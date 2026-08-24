@@ -659,7 +659,7 @@ function Dashboard() {
                       Download a backup of this app to restore it to your
                       self-hosted daabase deployment.{' '}
                       <a
-                        href="https://daabase-dash.apps.devtik.xyz/docs/self-hosting/migrate"
+                        href="https://dash.daabase.click/docs/self-hosting/migrate"
                         target="_blank"
                         rel="noreferrer"
                         className="font-medium underline underline-offset-2"

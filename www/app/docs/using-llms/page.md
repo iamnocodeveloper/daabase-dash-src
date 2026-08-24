@@ -44,7 +44,7 @@ particular functionality. For example, here are the recommended docs for [adding
 
 We recommend starting with the rules files above and adding more docs as needed.
 If you want though you can get all our docs at once in markdown format via
-[llms-full.txt](https://daabase-dash.apps.devtik.xyz/llms-full.txt)
+[llms-full.txt](https://dash.daabase.click/llms-full.txt)
 
 ## daabase MCP Server
 
@@ -213,7 +213,7 @@ access token.
 ### Get your Personal Access Token
 
 If you haven't already, make sure to get a personal access token from your
-[daabase dashboard](https://daabase-dash.apps.devtik.xyz/dash?s=personal-access-tokens)
+[daabase dashboard](https://dash.daabase.click/dash?s=personal-access-tokens)
 
 Once you have your token, you can set up the local daabase MCP server in your
 favorite editor with MCP support.

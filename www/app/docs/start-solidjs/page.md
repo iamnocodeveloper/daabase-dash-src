@@ -269,12 +269,12 @@ function Welcome() {
         </a>
         <a
           target="_blank"
-          href="https://daabase-dash.apps.devtik.xyz/docs"
+          href="https://dash.daabase.click/docs"
           rel="noopener noreferrer"
           class="border shadow flex flex-col py-8 gap-2 hover:bg-neutral-100 items-center justify-center font-semibold border-neutral-200 rounded"
         >
           <img
-            src="https://daabase-dash.apps.devtik.xyz/img/icon/logo-512.svg"
+            src="https://dash.daabase.click/img/icon/logo-512.svg"
             width={34}
           />
           daabase Docs

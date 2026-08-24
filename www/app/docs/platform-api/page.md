@@ -125,7 +125,7 @@ You have two options to authenticate and create long-lived apps:
 
 **Option 1: Personal Access Tokens**
 
-The quickest way to get started is to create a Personal Access Token. You can create Personal Access Tokens by going to user settings in "Dashboard -> Settings -> New Access Token". Here's a direct [link](https://daabase-dash.apps.devtik.xyz/dash/user-settings).
+The quickest way to get started is to create a Personal Access Token. You can create Personal Access Tokens by going to user settings in "Dashboard -> Settings -> New Access Token". Here's a direct [link](https://dash.daabase.click/dash/user-settings).
 
 Once you click "New Access Token", you'll get a token that looks like this:
 

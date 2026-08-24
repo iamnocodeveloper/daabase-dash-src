@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://daabase-dash.apps.devtik.xyz',
+  siteUrl: 'https://dash.daabase.click',
   generateRobotsTxt: false,
   generateIndexSitemap: false,
 

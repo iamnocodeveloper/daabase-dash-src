@@ -64,7 +64,7 @@ const HTMLView = ({
 }) => {
   const replaceUrl = getImgReplaceUrl();
   const body = useLocalImages
-    ? htmlBody.replaceAll('https://daabase-dash.apps.devtik.xyz/img/emails', replaceUrl)
+    ? htmlBody.replaceAll('https://dash.daabase.click/img/emails', replaceUrl)
     : htmlBody;
   return (
     <>

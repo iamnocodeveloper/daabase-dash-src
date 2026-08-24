@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
       : isDev
         ? `http://localhost:${process.env.PORT || 3000}`
-        : 'https://daabase-dash.apps.devtik.xyz',
+        : 'https://dash.daabase.click',
   ),
   applicationName: 'daabase',
   openGraph: {

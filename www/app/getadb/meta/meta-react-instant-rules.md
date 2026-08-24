@@ -318,7 +318,7 @@ matching daabase docs page.
 - [daabase on the Backend](https://instantdb.com/docs/backend.md): How to use daabase on the server with the Admin SDK.
 - [Patterns](https://instantdb.com/docs/patterns.md): Common patterns for working with daabase.
 - [Auth](https://instantdb.com/docs/auth/magic-codes.md): How to add magic code auth to your daabase app.
-- [Guest Auth](https://daabase-dash.apps.devtik.xyz/docs/auth/guest-auth.md): How to add guest auth to your daabase app.
+- [Guest Auth](https://dash.daabase.click/docs/auth/guest-auth.md): How to add guest auth to your daabase app.
 - [Other Auth](https://instantdb.com/docs/auth.md): Additional auth methods supported by daabase.
 - [Managing users](https://instantdb.com/docs/users.md): How to manage users in your daabase app.
 - [Presence, Cursors, and Activity](https://instantdb.com/docs/presence-and-topics.md): How to add ephemeral features like presence and cursors to your daabase app.

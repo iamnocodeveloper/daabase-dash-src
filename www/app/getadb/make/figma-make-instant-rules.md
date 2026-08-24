@@ -389,28 +389,28 @@ The bullets below are links to the daabase documentation. They provide detailed 
 
 Curls to `instantdb.com/docs/*.md` are fast and unmetered. Before calling daabase APIs whose signature you haven't seen written in this document, curl the relevant doc URL below first.
 
-- [Common mistakes](https://daabase-dash.apps.devtik.xyz/docs/common-mistakes.md): Common mistakes when working with daabase
-- [Initializing daabase](https://daabase-dash.apps.devtik.xyz/docs/init.md): How to integrate daabase with your app.
-- [Modeling data](https://daabase-dash.apps.devtik.xyz/docs/modeling-data.md): How to model data with daabase's schema.
-- [Writing data](https://daabase-dash.apps.devtik.xyz/docs/instaml.md): How to write data with daabase using InstaML.
-- [Reading data](https://daabase-dash.apps.devtik.xyz/docs/instaql.md): How to read data with daabase using InstaQL.
-- [daabase on the Backend](https://daabase-dash.apps.devtik.xyz/docs/backend.md): How to use daabase on the server with the Admin SDK.
-- [Patterns](https://daabase-dash.apps.devtik.xyz/docs/patterns.md): Common patterns for working with daabase.
-- [Auth](https://daabase-dash.apps.devtik.xyz/docs/auth/magic-codes.md): How to add magic code auth to your daabase app.
-- [Guest Auth](https://daabase-dash.apps.devtik.xyz/docs/auth/guest-auth.md): How to add guest auth to your daabase app.
-- [Other Auth](https://daabase-dash.apps.devtik.xyz/docs/auth.md): Additional auth methods supported by daabase.
-- [Managing users](https://daabase-dash.apps.devtik.xyz/docs/users.md): How to manage users in your daabase app.
-- [Presence, Cursors, and Activity](https://daabase-dash.apps.devtik.xyz/docs/presence-and-topics.md): How to add ephemeral features like presence and cursors to your daabase app.
-- [daabase CLI](https://daabase-dash.apps.devtik.xyz/docs/cli.md): How to use the daabase CLI to manage schema.
-- [Storage](https://daabase-dash.apps.devtik.xyz/docs/storage.md): How to upload and serve files with daabase.
-- [Streams](https://daabase-dash.apps.devtik.xyz/docs/streams.md): How to use streams with daabase.
-- [Stripe Payments](https://daabase-dash.apps.devtik.xyz/docs/stripe-payments.md): How to integrate Stripe payments with daabase.
-- [React Native](https://daabase-dash.apps.devtik.xyz/docs/start-rn.md): How to use daabase in React Native apps.
-- [Vanilla JS](https://daabase-dash.apps.devtik.xyz/docs/start-vanilla.md): How to use daabase in vanilla JS apps.
-- [SolidJS](https://daabase-dash.apps.devtik.xyz/docs/start-solidjs.md): How to use daabase in SolidJS apps.
-- [Svelte](https://daabase-dash.apps.devtik.xyz/docs/start-svelte.md): How to use daabase in Svelte apps.
-- [Vue](https://daabase-dash.apps.devtik.xyz/docs/start-vue.md): How to use daabase in Vue apps.
-- [TanStack](https://daabase-dash.apps.devtik.xyz/docs/start-tanstack.md): How to use daabase in TanStack apps.
+- [Common mistakes](https://dash.daabase.click/docs/common-mistakes.md): Common mistakes when working with daabase
+- [Initializing daabase](https://dash.daabase.click/docs/init.md): How to integrate daabase with your app.
+- [Modeling data](https://dash.daabase.click/docs/modeling-data.md): How to model data with daabase's schema.
+- [Writing data](https://dash.daabase.click/docs/instaml.md): How to write data with daabase using InstaML.
+- [Reading data](https://dash.daabase.click/docs/instaql.md): How to read data with daabase using InstaQL.
+- [daabase on the Backend](https://dash.daabase.click/docs/backend.md): How to use daabase on the server with the Admin SDK.
+- [Patterns](https://dash.daabase.click/docs/patterns.md): Common patterns for working with daabase.
+- [Auth](https://dash.daabase.click/docs/auth/magic-codes.md): How to add magic code auth to your daabase app.
+- [Guest Auth](https://dash.daabase.click/docs/auth/guest-auth.md): How to add guest auth to your daabase app.
+- [Other Auth](https://dash.daabase.click/docs/auth.md): Additional auth methods supported by daabase.
+- [Managing users](https://dash.daabase.click/docs/users.md): How to manage users in your daabase app.
+- [Presence, Cursors, and Activity](https://dash.daabase.click/docs/presence-and-topics.md): How to add ephemeral features like presence and cursors to your daabase app.
+- [daabase CLI](https://dash.daabase.click/docs/cli.md): How to use the daabase CLI to manage schema.
+- [Storage](https://dash.daabase.click/docs/storage.md): How to upload and serve files with daabase.
+- [Streams](https://dash.daabase.click/docs/streams.md): How to use streams with daabase.
+- [Stripe Payments](https://dash.daabase.click/docs/stripe-payments.md): How to integrate Stripe payments with daabase.
+- [React Native](https://dash.daabase.click/docs/start-rn.md): How to use daabase in React Native apps.
+- [Vanilla JS](https://dash.daabase.click/docs/start-vanilla.md): How to use daabase in vanilla JS apps.
+- [SolidJS](https://dash.daabase.click/docs/start-solidjs.md): How to use daabase in SolidJS apps.
+- [Svelte](https://dash.daabase.click/docs/start-svelte.md): How to use daabase in Svelte apps.
+- [Vue](https://dash.daabase.click/docs/start-vue.md): How to use daabase in Vue apps.
+- [TanStack](https://dash.daabase.click/docs/start-tanstack.md): How to use daabase in TanStack apps.
 
 # Final Note
 
