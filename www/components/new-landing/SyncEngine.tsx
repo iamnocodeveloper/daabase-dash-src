@@ -18,7 +18,7 @@ export function SyncEngine() {
         <SectionIntro>
           <SectionTitle>A database in your frontend</SectionTitle>
           <SectionSubtitle>
-            Instant apps aren't like traditional CRUD apps. Instead of endpoints
+            daabase apps aren't like traditional CRUD apps. Instead of endpoints
             your frontend gets a real-time database. This is the same tech that
             makes Linear and Figma so delightful.
           </SectionSubtitle>
@@ -27,11 +27,11 @@ export function SyncEngine() {
 
       {/* Features */}
       <div className="flex flex-col gap-12 md:gap-9">
-        {/* Instant updates — text left, demo right */}
+        {/* daabase updates — text left, demo right */}
         <AnimateIn>
           <div className="flex grid-cols-3 flex-col items-stretch gap-6 md:grid md:items-center">
             <div className="col-span-1">
-              <Subheading>Instant updates</Subheading>
+              <Subheading>daabase updates</Subheading>
               <FeatureBody>
                 Click a button, toggle a switch, type in a field — whatever you
                 do, you see the result right away. Your apps feel fast, so your
@@ -67,7 +67,7 @@ export function SyncEngine() {
             <div className="col-span-1">
               <Subheading>Works offline</Subheading>
               <FeatureBody>
-                Instant apps keep working when you lose connection. When your
+                daabase apps keep working when you lose connection. When your
                 users get back online, everything syncs up without them having
                 to do a thing. Pure magic.
               </FeatureBody>

@@ -33,7 +33,7 @@ export const CLILoginDialog = ({ tickets }: { tickets: TicketSystem }) => {
         onClose={cliAuthCompleteDialog.onClose}
       >
         <div className="flex flex-col gap-4 p-4">
-          <SectionHeading>Instant CLI verification complete!</SectionHeading>
+          <SectionHeading>daabase CLI verification complete!</SectionHeading>
           <Content>
             You can close this window and return to the terminal.
           </Content>
@@ -61,9 +61,9 @@ export const CLILoginDialog = ({ tickets }: { tickets: TicketSystem }) => {
         }}
       >
         <div className="flex flex-col gap-4 p-4">
-          <SectionHeading>Instant CLI login</SectionHeading>
+          <SectionHeading>daabase CLI login</SectionHeading>
           <Content>
-            Do you want to grant Instant CLI access to your account?
+            Do you want to grant daabase CLI access to your account?
           </Content>
           <Button
             variant="primary"

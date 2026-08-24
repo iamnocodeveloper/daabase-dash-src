@@ -14,8 +14,8 @@ export async function generateMetadata({
   const { slug } = await params;
   const app = getExampleAppBySlug(slug);
   return {
-    title: `${app.title} | InstantDB Examples`,
-    description: 'Learn Instant through example apps',
+    title: `${app.title} | daabase Examples`,
+    description: 'Learn daabase through example apps',
   };
 }
 

@@ -284,10 +284,10 @@ function AppStage({
         </Button>
       </div>
       <div>
-        <h2>6. (Coming soon) Connect to Instant</h2>
+        <h2>6. (Coming soon) Connect to daabase</h2>
         <p>
           With the API endpoints above, you can implement guest mode! Coming
-          soon, we'll create an API so you can authenticate Instant users, and
+          soon, we'll create an API so you can authenticate daabase users, and
           create databases on their behalf.
         </p>
         <p>Stay tuned!</p>
@@ -810,7 +810,7 @@ function CreateAuthorizationUrlStep({
             />
           </div>
           <Content>
-            Now you've built an OAuth app on the Instant platform. There is{' '}
+            Now you've built an OAuth app on the daabase platform. There is{' '}
             <a href="/docs/auth/platform-oauth" target="_blank">
               more information in the docs
             </a>
@@ -857,10 +857,10 @@ function Authed() {
     <div className="mx-auto max-w-xl p-4 pb-16">
       <div className="space-y-4">
         <SectionHeading className="font-bold">
-          Here's a demo of OAuth apps on Instant!
+          Here's a demo of OAuth apps on daabase!
         </SectionHeading>
         <Content>
-          First we'll create a new Instant app where all of the data for the
+          First we'll create a new daabase app where all of the data for the
           demo will live. You can delete the app at the end of the demo.
         </Content>
         <CreateAppStep app={app} reset={reset} onCreateApp={setApp} />

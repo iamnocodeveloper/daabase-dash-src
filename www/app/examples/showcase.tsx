@@ -113,10 +113,10 @@ function Showcase({
     <div className="space-y-12">
       <div className="space-y-8">
         <div className="text-center">
-          <SectionTitle>Example Apps built w/ Instant</SectionTitle>
+          <SectionTitle>Example Apps built w/ daabase</SectionTitle>
           <SectionSubtitle>
-            Curious to see Instant in action? Here are some common apps to give
-            you a sense on how to build with Instant.
+            Curious to see daabase in action? Here are some common apps to give
+            you a sense on how to build with daabase.
           </SectionSubtitle>
         </div>
         <TabToggle activeTab={activeTab} />

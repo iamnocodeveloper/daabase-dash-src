@@ -270,10 +270,10 @@ export function AutoPlayDemo() {
             <div className="flex items-center gap-2.5">
               <img
                 src="/img/icon/favicon-96x96.svg"
-                alt="Instant"
+                alt="daabase"
                 className="h-6 w-6"
               />
-              <span className="text-sm font-medium">With Instant</span>
+              <span className="text-sm font-medium">With daabase</span>
             </div>
             <span className="hidden text-xs font-medium text-green-600 md:block">
               Updates right away
@@ -296,7 +296,7 @@ export function AutoPlayDemo() {
         <div className="mb-2 px-1">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <span className="text-sm font-medium">Without Instant</span>
+              <span className="text-sm font-medium">Without daabase</span>
             </div>
             <span className="hidden text-xs font-medium text-gray-400 md:block">
               Waits on the server

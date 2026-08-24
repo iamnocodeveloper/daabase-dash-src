@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Content from './content';
 
-const title = 'Storage - Instant';
+const title = 'Storage - daabase';
 const description =
   'Digital content is just another table in your database. No separate service needed.';
 

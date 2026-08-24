@@ -3,7 +3,7 @@ import { LandingContainer, MainNav } from '@/components/marketingUi';
 import { Footer } from '@/components/new-landing/Footer';
 
 export const metadata: Metadata = {
-  title: 'Instant Terms of Service',
+  title: 'daabase Terms of Service',
 };
 
 function TermsContent() {
@@ -13,8 +13,8 @@ function TermsContent() {
       <p>Effective Date: March 19, 2024</p>
       <p>
         <strong>Binding Agreement</strong>. This is a binding contract
-        (&quot;Terms&quot;) between you and Instant (&quot;we,&quot;
-        &quot;us,&quot; &quot;our&quot;, "Instant"). These Terms apply whenever
+        (&quot;Terms&quot;) between you and daabase (&quot;we,&quot;
+        &quot;us,&quot; &quot;our&quot;, "daabase"). These Terms apply whenever
         you use any of the sites, apps, products, or services
         (&quot;Services&quot;) we offer, in existence now to created in the
         future. Further, we may automatically upgrade our Services, and these
@@ -37,9 +37,9 @@ function TermsContent() {
         registered by their parent or guardian.
       </p>
       <p>
-        <strong>Your Content and Permissions</strong>. Instant allows you to
+        <strong>Your Content and Permissions</strong>. daabase allows you to
         share just about anything--files, videos, links, music, documents, code,
-        and text (&quot;Your Content&quot;). Your Content is yours. Instant does
+        and text (&quot;Your Content&quot;). Your Content is yours. daabase does
         not claim any right, title, or interest in Your Content. You grant us a
         non-exclusive, worldwide, royalty free license to do the things we need
         to do to provide the Services, including but not limited to storing,
@@ -57,8 +57,8 @@ function TermsContent() {
         <strong>Account Security</strong>. You are responsible for safeguarding
         your password to the Services, making sure that others don&#39;t have
         access to it, and keeping your account information current. You must
-        immediately notify Instant of any unauthorized uses of your account or
-        any other breaches of security. Instant will not be liable for your acts
+        immediately notify daabase of any unauthorized uses of your account or
+        any other breaches of security. daabase will not be liable for your acts
         or omissions, including any damages of any kind incurred as a result of
         your acts or omissions.
       </p>
@@ -70,29 +70,29 @@ function TermsContent() {
         blogs, or by sending you an email or other communication before the
         changes take effect. The notice will designate a reasonable period of
         time after which the new Terms will take effect. If you disagree with
-        our changes, then you should stop using Instant within the designated
-        notice period. Your continued use of Instant will be subject to the new
+        our changes, then you should stop using daabase within the designated
+        notice period. Your continued use of daabase will be subject to the new
         Terms. However, any dispute that arose before the changes shall be
         governed by the Terms (including the binding individual arbitration
         clause) that were in place when the dispute arose.
       </p>
       <p>
         <strong>Our Intellectual Property</strong>: The Services and all
-        materials contained therein, including, without limitation, Instant
+        materials contained therein, including, without limitation, daabase
         logo, and all designs, text, graphics, pictures, information, data,
         software, sound files, other files, and the selection and arrangement
-        thereof (collectively, the &quot;Instant Materials&quot;) are the
-        property of Instant or its licensors or users and are protected by U.S.
+        thereof (collectively, the &quot;daabase Materials&quot;) are the
+        property of daabase or its licensors or users and are protected by U.S.
         and international intellectual property laws. You are granted a
         personal, limited, non-sublicensable, non-exclusive, revocable license
-        to access and use Instant Materials in accordance with these Terms for
+        to access and use daabase Materials in accordance with these Terms for
         the sole purpose of enabling you to use and enjoy the Services.
       </p>
       <p>
         Other trademarks, service marks, graphics and logos used in connection
         with the Services may be the trademarks of other third parties. Your use
         of the Services grants you no right or license to reproduce or otherwise
-        use any Instant, or third-party trademarks.
+        use any daabase, or third-party trademarks.
       </p>
       <p>
         <strong>Termination</strong>. You are free to stop using the Services at
@@ -105,14 +105,14 @@ function TermsContent() {
       </p>
       <p>
         <strong>Disclaimer of Warranties</strong>. We make no warranties of any
-        kind with respect to Instant or your use of the Services.
+        kind with respect to daabase or your use of the Services.
       </p>
       <p>
         <strong>Limitation of Liability</strong>. We shall not have any
         liability for any indirect, incidental, consequential, special,
         exemplary, or damages under any theory of liability arising out of, or
-        relating to, these Terms or your use of Instant. As a condition of
-        access to Instant, you understand and agree that our liability shall not
+        relating to, these Terms or your use of daabase. As a condition of
+        access to daabase, you understand and agree that our liability shall not
         exceed $0.
       </p>
       <p>
@@ -121,7 +121,7 @@ function TermsContent() {
         any and all claims, damages, losses, liabilities, actions, judgments,
         costs, and expenses (including reasonable attorneys&#39; fees) brought
         by a third party arising out of or in connection with: (i) any act or
-        omission by you, in connection with your use of Instant or (ii) your
+        omission by you, in connection with your use of daabase or (ii) your
         breach or alleged breach of any of these Terms. We may, at its option,
         elect to take over control of the defense and settlement of a claim
         subject to indemnification. You agree not to settle any such claim
@@ -129,7 +129,7 @@ function TermsContent() {
       </p>
       <p>
         <strong>Arbitration Agreement</strong>. We both agree to resolve any
-        disputes arising out of these Terms or your use of Instant through final
+        disputes arising out of these Terms or your use of daabase through final
         and binding arbitration. Arbitration is a less formal procedure than a
         lawsuit in court, with the goal of resolving disputes more quickly. We
         both agree to waive our rights to have our claims decided by a judge or
@@ -159,7 +159,7 @@ function TermsContent() {
       </p>
       <p>
         <strong>Governing Law</strong>. You agree that these Terms, and your use
-        of Instant, are governed by California law, in the United States of
+        of daabase, are governed by California law, in the United States of
         America, without regard to its principles of conflicts of law.
       </p>
     </div>

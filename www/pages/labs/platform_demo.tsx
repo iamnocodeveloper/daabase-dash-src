@@ -266,10 +266,10 @@ function AppStage({
         </Button>
       </div>
       <div>
-        <h2>6. (Coming soon) Connect to Instant</h2>
+        <h2>6. (Coming soon) Connect to daabase</h2>
         <p>
           With the API endpoints above, you can implement guest mode! Coming
-          soon, we'll create an API so you can authenticate Instant users, and
+          soon, we'll create an API so you can authenticate daabase users, and
           create databases on their behalf.
         </p>
         <p>Stay tuned!</p>

@@ -39,13 +39,13 @@ export default function AdminSdk() {
       {/* Features */}
       <Section className="pb-0 sm:pb-0">
         <div className="space-y-24">
-          {/* Use Instant on the backend */}
+          {/* Use daabase on the backend */}
           <div className="flex flex-col items-stretch gap-8 md:flex-row md:items-center">
             <div className="space-y-4 md:max-w-[400px]">
-              <Subheading>Use Instant on the backend</Subheading>
+              <Subheading>Use daabase on the backend</Subheading>
               <p className="mt-2 text-base text-gray-600">
                 When you need to interact with your database from a secure
-                environment you can use the Instant Admin SDK.
+                environment you can use the daabase Admin SDK.
               </p>
               <p className="mt-2 text-base text-gray-600">
                 It has the same API as the client SDK but with elevated
@@ -82,7 +82,7 @@ export default function AdminSdk() {
                 <Subheading>HTTP API for non-JS backends</Subheading>
                 <p className="mt-2 text-base text-gray-600">
                   The Admin SDK is built on top of our HTTP API. If you're using
-                  a non-JS backend you can use Instant by hitting the API
+                  a non-JS backend you can use daabase by hitting the API
                   directly.
                 </p>
                 <p className="mt-2 text-base text-gray-600">
@@ -104,10 +104,10 @@ export default function AdminSdk() {
             <div className="text-center">
               <SectionTitle>
                 <span className="text-orange-600">Build full-stack apps</span>
-                <br className="hidden md:block" /> with Instant.
+                <br className="hidden md:block" /> with daabase.
               </SectionTitle>
               <SectionSubtitle>
-                Instant has you covered on both the frontend and the backend.
+                daabase has you covered on both the frontend and the backend.
               </SectionSubtitle>
             </div>
           </AnimateIn>

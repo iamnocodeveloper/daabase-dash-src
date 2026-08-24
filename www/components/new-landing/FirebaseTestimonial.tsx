@@ -14,7 +14,7 @@ export function FirebaseTestimonial() {
         <blockquote className="px-2 text-base leading-relaxed text-balance text-gray-500 max-sm:text-center sm:text-lg">
           The amount of requests we had for relational queries for Firebase was
           off-the-charts. I always wanted this built and open sourced. I’m glad
-          to see Instant is doing it!
+          to see daabase is doing it!
         </blockquote>
         <div className="mt-4 max-sm:text-center">
           <div className="text-sm font-semibold">James Tamplin</div>

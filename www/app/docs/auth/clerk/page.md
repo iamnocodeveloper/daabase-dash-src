@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Clerk'
-    description: "How to integrate Clerk's auth flow with Instant."
+    description: "How to integrate Clerk's auth flow with daabase."
 ---
 
-Instant supports auth with Clerk.
+daabase supports auth with Clerk.
 
 ## Setup
 
@@ -30,13 +30,13 @@ You can have additional claims as long as the `email` claim is set to `{{user.pr
 
 On the Clerk dashboard, navigate to [`API keys`](https://dashboard.clerk.com/last-active?path=api-keys), then copy the `Publishable key`. It should start with `pk_`.
 
-**Step 3: Register your Clerk Publishable key with your Instant app**
+**Step 3: Register your Clerk Publishable key with your daabase app**
 
 {% setup-paths %}
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard, add a new Clerk client with the publishable key you copied.
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard, add a new Clerk client with the publishable key you copied.
 
 {% /dashboard-path %}
 
@@ -53,9 +53,9 @@ npx instant-cli@latest auth client add \
 
 ## Usage
 
-Use Clerk's `getToken` helper to get a session JWT for your signed-in user. Then call Instant's `db.auth.signInWithIdToken` with the JWT and the client name you set on the Instant dashboard.
+Use Clerk's `getToken` helper to get a session JWT for your signed-in user. Then call daabase's `db.auth.signInWithIdToken` with the JWT and the client name you set on the daabase dashboard.
 
-When you call `db.auth.signInWithIdToken`, Instant will verify that the JWT was signed by your Clerk app. If verified, Instant will use the email in the JWT's claims to look up your user or create a new one and create a long-lived session. Be sure to call Instant's `db.auth.signOut` when you want to sign the user out.
+When you call `db.auth.signInWithIdToken`, daabase will verify that the JWT was signed by your Clerk app. If verified, daabase will use the email in the JWT's claims to look up your user or create a new one and create a long-lived session. Be sure to call daabase's `db.auth.signOut` when you want to sign the user out.
 
 Here is a full example using Clerk's Next.js library:
 
@@ -72,12 +72,12 @@ import {
 import { init } from '@instantdb/react';
 import { useEffect } from 'react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 
 const db = init({ appId: APP_ID });
 
-// Use the clerk client name you set in the Instant dashboard auth tab
+// Use the clerk client name you set in the daabase dashboard auth tab
 const CLERK_CLIENT_NAME = 'REPLACE_ME';
 
 function ClerkSignedInComponent() {
@@ -92,7 +92,7 @@ function ClerkSignedInComponent() {
       return;
     }
 
-    // Create a long-lived session with Instant for your clerk user
+    // Create a long-lived session with daabase for your clerk user
     // It will look up the user by email or create a new user with
     // the email address in the session token.
     db.auth.signInWithIdToken({
@@ -111,15 +111,15 @@ function ClerkSignedInComponent() {
     return <div>Loading...</div>;
   }
   if (error) {
-    return <div>Error signing in to Instant! {error.message}</div>;
+    return <div>Error signing in to daabase! {error.message}</div>;
   }
   if (user) {
     return (
       <div>
-        <p>Signed in with Instant through Clerk!</p>{' '}
+        <p>Signed in with daabase through Clerk!</p>{' '}
         <button
           onClick={() => {
-            // First sign out of Instant to clear the Instant session.
+            // First sign out of daabase to clear the daabase session.
             db.auth.signOut().then(() => {
               // Then sign out of Clerk to clear the Clerk session.
               signOut();
@@ -134,7 +134,7 @@ function ClerkSignedInComponent() {
   return (
     <div>
       <button onClick={signInToInstantWithClerkToken}>
-        Sign in to Instant
+        Sign in to daabase
       </button>
     </div>
   );

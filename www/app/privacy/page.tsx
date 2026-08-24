@@ -3,7 +3,7 @@ import { LandingContainer, MainNav } from '@/components/marketingUi';
 import { Footer } from '@/components/new-landing/Footer';
 
 export const metadata: Metadata = {
-  title: 'Instant Privacy Policy',
+  title: 'daabase Privacy Policy',
 };
 
 function PrivacyPolicyContent() {
@@ -14,7 +14,7 @@ function PrivacyPolicyContent() {
       </h1>
       <p>This Application collects some Personal Data from its Users.</p>
       <h2 id="owner-and-data-controller">Owner and Data Controller</h2>
-      <p>Instant</p>
+      <p>daabase</p>
       <p>
         <strong>Owner contact email: </strong>
         <a href="mailto:support@instantdb.com">support@instantdb.com</a>

@@ -8,7 +8,7 @@ export default async function generateMakeMarkdown(
   const rules = await loadRules();
 
   return `
-A new Instant app has just been provisioned for you!
+A new daabase app has just been provisioned for you!
 
 Here's the info:
 
@@ -20,7 +20,7 @@ INSTANT_ADMIN_TOKEN=${app.adminToken}
 
 Now you can use this to build a full-stack app.
 
-What follows are instructions for using Instant. Follow them, and you are golden!
+What follows are instructions for using daabase. Follow them, and you are golden!
 ---
 
 ${rules}`;

@@ -5,7 +5,7 @@ nextjs:
     description: 'Let your users try your app before creating an account'
 ---
 
-Instant supports guest authentication. This allows your users to try your app before signing up and ensures they can keep all their data when they decide to create a full account with their email.
+daabase supports guest authentication. This allows your users to try your app before signing up and ensures they can keep all their data when they decide to create a full account with their email.
 
 ## Signing in as a Guest
 
@@ -27,7 +27,7 @@ The fields must be optional attributes on `$users`, and `$users` must have a `cr
 import React, { useState } from 'react';
 import { init, User } from '@instantdb/react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 const db = init({ appId: APP_ID });
 
@@ -81,7 +81,7 @@ export default App;
 
 ## Upgrading to a full user
 
-When a guest user is ready to create a permanent account, you can use any of Instant's sign-in methods. The guest user will be automatically upgraded to a full user.
+When a guest user is ready to create a permanent account, you can use any of daabase's sign-in methods. The guest user will be automatically upgraded to a full user.
 
 Here is a full example using magic code auth:
 
@@ -91,7 +91,7 @@ Here is a full example using magic code auth:
 import React, { useState } from 'react';
 import { init, User } from '@instantdb/react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 const db = init({ appId: APP_ID });
 

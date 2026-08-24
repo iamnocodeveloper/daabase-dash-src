@@ -82,7 +82,7 @@ const LoggedOutEmptyState: React.FC = () => (
         Sign in to chat
       </h3>
       <p className="text-sm text-gray-500 dark:text-gray-400">
-        Sign in to ask questions about Instant and get AI-powered help with the
+        Sign in to ask questions about daabase and get AI-powered help with the
         docs.
       </p>
     </div>

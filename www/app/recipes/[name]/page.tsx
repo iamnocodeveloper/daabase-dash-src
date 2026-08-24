@@ -16,7 +16,7 @@ export async function generateMetadata({
   const { name } = await params;
   if (!recipeFiles.includes(name)) return {};
   const title = capitalize(name.split('-').join(' '));
-  return { title: `${title} · Instant Recipe` };
+  return { title: `${title} · daabase Recipe` };
 }
 
 export default async function Page({

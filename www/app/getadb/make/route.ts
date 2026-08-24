@@ -25,4 +25,4 @@ export async function GET(request: Request) {
   });
 }
 
-const DEFAULT_APP_TITLE = 'Instant Figma Make App';
+const DEFAULT_APP_TITLE = 'daabase Figma Make App';

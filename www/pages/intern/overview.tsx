@@ -575,8 +575,8 @@ export default function Page() {
   return (
     <div className="flex h-full w-full flex-col overflow-hidden md:flex-row">
       <Head>
-        <title>Instant Overview</title>
-        <meta name="description" content="Welcome to Instant." />
+        <title>daabase Overview</title>
+        <meta name="description" content="Welcome to daabase." />
       </Head>
       <div className="flex flex-1 flex-col overflow-hidden">
         {isHydrated ? <Main /> : null}

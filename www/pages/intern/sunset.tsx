@@ -160,7 +160,7 @@ function Checklist({
               {isNext && confirming && (
                 <div className="mt-1 flex flex-col gap-2 rounded border border-amber-300 bg-amber-50 p-3">
                   <p className="text-sm">
-                    This affects <strong>every app on Instant</strong> within
+                    This affects <strong>every app on daabase</strong> within
                     seconds.{' '}
                     {isDev ? (
                       <span className="text-gray-600">(dev: just click)</span>
@@ -690,7 +690,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Head>
-        <title>Instant Intern - Sunset</title>
+        <title>daabase Intern - Sunset</title>
       </Head>
       <SunsetDashboard />
     </div>

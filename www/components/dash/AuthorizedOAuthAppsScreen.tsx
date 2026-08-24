@@ -139,7 +139,7 @@ export default function OAuthAppsTab({ className }: { className?: string }) {
       {error ? <div>{error.message}</div> : null}
       <Content className="dark:text-neutral-400">
         <p>
-          Below are any OAuth apps that you have granted access to your Instant
+          Below are any OAuth apps that you have granted access to your daabase
           Account.
         </p>
       </Content>

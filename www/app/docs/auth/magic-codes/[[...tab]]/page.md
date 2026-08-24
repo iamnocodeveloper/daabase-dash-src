@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: 'Magic Code Auth'
-    description: 'How to add magic code auth to your Instant app.'
+    description: 'How to add magic code auth to your daabase app.'
 ---
 
 {% nav-default value="react" %}
 
-Instant supports a "magic-code" flow for auth. Users provide their email, we send
+daabase supports a "magic-code" flow for auth. Users provide their email, we send
 them a login code on your behalf, and they authenticate with your app.
 
 Choose the platform you're building for to see a full example.
@@ -417,8 +417,8 @@ Make sure you have a `<div id="app"></div>` element in your HTML.
 We created a login flow to handle magic code auth. Of note are `auth.sendMagicCode`
 and `auth.signInWithMagicCode`.
 
-On successful validation, Instant's backend will return a user object with a refresh token.
-The client SDK will then restart the WebSocket connection with Instant's sync layer and provide the refresh token.
+On successful validation, daabase's backend will return a user object with a refresh token.
+The client SDK will then restart the WebSocket connection with daabase's sync layer and provide the refresh token.
 
 When doing queries or transactions, the refresh token will be used to hydrate `auth`
 on the backend during permission checks.
@@ -434,7 +434,7 @@ db.auth.sendMagicCode({ email }).catch((err) => {
 });
 ```
 
-Use `auth.sendMagicCode` to generate a magic code on Instant's backend and email it to the user.
+Use `auth.sendMagicCode` to generate a magic code on daabase's backend and email it to the user.
 
 ## Sign in with Magic Code
 

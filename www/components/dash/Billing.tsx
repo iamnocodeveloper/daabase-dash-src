@@ -292,7 +292,7 @@ export default function Billing({ appId }: { appId: string }) {
       ) : billingClosed ? (
         <div className="flex flex-col space-y-4">
           <Content className="rounded-sm border border-purple-400 bg-purple-100 px-2 py-1 text-sm text-purple-800 italic dark:border-purple-500/50 dark:bg-purple-500/20 dark:text-white">
-            Instant is winding down. Paid features like teams are now included
+            daabase is winding down. Paid features like teams are now included
             on every plan for free, plan limits are removed, and we no longer
             sell subscriptions. Existing subscriptions end at the close of their
             billing period.

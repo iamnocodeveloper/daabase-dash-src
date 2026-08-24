@@ -1,6 +1,6 @@
 export const PLACEHOLDER_TOKEN = '<generate-a-uuid>';
 
-export const GUIDE_MARKDOWN = `This is Instant's get-a-db service.
+export const GUIDE_MARKDOWN = `This is daabase's get-a-db service.
 
 To provision credentials, fetch https://www.getadb.com/provision/${PLACEHOLDER_TOKEN}.
 

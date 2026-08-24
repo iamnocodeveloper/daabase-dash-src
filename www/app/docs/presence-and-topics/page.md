@@ -2,7 +2,7 @@
 nextjs:
   metadata:
     title: 'Presence, Cursors, and Activity'
-    description: 'How to add ephemeral features like presence and cursors to your Instant app.'
+    description: 'How to add ephemeral features like presence and cursors to your daabase app.'
 ---
 
 Sometimes you want to show real-time updates to users without persisting the
@@ -13,7 +13,7 @@ data to your database. Common scenarios include:
 - Typing indicators in chat apps like Discord
 - Live reactions in a video streaming app like Twitch
 
-Instant provides three primitives for quickly building these ephemeral experiences: rooms, presence, and topics.
+daabase provides three primitives for quickly building these ephemeral experiences: rooms, presence, and topics.
 
 **Rooms**
 
@@ -23,13 +23,13 @@ A room represents a temporary context for realtime events. Users in the same roo
 
 Presence is an object that each peer shares with every other peer. When a user updates their presence, it's instantly replicated to all users in that room. Presence persists throughout the remainder of a user's connection and is automatically cleaned up when a user leaves the room.
 
-You can use presence to build features like "who's online." Instant's cursor and typing indicator are both built on top of the presence API.
+You can use presence to build features like "who's online." daabase's cursor and typing indicator are both built on top of the presence API.
 
 **Topics**
 
 Topics have "fire-and-forget" semantics and are better suited for data that doesn't need any sort of persistence. When a user publishes a topic, a callback is fired for every other user in the room listening for that topic.
 
-You can use topics to build features like "live reactions." The real-time emoji button panel on Instant's homepage is built using the topics API.
+You can use topics to build features like "live reactions." The real-time emoji button panel on daabase's homepage is built using the topics API.
 
 **Transact vs. Ephemeral**
 
@@ -47,7 +47,7 @@ To obtain a room reference, call `db.room(roomType, roomId)`:
 ```typescript
 import { init } from '@instantdb/react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 
 // db will export all the presence hooks you need!
@@ -55,7 +55,7 @@ const db = init({ appId: APP_ID });
 
 // Specifying a room type and room id gives you the power to
 // restrict sharing to a specific room. However you can also just use
-// `db.room()` to share presence and topics to an Instant generated default room
+// `db.room()` to share presence and topics to an daabase generated default room
 const roomId = 'hacker-chat-room-id';
 const room = db.room('chat', roomId);
 ```
@@ -68,7 +68,7 @@ By default rooms accept any kind of data. However, you can enforce typesafety wi
 import { init } from '@instantdb/react';
 import schema from '../instant.schema.ts';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 
 const db = init({ appId: APP_ID, schema });
@@ -122,12 +122,12 @@ Once you've updated your schema, you'll start seeing types in your IntelliSense:
 
 One common use case for presence is to show who's online.
 
-Instant's `usePresence` is similar in feel to `useState`. It returns an object containing the current user's presence state, the presence state of every other user in the room, and a function (`publishPresence`) to update the current user's presence. `publishPresence` is similar to React's `setState` and will merge the current and new presence objects.
+daabase's `usePresence` is similar in feel to `useState`. It returns an object containing the current user's presence state, the presence state of every other user in the room, and a function (`publishPresence`) to update the current user's presence. `publishPresence` is similar to React's `setState` and will merge the current and new presence objects.
 
 ```tsx
 import { init } from '@instantdb/react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 const db = init({ appId: APP_ID });
 
@@ -203,9 +203,9 @@ const { publishPresence } = db.rooms.usePresence(room, {
 
 ## Topics
 
-Instant provides 2 hooks for sending and handling events for a given topic. `usePublishTopic` returns a function you can call to publish an event, and `useTopicEffect` will be called each time a peer in the same room publishes a topic event.
+daabase provides 2 hooks for sending and handling events for a given topic. `usePublishTopic` returns a function you can call to publish an event, and `useTopicEffect` will be called each time a peer in the same room publishes a topic event.
 
-Here's a live reaction feature using topics. You can also play with it live on [our recipes page](https://www.instantdb.com/recipes?#5-reactions)
+Here's a live reaction feature using topics. You can also play with it live on [our recipes page](https://daabase-dash.apps.devtik.xyz/recipes?#5-reactions)
 
 ```tsx {% showCopy=true %}
 'use client';
@@ -213,7 +213,7 @@ Here's a live reaction feature using topics. You can also play with it live on [
 import { init } from '@instantdb/react';
 import { RefObject, createRef, useRef } from 'react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 
 // Set up room schema
@@ -368,7 +368,7 @@ Adding multiplayer cursors to your app is as simple as importing our `<Cursors>`
 
 import { init, Cursors } from '@instantdb/react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 
 const db = init({ appId: APP_ID });
@@ -420,7 +420,7 @@ You can render multiple cursor spaces. For instance, imagine you're building a s
 
 import { init } from '@instantdb/react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 
 const db = init({ appId: APP_ID });

@@ -10,7 +10,7 @@ import { InstantIssue } from '@/lib/types';
 import { useEffect, useRef, useState } from 'react';
 
 /*
-  This is the page an Instant user will see when a platform
+  This is the page an daabase user will see when a platform
   OAuth app wants them to grant access to their account.
 */
 
@@ -30,14 +30,14 @@ function InvalidRedirect({
         <span className="inline-flex items-center space-x-2">
           <LogoIcon />
           <span className="font-mono text-sm text-gray-400 lowercase">
-            Instant
+            daabase
           </span>
         </span>
 
         <Content>
           <p>
             It looks like you're trying to give an external service access to
-            your Instant account, but {explanation}.
+            your daabase account, but {explanation}.
           </p>
           {instantError ? (
             <p className="border-l-4 pl-2">{instantError}</p>
@@ -69,38 +69,38 @@ function InvalidRedirect({
 const scopeDescriptions = [
   {
     description:
-      'Read access to all of your Instant apps, including schema and permission rules.',
+      'Read access to all of your daabase apps, including schema and permission rules.',
     applies: (scopes: string[]) =>
       scopes.includes('apps-read') && !scopes.includes('apps-write'),
   },
   {
     description:
-      'Read and write access to all of your Instant apps, including schema and permission rules.',
+      'Read and write access to all of your daabase apps, including schema and permission rules.',
     applies: (scopes: string[]) => scopes.includes('apps-write'),
   },
   {
-    description: 'Create new apps in your Instant account.',
+    description: 'Create new apps in your daabase account.',
     applies: (scopes: string[]) => scopes.includes('apps-write'),
   },
   {
-    description: 'Query all of the data in any of your Instant databases.',
+    description: 'Query all of the data in any of your daabase databases.',
     applies: (scopes: string[]) =>
       scopes.includes('data-read') || scopes.includes('data-write'),
   },
   {
     description:
-      'Create, update, and delete data in any of your Instant databases.',
+      'Create, update, and delete data in any of your daabase databases.',
     applies: (scopes: string[]) => scopes.includes('data-write'),
   },
   {
     description:
-      'Download storage ($files) data from any of your Instant databases.',
+      'Download storage ($files) data from any of your daabase databases.',
     applies: (scopes: string[]) =>
       scopes.includes('storage-read') || scopes.includes('storage-write'),
   },
   {
     description:
-      'Upload, update, and delete storage ($files) data from any of your Instant databases.',
+      'Upload, update, and delete storage ($files) data from any of your daabase databases.',
     applies: (scopes: string[]) => scopes.includes('storage-write'),
   },
 ];
@@ -167,7 +167,7 @@ function OAuthForm({ redirectId }: { redirectId: string }) {
         <span className="inline-flex items-center space-x-2">
           <LogoIcon />
           <span className="font-mono text-sm text-gray-400 lowercase">
-            Instant
+            daabase
           </span>
         </span>
         <span className="text-sm text-gray-700 italic">
@@ -180,7 +180,7 @@ function OAuthForm({ redirectId }: { redirectId: string }) {
           <Content>
             <p>
               <span className="font-bold">{data.appName}</span> wants access to
-              your Instant account.
+              your daabase account.
             </p>
           </Content>
         </div>

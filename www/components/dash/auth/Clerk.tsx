@@ -61,7 +61,7 @@ function ClerkSignedInComponent() {
       return;
     }
 
-    // Create a long-lived session with Instant for your clerk user
+    // Create a long-lived session with daabase for your clerk user
     // It will look up the user by email or create a new user with
     // the email address in the session token.
     db.auth.signInWithIdToken({
@@ -80,15 +80,15 @@ function ClerkSignedInComponent() {
     return <div>Loading...</div>;
   }
   if (error) {
-    return <div>Error signing in to Instant! {error.message}</div>;
+    return <div>Error signing in to daabase! {error.message}</div>;
   }
   if (user) {
     return (
       <div>
-        <p>Signed in with Instant through Clerk!</p>{" "}
+        <p>Signed in with daabase through Clerk!</p>{" "}
         <button
           onClick={() => {
-            // First sign out of Instant to clear the Instant session.
+            // First sign out of daabase to clear the daabase session.
             db.auth.signOut().then(() => {
               // Then sign out of Clerk to clear the Clerk session.
               signOut();
@@ -103,7 +103,7 @@ function ClerkSignedInComponent() {
   return (
     <div>
       <button onClick={signInToInstantWithClerkToken}>
-        Sign in to Instant
+        Sign in to daabase
       </button>
     </div>
   );
@@ -328,7 +328,7 @@ export function ClerkClient({
                   verified emails. Make sure your JWT includes the{' '}
                   <code>email_verified</code> claim. If the claim is missing or
                   the email is not verified, we won't set the email for that
-                  user when they sign in with Instant.
+                  user when they sign in with daabase.
                 </>
               )}
             </p>
@@ -367,7 +367,7 @@ export function ClerkClient({
       <Content className="dark:text-white">
         <strong>2.</strong> Use{' '}
         <code className="dark:text-white">db.auth.signInWithIdToken</code> to
-        link your Clerk user to Instant.
+        link your Clerk user to daabase.
       </Content>
 
       <div className="overflow-auto rounded-sm border text-sm dark:border-none">

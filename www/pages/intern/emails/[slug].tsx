@@ -6,7 +6,7 @@ const TextView = ({ textBody }: { textBody: string }) => {
   return (
     <>
       <Head>
-        <title>Instant Email Previewer</title>
+        <title>daabase Email Previewer</title>
         <meta
           name="description"
           content="Relational Database, on the client."
@@ -64,12 +64,12 @@ const HTMLView = ({
 }) => {
   const replaceUrl = getImgReplaceUrl();
   const body = useLocalImages
-    ? htmlBody.replaceAll('https://www.instantdb.com/img/emails', replaceUrl)
+    ? htmlBody.replaceAll('https://daabase-dash.apps.devtik.xyz/img/emails', replaceUrl)
     : htmlBody;
   return (
     <>
       <Head>
-        <title>Instant Email Previewer</title>
+        <title>daabase Email Previewer</title>
         <meta
           name="description"
           content="Relational Database, on the client."
@@ -165,7 +165,7 @@ const Email = ({
   return (
     <>
       <Head>
-        <title>Instant Email Previewer</title>
+        <title>daabase Email Previewer</title>
         <meta
           name="description"
           content="Relational Database, on the client."

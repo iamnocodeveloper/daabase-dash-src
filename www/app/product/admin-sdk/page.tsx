@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Content from './content';
 
-const title = 'Admin SDK - Instant';
+const title = 'Admin SDK - daabase';
 const description =
-  'Use Instant on your backend with elevated permissions. Same APIs, server-side power.';
+  'Use daabase on your backend with elevated permissions. Same APIs, server-side power.';
 
 export const metadata: Metadata = {
   title,

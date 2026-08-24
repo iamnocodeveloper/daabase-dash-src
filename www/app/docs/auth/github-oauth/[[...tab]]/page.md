@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: 'GitHub OAuth'
-    description: 'How to add GitHub OAuth to your Instant app.'
+    description: 'How to add GitHub OAuth to your daabase app.'
 ---
 
 {% nav-default value="web-redirect" %}
 
-Instant supports logging users in with their GitHub account. GitHub uses OAuth 2.0 for authentication, which provides a secure way for users to sign in without sharing their passwords.
+daabase supports logging users in with their GitHub account. GitHub uses OAuth 2.0 for authentication, which provides a secure way for users to sign in without sharing their passwords.
 
 Choose the option that sounds best to you, and the rest of the document will show you how to add Sign in with GitHub to your app.
 
@@ -41,7 +41,7 @@ Choose the option that sounds best to you, and the rest of the document will sho
 There are three main steps:
 
 1. **GitHub Developer Settings**: Create an OAuth App.
-2. **Instant Dashboard**: Connect your OAuth App to Instant.
+2. **daabase Dashboard**: Connect your OAuth App to daabase.
 3. **Your app**: Add code to log in with GitHub!
 
 Let's dive deeper into each step:
@@ -59,15 +59,15 @@ Let's dive deeper into each step:
 6. After creation, you'll see your **Client ID**.
 7. Click "Generate a new client secret" to get your **Client Secret**.
 
-## 2. Connect your OAuth App to Instant
+## 2. Connect your OAuth App to daabase
 
-**Add your OAuth App on Instant**
+**Add your OAuth App on daabase**
 
 {% setup-paths %}
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard:
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard:
 
 - Click "Set up GitHub"
 - Enter a unique name for your client (e.g., "github-web")
@@ -91,7 +91,7 @@ npx instant-cli@latest auth client add \
 
 {% conditional param="method" value="web-redirect" %}
 
-**Register your website with Instant**
+**Register your website with daabase**
 
 If you're testing from localhost, add `http://localhost:3000` (replacing `3000` with the port you use). For production, add your website's domain.
 
@@ -99,7 +99,7 @@ If you're testing from localhost, add `http://localhost:3000` (replacing `3000` 
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard, add your URL to the **Redirect Origins** list.
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard, add your URL to the **Redirect Origins** list.
 
 {% /dashboard-path %}
 
@@ -137,7 +137,7 @@ const db = init({ appId: APP_ID });
 
 export default function App() {
   const url = db.auth.createAuthorizationURL({
-    // Use the GitHub client name from the Instant dashboard auth tab
+    // Use the GitHub client name from the daabase dashboard auth tab
     clientName: 'github-web',
     redirectURL: window.location.href,
   });
@@ -166,7 +166,7 @@ function Login({ url }) {
 
 When your users click on the link, they'll be redirected to GitHub to authorize your app, then back to your site.
 
-Instant will automatically log them in to your app when they are redirected!
+daabase will automatically log them in to your app when they are redirected!
 
 {% /conditional %}
 
@@ -174,10 +174,10 @@ Instant will automatically log them in to your app when they are redirected!
 
 **Method: Expo Web Auth**
 
-Instant comes with support for Expo's AuthSession library. To use it, you need to:
+daabase comes with support for Expo's AuthSession library. To use it, you need to:
 
 1. Set up AuthSession
-2. Register your app with Instant
+2. Register your app with daabase
 3. Use AuthSession to log in with GitHub!
 
 Let's do that.
@@ -202,15 +202,15 @@ Update your app.json with your scheme:
 }
 ```
 
-**Register your app with Instant**
+**Register your app with daabase**
 
-Now that you have your App Scheme, it's time to tell Instant about it. For development with Expo, add `exp://` and your scheme (e.g. `mycoolredirect://`) as redirect origins.
+Now that you have your App Scheme, it's time to tell daabase about it. For development with Expo, add `exp://` and your scheme (e.g. `mycoolredirect://`) as redirect origins.
 
 {% setup-paths %}
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard, add a redirect origin of type "App scheme".
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard, add a redirect origin of type "App scheme".
 
 {% screenshot src="/img/docs/rn-web-redirect-origins.png" /%}
 
@@ -272,7 +272,7 @@ function Login() {
   const [request, _response, promptAsync] = useAuthRequest(
     {
       // The unique name you gave the OAuth client when you
-      // registered it on the Instant dashboard
+      // registered it on the daabase dashboard
       clientId: 'github-web',
       redirectUri: makeRedirectUri(),
     },
@@ -307,7 +307,7 @@ export default App;
 
 ## Scopes
 
-GitHub uses OAuth scopes to control access. The basic scopes Instant requests are:
+GitHub uses OAuth scopes to control access. The basic scopes daabase requests are:
 
 - `read:user` - Read access to profile information
 - `user:email` - Read access to email addresses

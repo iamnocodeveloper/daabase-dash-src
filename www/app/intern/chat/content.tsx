@@ -42,7 +42,7 @@ export default function AIChatUsagePage() {
           <div className="mt-12 mb-8 text-center">
             <H2>Access Denied</H2>
             <p className="mt-4 text-gray-600">
-              You need to be an Instant admin to access this page.
+              You need to be an daabase admin to access this page.
             </p>
           </div>
         </Section>

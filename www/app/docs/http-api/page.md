@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Admin HTTP API'
-    description: "Direct HTTP access to Instant's admin API for non-JavaScript environments."
+    description: "Direct HTTP access to daabase's admin API for non-JavaScript environments."
 ---
 
-If your backend is written in JavaScript, you can use the [`@instantdb/admin`](/docs/backend) SDK to connect your server to Instant.
+If your backend is written in JavaScript, you can use the [`@instantdb/admin`](/docs/backend) SDK to connect your server to daabase.
 
 But what if your backend isn't written in JavaScript? That's where the HTTP API comes in.
 
@@ -70,8 +70,8 @@ curl -X POST "https://api.instantdb.com/admin/transact" \
   -d '{"steps":[["update","todos","<a-todo-uuid>",{"title":"Get fit"}]]}'
 ```
 
-`steps` is the internal representation of Instant transactions. Here's how they
-map to the [Instant transactions](/docs/instaml) you know:
+`steps` is the internal representation of daabase transactions. Here's how they
+map to the [daabase transactions](/docs/instaml) you know:
 
 ```javascript
 [
@@ -269,7 +269,7 @@ curl -X POST "https://api.instantdb.com/admin/refresh_tokens" \
   -d "{\"id\":\"$USER_ID\"}"
 ```
 
-If a user with the given `id` or `email` does not exist, Instant will create the
+If a user with the given `id` or `email` does not exist, daabase will create the
 user for you. You can pass `extra-fields` to set custom `$users` properties on creation. The response includes `user.refresh_token` and `"created": true` when a new user is created. You can pass this token on to your client and use it to [log in](/docs/backend#2-frontend-db-auth-sign-in-with-token).
 
 ## Custom magic codes
@@ -284,7 +284,7 @@ curl -X POST "https://api.instantdb.com/admin/magic_code" \
   -d '{"email":"alyssa_p_hacker@instantdb.com"}'
 ```
 
-You can also use Instant's default email provider to send a magic code:
+You can also use daabase's default email provider to send a magic code:
 
 ```shell
 curl -X POST "https://api.instantdb.com/admin/send_magic_code" \

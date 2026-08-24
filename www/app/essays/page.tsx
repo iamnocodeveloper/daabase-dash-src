@@ -11,7 +11,7 @@ import { authorFirstName, formatDuration } from '@/lib/postUtils';
 import { getAllPosts, type Author, type Post } from '@/lib/posts';
 
 export const metadata: Metadata = {
-  title: 'Instant Essays',
+  title: 'daabase Essays',
   alternates: {
     types: {
       'application/rss+xml': '/rss.xml',

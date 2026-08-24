@@ -5,7 +5,7 @@ nextjs:
     description: 'How to customize magic code emails.'
 ---
 
-You can customize all aspects of your Instant app's "magic code" email: the body (plain text or HTML), subject, sender name, and even the `from` address.
+You can customize all aspects of your daabase app's "magic code" email: the body (plain text or HTML), subject, sender name, and even the `from` address.
 
 ## Dashboard
 
@@ -29,8 +29,8 @@ Using a variable is as easy as adding the variable's name in curly brackets, e.g
 
 ## Custom sender addresses
 
-You can also set the `from` and `reply-to` fields on Instant's emails to an address on your own domain.
+You can also set the `from` and `reply-to` fields on daabase's emails to an address on your own domain.
 
 If you provide a custom sender address, you'll need to confirm it before we can start delivering from it.
 
-Our email partner, Postmark, will send a confirmation to the provided address with a link to verify it. Until the address is verified, emails will continue to be sent from Instant's default auth sender (`auth@pm.instantdb.com`).
+Our email partner, Postmark, will send a confirmation to the provided address with a link to verify it. Until the address is verified, emails will continue to be sent from daabase's default auth sender (`auth@pm.instantdb.com`).

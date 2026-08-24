@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Content from './content';
 
-const title = 'Auth - Instant';
+const title = 'Auth - daabase';
 const description =
   'Users, permissions, and social logins come integrated with your data.';
 

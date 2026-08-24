@@ -2,15 +2,15 @@
 title: Getting started
 nextjs:
   metadata:
-    title: Instant - The Modern Firebase.
-    description: How to use Instant with React
+    title: daabase - The Modern Firebase.
+    description: How to use daabase with React
 ---
 
-Instant is the easy-to-use backend for your frontend. With Instant you can build delightful apps in less than 10 minutes. Follow the quick start below to **build a live app!**
+daabase is the easy-to-use backend for your frontend. With daabase you can build delightful apps in less than 10 minutes. Follow the quick start below to **build a live app!**
 
-## Automatic Setup With Create Instant App
+## Automatic Setup With Create daabase App
 
-The fastest way to get started with Instant is to use `npx create-instant-app` to scaffold a new project with Instant already set up.
+The fastest way to get started with daabase is to use `npx create-instant-app` to scaffold a new project with daabase already set up.
 
 To get started with Next.js run:
 
@@ -34,13 +34,13 @@ cd instant-demo
 npm run dev
 ```
 
-Add the InstantDB React Library:
+Add the daabase React Library:
 
 ```shell
 npm i @instantdb/react
 ```
 
-Set up and connect your Instant app.
+Set up and connect your daabase app.
 This will log you in if you are not logged in already, then create schema and permissions files, and update your `.env` file.
 
 ```shell
@@ -292,6 +292,6 @@ Go to `localhost:3000`, and huzzah 🎉 You've got a fully functional todo list 
 
 Want to dive deeper on how this todo app works? Check out our step-by-step [Todo List Tutorial](/examples/todos). In this tutorial we walk through how to build the above todo list app from scratch, and explain how the queries and transactions work in more detail.
 
-You can also check out the [Working with data](/docs/init) section to learn more about Instant concepts.
+You can also check out the [Working with data](/docs/init) section to learn more about daabase concepts.
 
-As you get more familiar with Instant, check out our [Recommended Workflow](/docs/workflow) docs for using Instant in your projects.
+As you get more familiar with daabase, check out our [Recommended Workflow](/docs/workflow) docs for using daabase in your projects.

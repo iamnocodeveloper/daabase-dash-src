@@ -2,14 +2,14 @@
 nextjs:
   metadata:
     title: 'Streams'
-    description: 'How to stream and persist data with Instant.'
+    description: 'How to stream and persist data with daabase.'
 ---
 
-Instant Streams provide a simple way to build durable, real-time data flows. They are excellent for LLM-native applications, making it easy to stream AI chat completions.
+daabase Streams provide a simple way to build durable, real-time data flows. They are excellent for LLM-native applications, making it easy to stream AI chat completions.
 
 ## How Streams work
 
-Instant streams implement the standard [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API). When you create a write stream, the most recent data is buffered in memory on Instant's servers. The stream is periodically flushed to [Storage](/docs/storage) and is fully flushed to storage when finished.
+daabase streams implement the standard [Web Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API). When you create a write stream, the most recent data is buffered in memory on daabase's servers. The stream is periodically flushed to [Storage](/docs/storage) and is fully flushed to storage when finished.
 
 Because streams are backed by storage, they never expire. A reader can pick up from any point in the stream, and resume if the connection is lost.
 
@@ -39,7 +39,7 @@ await writer.close();
 Use `db.streams.createReadStream({ clientId })` or `db.streams.createReadStream({ streamId })` to read from a stream.
 
 - `clientId`: Find the stream by the client-provided ID.
-- `streamId`: Find the stream by the server-generated UUID that Instant assigns when the stream is created.
+- `streamId`: Find the stream by the server-generated UUID that daabase assigns when the stream is created.
 - `byteOffset`: Optionally start reading from a specific offset.
 
 If the stream does not exist, the stream will enter an error state and return an error from `read()`.
@@ -325,9 +325,9 @@ export async function GET(
 
 ## Resume directly from the client
 
-The key advantage of Instant is that the client can reconnect to the stream **directly from the browser** without hitting your backend again.
+The key advantage of daabase is that the client can reconnect to the stream **directly from the browser** without hitting your backend again.
 
-By implementing a custom `DefaultChatTransport`, the Vercel AI SDK will automatically use Instant to resume any interrupted streams.
+By implementing a custom `DefaultChatTransport`, the Vercel AI SDK will automatically use daabase to resume any interrupted streams.
 
 ```tsx {% showCopy=true %}
 import { useMemo } from 'react';
@@ -379,7 +379,7 @@ function Chat() {
 }
 ```
 
-Below is a full example that includes storing chat data in Instant and uses Instant auth for authorization.
+Below is a full example that includes storing chat data in daabase and uses daabase auth for authorization.
 
 If you want to jump into building an app, `create-instant-app` has a working template that uses this pattern:
 
@@ -505,7 +505,7 @@ export const db = init({
 
 ### Client components
 
-By implementing a custom `DefaultChatTransport`, the Vercel AI SDK will automatically use Instant to resume any interrupted streams directly from the browser without hitting your backend again.
+By implementing a custom `DefaultChatTransport`, the Vercel AI SDK will automatically use daabase to resume any interrupted streams directly from the browser without hitting your backend again.
 
 ```tsx {% showCopy=true %}
 'use client';
@@ -576,7 +576,7 @@ function ChatInner({
 }
 
 export function Chat({ id }: { id: string }) {
-  // Fetch messages from Instant
+  // Fetch messages from daabase
   const {
     isLoading: isLoadingData,
     error: queryError,
@@ -638,7 +638,7 @@ export function Chat({ id }: { id: string }) {
 
 ### Server-side: Create the POST handler
 
-The POST handler saves the user message and pipes the AI completion to an Instant write stream.
+The POST handler saves the user message and pipes the AI completion to an daabase write stream.
 
 ```ts {% showCopy=true %}
 // app/api/chat/route.ts

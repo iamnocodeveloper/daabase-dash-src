@@ -119,6 +119,11 @@ function FavIconMeta() {
       />
       <link
         rel="icon"
+        type="image/svg+xml"
+        href="/img/icon/favicon-96x96.svg"
+      />
+      <link
+        rel="icon"
         type="image/png"
         href="/img/icon/favicon-196x196.png"
         sizes="196x196"
@@ -147,7 +152,7 @@ function FavIconMeta() {
         href="/img/icon/favicon-128.png"
         sizes="128x128"
       />
-      <meta name="application-name" content="Instant" />
+      <meta name="application-name" content="daabase" />
       <meta name="msapplication-TileColor" content="#FFFFFF" />
       <meta name="msapplication-TileImage" content="mstile-144x144.png" />
       <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
@@ -167,6 +172,7 @@ function FavIconMeta() {
 function AppHead() {
   return (
     <Head>
+      <title>daabase</title>
       <FavIconMeta />
       <meta
         name="viewport"

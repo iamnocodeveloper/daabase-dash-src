@@ -8,7 +8,7 @@ import { Section } from '@/components/new-landing/Section';
 import { SectionTitle } from '@/components/new-landing/typography';
 
 export const metadata: Metadata = {
-  title: 'Instant Recipes',
+  title: 'daabase Recipes',
 };
 
 export default function Page() {

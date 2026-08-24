@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Content from './content';
 
-const title = 'Sync Engine - Instant';
+const title = 'Sync Engine - daabase';
 const description =
   'Make every feature feel instant, be collaborative, and work offline. No extra code required.';
 

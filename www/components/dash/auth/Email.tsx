@@ -361,7 +361,7 @@ export function Email({
                   onClick={useInstantSender}
                   className="self-start text-sm text-gray-500 hover:text-gray-700 dark:text-neutral-400 dark:hover:text-neutral-200"
                 >
-                  Use Instant's address instead
+                  Use daabase's address instead
                 </button>
               </div>
             ) : (

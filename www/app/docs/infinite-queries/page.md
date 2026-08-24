@@ -5,7 +5,7 @@ nextjs:
     description: How to subscribe to large amounts of data incrementally
 ---
 
-It is a common pattern to show users a long list of items that gets larger as they interact. Instant supports this pattern with the `useInfiniteQuery` hook.
+It is a common pattern to show users a long list of items that gets larger as they interact. daabase supports this pattern with the `useInfiniteQuery` hook.
 
 The useInfiniteQuery hook is designed to work just like the useQuery hook. You make the same kind of queries, and it returns the same kind of data. But now you get a canLoadNextPage variable and a loadNextPage function to load more items.
 

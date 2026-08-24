@@ -1,31 +1,31 @@
 ---
 nextjs:
   metadata:
-    title: 'Using Instant with LLMs'
-    description: 'How to use Instant with LLMs'
+    title: 'Using daabase with LLMs'
+    description: 'How to use daabase with LLMs'
 ---
 
-You can supercharge your Instant experience by using it with LLMs. Just add our Instant rules and you're off to the races!
+You can supercharge your daabase experience by using it with LLMs. Just add our daabase rules and you're off to the races!
 
-## Instant Skill
+## daabase Skill
 
-The fastest way to add rules to your LLM tool is to add the Instant skill.
+The fastest way to add rules to your LLM tool is to add the daabase skill.
 
 ```text {% showCopy="true" %}
 npx skills add instantdb/skills
 ```
 
-This will give your agent the context it needs to work with InstantDB.
+This will give your agent the context it needs to work with daabase.
 
 You can verify you set up the rules correctly by asking your LLM "How do you
-make queries and transactions in InstantDB?" If everything is set up correctly,
+make queries and transactions in daabase?" If everything is set up correctly,
 you should see a response with information about `db.useQuery` and `db.transact`.
 
 If you'd prefer to manually install the rules instead, see the section below.
 
-## Instant Rules
+## daabase Rules
 
-We've created a set of rules to help LLMs understand how Instant works. If you
+We've created a set of rules to help LLMs understand how daabase works. If you
 start a new project with `create-instant-app` you'll get these rules
 automatically. If you have an existing project you can add the rules manually.
 
@@ -44,25 +44,25 @@ particular functionality. For example, here are the recommended docs for [adding
 
 We recommend starting with the rules files above and adding more docs as needed.
 If you want though you can get all our docs at once in markdown format via
-[llms-full.txt](https://www.instantdb.com/llms-full.txt)
+[llms-full.txt](https://daabase-dash.apps.devtik.xyz/llms-full.txt)
 
-## Instant MCP Server
+## daabase MCP Server
 
-We built [`@instantdb/mcp`](https://github.com/instantdb/instant/tree/main/client/packages/mcp) to enable creating, managing, and updating your Instant apps.
+We built [`@instantdb/mcp`](https://github.com/instantdb/instant/tree/main/client/packages/mcp) to enable creating, managing, and updating your daabase apps.
 Combine the MCP with our rules file to build full-stack apps directly in your editor.
 
 The easiest way to get started is to use our hosted remote MCP server. Use the
-instructions below to add the Instant MCP server to your favorite LLM editor or tool.
+instructions below to add the daabase MCP server to your favorite LLM editor or tool.
 
 {% callout type="note" %}
 
-When you add the MCP server, you'll be sent through an OAuth flow to grant access to your Instant Account.
+When you add the MCP server, you'll be sent through an OAuth flow to grant access to your daabase Account.
 
 {% /callout %}
 
 ### Cursor
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=InstantDB&config=eyJ1cmwiOiJodHRwczovL21jcC5pbnN0YW50ZGIuY29tL21jcCJ9)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=daabase&config=eyJ1cmwiOiJodHRwczovL21jcC5pbnN0YW50ZGIuY29tL21jcCJ9)
 
 Or edit your `~/.cursor/mcp.json` directly:
 
@@ -86,7 +86,7 @@ claude mcp add instant -s user -t http https://mcp.instantdb.com/mcp
 
 Now you can run `claude` to start Claude Code and then run `/mcp` to see your list
 of MCP servers. `instant` should be listed there. Select it and go through the
-auth flow to enable the Instant MCP server in your Claude Code sessions!
+auth flow to enable the daabase MCP server in your Claude Code sessions!
 
 ### Codex
 
@@ -105,9 +105,9 @@ Tell Codex to add the MCP server:
 codex mcp add instant --url "https://mcp.instantdb.com/mcp"
 ```
 
-This should load a browser to authenticate with Instant.
+This should load a browser to authenticate with daabase.
 
-Now run `codex` to start Codex. You can run `/mcp` to see Instant in your list.
+Now run `codex` to start Codex. You can run `/mcp` to see daabase in your list.
 
 ### Gemini
 
@@ -117,13 +117,13 @@ If you're on a paid Google AI plan, you can add the server via the command line:
 gemini mcp add --transport http instant https://mcp.instantdb.com/mcp
 ```
 
-This should load a browser to authenticate with Instant.
+This should load a browser to authenticate with daabase.
 
-Now run `gemini` to start Gemini. You can run `/mcp` to see Instant in your list.
+Now run `gemini` to start Gemini. You can run `/mcp` to see daabase in your list.
 
 ### Windsurf
 
-You can add the Instant MCP server through the Windsurf UI:
+You can add the daabase MCP server through the Windsurf UI:
 
 1. Open Windsurf Settings.
 2. Under Cascade, you'll find Model Context Protocol Servers.
@@ -191,7 +191,7 @@ Open your Zed settings and add the following:
 
 ### Other Tools
 
-For other tools that support MCP servers, you can configure Instant using either our streamable HTTP
+For other tools that support MCP servers, you can configure daabase using either our streamable HTTP
 endpoint (recommended if your tool supports it):
 
 ```text {% showCopy="true" %}
@@ -213,14 +213,14 @@ access token.
 ### Get your Personal Access Token
 
 If you haven't already, make sure to get a personal access token from your
-[Instant dashboard](https://www.instantdb.com/dash?s=personal-access-tokens)
+[daabase dashboard](https://daabase-dash.apps.devtik.xyz/dash?s=personal-access-tokens)
 
-Once you have your token, you can set up the local Instant MCP server in your
+Once you have your token, you can set up the local daabase MCP server in your
 favorite editor with MCP support.
 
 ### Cursor/Windsurf/Cline
 
-You can set up the Instant MCP server in Cursor, Windsurf, or Cline by adding
+You can set up the daabase MCP server in Cursor, Windsurf, or Cline by adding
 the following configuration to your MCP settings:
 
 **macOS/Linux**
@@ -263,7 +263,7 @@ the following configuration to your MCP settings:
 ```
 
 Replace `<token>` with your personal access token. Save the file and reload
-the editor! You should now see the Instant MCP server active and enabled!
+the editor! You should now see the daabase MCP server active and enabled!
 
 ### Zed
 
@@ -285,11 +285,11 @@ Open your Zed settings and add the following:
 ```
 
 Replace `<token>` with your personal access token. Save the file and reload the editor.
-You should now see the Instant MCP server active and enabled!
+You should now see the daabase MCP server active and enabled!
 
 ### Claude Desktop
 
-You can set up the Instant MCP server in Claude Desktop by following these
+You can set up the daabase MCP server in Claude Desktop by following these
 steps:
 
 1. Open the file `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -307,13 +307,13 @@ steps:
 ```
 
 Replace `<token>` with your personal access token. Save the file and restart
-Claude Desktop. You should now see the Instant MCP server active and enabled!
+Claude Desktop. You should now see the daabase MCP server active and enabled!
 
 ## MCP Tools
 
 Below is a list of the current tools we expose:
 
-- `learn` Fetch rules files if needed to help the LLM understand InstantDB.
+- `learn` Fetch rules files if needed to help the LLM understand daabase.
 - `get-schema` Retrieves the schema for a specific app.
 - `get-perms` Retrieves permission rules for an app.
 - `push-schema` Applies schema changes to an app.

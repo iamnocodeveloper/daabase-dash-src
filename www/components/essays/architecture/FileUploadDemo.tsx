@@ -12,7 +12,7 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { type DemoState } from './Demos';
 import { createDemoApp } from './createDemoApp';
 
-type InstantDB = InstantReactWebDatabase<InstantUnknownSchema>;
+type daabase = InstantReactWebDatabase<InstantUnknownSchema>;
 
 const VIDA_IMAGES = [
   { url: '/img/essays/vida.jpg', name: 'vida.jpg' },
@@ -66,7 +66,7 @@ export default function FileUploadDemo({
 }
 
 function FileUploadPreview({ appId }: { appId: string }) {
-  const dbRef = useRef<InstantDB | null>(null);
+  const dbRef = useRef<daabase | null>(null);
 
   if (!dbRef.current) {
     dbRef.current = init({
@@ -89,7 +89,7 @@ function FileUploadPreview({ appId }: { appId: string }) {
   );
 }
 
-function FileUploadLayout({ db, appId }: { db: InstantDB; appId: string }) {
+function FileUploadLayout({ db, appId }: { db: daabase; appId: string }) {
   const [dragOver, setDragOver] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploaded, setUploaded] = useState(false);
@@ -269,7 +269,7 @@ function CreateTodoWithImage({
   text,
   setText,
 }: {
-  db: InstantDB;
+  db: daabase;
   dragOver: boolean;
   uploading: boolean;
   uploaded: boolean;

@@ -54,13 +54,13 @@ function Main({ files }: { files: File[] }) {
   const [selectedExample, setSelectedExample] = useState<string | undefined>();
   const [appId, setAppId] = useState<string | undefined>(undefined);
   const [host, setHost] = useState<string | undefined>(undefined);
-  const columnDbsRef = useRef<InstantDB[]>([]);
+  const columnDbsRef = useRef<daabase[]>([]);
 
   useEffect(() => {
     setHost(window.location.host);
   }, []);
 
-  function getColumnDb(appId: string, index: number): InstantDB {
+  function getColumnDb(appId: string, index: number): daabase {
     while (columnDbsRef.current.length <= index) {
       const i = columnDbsRef.current.length;
       columnDbsRef.current.push(
@@ -156,7 +156,7 @@ function Main({ files }: { files: File[] }) {
           className="flex w-full max-w-md flex-col gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3"
         >
           <p className="text-left text-sm text-gray-500">
-            P.S we made an Instant app just for you! Share this with your
+            P.S we made an daabase app just for you! Share this with your
             friends and you can play with every example together.
           </p>
           <div className="flex items-center gap-2 rounded-md bg-gray-50 px-3 py-1.5">
@@ -208,7 +208,7 @@ function Example({
   file: File;
   appId: string | undefined;
   host: string | undefined;
-  getColumnDb: (appId: string, index: number) => InstantDB;
+  getColumnDb: (appId: string, index: number) => daabase;
   onViewChange: (inView: boolean) => void;
   lazy: boolean;
 }) {
@@ -333,7 +333,7 @@ function Example({
   );
 }
 
-function RoomStatus({ db, appId }: { db: InstantDB; appId: string }) {
+function RoomStatus({ db, appId }: { db: daabase; appId: string }) {
   const room = db.room('recipes', appId);
   const presence = room.usePresence();
   const numPeers = Object.keys(presence.peers).length;
@@ -356,7 +356,7 @@ function RoomStatus({ db, appId }: { db: InstantDB; appId: string }) {
   );
 }
 
-type InstantDB = InstantReactWebDatabase<InstantUnknownSchema>;
+type daabase = InstantReactWebDatabase<InstantUnknownSchema>;
 
 function recipesUrl(appId: string) {
   return 'https://instantdb.com/recipes?app=' + appId;

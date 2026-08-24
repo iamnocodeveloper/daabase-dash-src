@@ -136,7 +136,7 @@ function ExampleDetail({ app }: { app: ExampleApp }) {
       <div className="mx-auto mt-8 max-w-2xl border border-dashed border-orange-600 bg-orange-50/50 px-4 pt-2 pb-4">
         <div className="py-4 text-sm font-light">
           What did you think of this example? Are there any other apps you'd
-          like to see implemented with InstantDB? Let us know and we'll do our
+          like to see implemented with daabase? Let us know and we'll do our
           best to add it!
         </div>
         <RatingBox pageId={`examples/${slug}`} />

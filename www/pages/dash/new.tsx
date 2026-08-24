@@ -40,7 +40,7 @@ function NewApp() {
         <div className="flex max-w-md flex-col gap-4 text-center">
           <ScreenHeading>New app creation is closed</ScreenHeading>
           <Content>
-            Instant is winding down and isn&apos;t accepting new apps. Read the{' '}
+            daabase is winding down and isn&apos;t accepting new apps. Read the{' '}
             <Link
               href={sunsetPostPath}
               className="underline underline-offset-2"

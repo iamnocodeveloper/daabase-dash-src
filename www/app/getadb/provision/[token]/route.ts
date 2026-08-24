@@ -44,7 +44,7 @@ export async function GET(
   });
 }
 
-const DEFAULT_APP_TITLE = 'Instant App';
+const DEFAULT_APP_TITLE = 'daabase App';
 
 function placeholderNotReplacedMarkdown(): string {
   return `You fetched the provision URL without replacing the placeholder.

@@ -463,7 +463,7 @@ export default function Storage() {
                 No need for a separate file storage system
               </Subheading>
               <p className="mt-2 text-base">
-                Instant comes with built-in file storage. No S3 buckets to
+                daabase comes with built-in file storage. No S3 buckets to
                 configure, no signed URLs to manage.
               </p>
               <p className="mt-2 text-base">
@@ -489,7 +489,7 @@ export default function Storage() {
               <div className="space-y-4 md:max-w-[440px]">
                 <Subheading>Files are integrated into your database</Subheading>
                 <p className="mt-2 text-base">
-                  Files are stored alongside other entities in Instant. Upload
+                  Files are stored alongside other entities in daabase. Upload
                   them, link them to your data, and query with InstaQL just like
                   any other table.
                 </p>

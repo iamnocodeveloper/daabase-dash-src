@@ -3,8 +3,8 @@ import { webMetas, mobileMetas } from '@/lib/examples/data';
 import Content from '../showcase';
 
 export const metadata: Metadata = {
-  title: 'InstantDB Examples',
-  description: 'Learn Instant through example apps',
+  title: 'daabase Examples',
+  description: 'Learn daabase through example apps',
 };
 
 export default function Page() {

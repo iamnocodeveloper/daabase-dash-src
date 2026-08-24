@@ -174,7 +174,7 @@ function RestoreDialog({
             need to update them from the `Auth` tab after the restore finishes.
           </Content>
           <div className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
-            Only upload zip files that were downloaded from a valid Instant
+            Only upload zip files that were downloaded from a valid daabase
             backup.
           </div>
           {email && (
@@ -385,7 +385,7 @@ function RestoreContent() {
       <div>
         <H2>Restore from backup</H2>
         <p className="mt-2 text-gray-600">
-          Restore an app from a backup zip you downloaded from Instant.
+          Restore an app from a backup zip you downloaded from daabase.
         </p>
       </div>
 
@@ -437,7 +437,7 @@ export default function RestorePage() {
           <div className="mt-12 mb-8 text-center">
             <H2>Access Denied</H2>
             <p className="mt-4 text-gray-600">
-              You need to be an Instant admin to access this page.
+              You need to be an daabase admin to access this page.
             </p>
           </div>
         </Section>
@@ -461,7 +461,7 @@ export default function RestorePage() {
 TODOs
   1. [DRAFTED] Better explanation of what this does.
        Added intro + dialog copy, but the wording still needs your review.
-  2. [DONE] Warn that the zip should be a backup downloaded from Instant.
+  2. [DONE] Warn that the zip should be a backup downloaded from daabase.
   3. [DONE] Explain the app is assigned to the signed-in user (shows the email).
   4. [DONE] "Start restore" button opens a dialog with the form.
   5. [BUILT, UNVERIFIED] Show the last N restores (GET /dash/restore-jobs + list).

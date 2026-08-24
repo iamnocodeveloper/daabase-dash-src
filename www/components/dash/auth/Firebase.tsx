@@ -49,7 +49,7 @@ function App() {
   return (
     <div>
       <db.SignedIn>
-        <div>Logged in to Firebase Auth and Instant!</div>
+        <div>Logged in to Firebase Auth and daabase!</div>
       </db.SignedIn>
       <db.SignedOut>
         <div>Log in with Firebase Auth.</div>
@@ -204,7 +204,7 @@ export function FirebaseClient({
 
       <Content>
         Use <code className="dark:text-white">db.auth.signInWithIdToken</code>{' '}
-        to link your Firebase user to Instant.
+        to link your Firebase user to daabase.
       </Content>
 
       <div className="overflow-auto rounded-sm border text-sm dark:border-none">

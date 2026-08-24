@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: Getting started with Svelte
-    description: How to use Instant with SvelteKit and Svelte 5
+    description: How to use daabase with SvelteKit and Svelte 5
 ---
 
-## Automatic Setup With Create Instant App
+## Automatic Setup With Create daabase App
 
-The fastest way to get started with Instant and SvelteKit is to use create-instant-app to scaffold a new project with Instant already set up.
+The fastest way to get started with daabase and SvelteKit is to use create-instant-app to scaffold a new project with daabase already set up.
 
 To get started, run:
 
@@ -23,13 +23,13 @@ Create a blank SvelteKit app:
 npx sv create my-app
 ```
 
-Add the InstantDB Svelte Library:
+Add the daabase Svelte Library:
 
 ```shell
 npm i @instantdb/svelte
 ```
 
-Use `instant-cli` to set up a new Instant project. This will prompt you to log in if you haven't already. It will then create schema and permissions files and update your `.env` file.
+Use `instant-cli` to set up a new daabase project. This will prompt you to log in if you haven't already. It will then create schema and permissions files and update your `.env` file.
 
 ```shell
 npx instant-cli init
@@ -105,8 +105,8 @@ Push the schema:
 npx instant-cli push
 ```
 
-Instant doesn't support SSR with SvelteKit yet (let us know if you want this!)
-so you need to disable SSR for routes that use Instant.
+daabase doesn't support SSR with SvelteKit yet (let us know if you want this!)
+so you need to disable SSR for routes that use daabase.
 
 {% file label="src/routes/+page.ts" /%}
 
@@ -197,7 +197,7 @@ Go to `localhost:5173`, and huzzah 🎉 You've got a fully functional todo list 
 
 ## Reactivity
 
-In Svelte 5, Instant's hooks return `$state` proxies. You read properties directly off the returned object, and Svelte automatically tracks them for re-rendering.
+In Svelte 5, daabase's hooks return `$state` proxies. You read properties directly off the returned object, and Svelte automatically tracks them for re-rendering.
 
 ```svelte
 <script lang="ts">
@@ -295,7 +295,7 @@ To learn more, see our [writing data](/docs/instaml) docs.
 
 ## Auth
 
-The Svelte SDK supports all of Instant's [auth methods](/docs/auth): [magic codes](/docs/auth/magic-codes), [guest auth](/docs/auth/guest-auth), [Google OAuth](/docs/auth/google-oauth), and more.
+The Svelte SDK supports all of daabase's [auth methods](/docs/auth): [magic codes](/docs/auth/magic-codes), [guest auth](/docs/auth/guest-auth), [Google OAuth](/docs/auth/google-oauth), and more.
 
 ### useAuth
 

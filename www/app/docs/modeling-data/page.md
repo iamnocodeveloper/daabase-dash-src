@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Modeling data'
-    description: "How to model data with Instant's schema."
+    description: "How to model data with daabase's schema."
 ---
 
-In this section we’ll learn how to model data using Instant's schema. By the end of this document you’ll know how to:
+In this section we’ll learn how to model data using daabase's schema. By the end of this document you’ll know how to:
 
 - Create namespaces and attributes
 - Add indexes and unique constraints
@@ -16,13 +16,13 @@ We’ll build a micro-blog to illustrate; we'll have authors, posts, comments, a
 
 ## Schema as Code
 
-With Instant you can define your schema and your permissions in code. If you haven't already, use the [CLI](/docs/cli) to generate an `instant.schema.ts` and an `instant.perms.ts` file:
+With daabase you can define your schema and your permissions in code. If you haven't already, use the [CLI](/docs/cli) to generate an `instant.schema.ts` and an `instant.perms.ts` file:
 
 ```shell {% showCopy=true %}
 npx instant-cli@latest init
 ```
 
-The CLI will guide you through picking an Instant app and generate these files for you.
+The CLI will guide you through picking an daabase app and generate these files for you.
 
 ## instant.schema.ts
 
@@ -90,7 +90,7 @@ export type { AppSchema };
 export default schema;
 ```
 
-Let's unpack what we just wrote. There are three core building blocks to model data with Instant: **Namespaces**, **Attributes**, and **Links**.
+Let's unpack what we just wrote. There are three core building blocks to model data with daabase: **Namespaces**, **Attributes**, and **Links**.
 
 ## 1) Namespaces
 
@@ -155,11 +155,11 @@ const _schema = i.schema({
 });
 ```
 
-Instant will _make sure_ that all `title` attributes are strings, and you'll get the proper TypeScript hints to boot!
+daabase will _make sure_ that all `title` attributes are strings, and you'll get the proper TypeScript hints to boot!
 
 ### Required constraints
 
-All attributes you define are considered _required_ by default. This constraint is enforced on the backend: Instant guarantees that every entity of that type will have a value and reports errors if you attempt to add an entity without a required attribute.
+All attributes you define are considered _required_ by default. This constraint is enforced on the backend: daabase guarantees that every entity of that type will have a value and reports errors if you attempt to add an entity without a required attribute.
 
 ```typescript
 const _schema = i.schema({
@@ -383,7 +383,7 @@ The CLI will look at your app in production, show you the new columns you'd crea
 {% ansi %}
 
 ```
-Checking for an Instant SDK...
+Checking for an daabase SDK...
 Found [32m@instantdb/react[39m in your package.json.
 Found [32mNEXT_PUBLIC_INSTANT_APP_ID[39m: *****
 Planning schema...
@@ -481,7 +481,7 @@ npx instant-cli@latest push perms
 {% ansi %}
 
 ```
-Checking for an Instant SDK...
+Checking for an daabase SDK...
 Found [32m@instantdb/react[39m in your package.json.
 Found [32mNEXT_PUBLIC_INSTANT_APP_ID[39m: *****
 Planning perms...

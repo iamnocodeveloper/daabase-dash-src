@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Devtool'
-    description: 'Use the Instant devtool to inspect your app in development.'
+    description: 'Use the daabase devtool to inspect your app in development.'
 ---
 
-When you load your app in development, you'll notice a little "Instant" icon show up:
+When you load your app in development, you'll notice a little "daabase" icon show up:
 
 {% screenshot src="/img/docs/devtool-pointer.jpg" /%}
 

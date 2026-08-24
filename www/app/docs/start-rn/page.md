@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Getting started with React Native'
-    description: 'How to use Instant with React Native'
+    description: 'How to use daabase with React Native'
 ---
 
-You can use Instant in React Native projects too! Below is an example using Expo.
+You can use daabase in React Native projects too! Below is an example using Expo.
 
 Open up your terminal and do the following:
 
@@ -27,7 +27,7 @@ Now open up `app/(tabs)/index.tsx` in your favorite editor and replace the entir
 import { init, i, InstaQLEntity } from '@instantdb/react-native';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 
 // Optional: You can declare a schema!
@@ -132,11 +132,11 @@ npm run start
 
 Scan the QR code with your phone and follow the instructions on the screen :)
 
-Huzzah 🎉 You've got your first React Native Instant app running! Check out the [Working with data](/docs/init) section to learn more about how to use Instant!
+Huzzah 🎉 You've got your first React Native daabase app running! Check out the [Working with data](/docs/init) section to learn more about how to use daabase!
 
 ## Using MMKV for faster storage (optional)
 
-By default, Instant uses [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) to persist data on the device. If you want faster read/write performance, you can use [MMKV](https://github.com/mrousavy/react-native-mmkv) instead.
+By default, daabase uses [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) to persist data on the device. If you want faster read/write performance, you can use [MMKV](https://github.com/mrousavy/react-native-mmkv) instead.
 
 ### Install the MMKV package
 
@@ -153,7 +153,7 @@ Note: MMKV requires native code, so you'll need to run a prebuild:
 npx expo prebuild
 ```
 
-### Configure Instant to use MMKV
+### Configure daabase to use MMKV
 
 Import `Store` from `@instantdb/react-native-mmkv` and pass it to `init`:
 
@@ -173,13 +173,13 @@ Then run your app on a device or simulator:
 npx expo run:ios # or npx expo run:android
 ```
 
-That's it! Instant will now use MMKV for local persistence instead of AsyncStorage.
+That's it! daabase will now use MMKV for local persistence instead of AsyncStorage.
 
 When you use a custom store, `@react-native-async-storage/async-storage` becomes optional, so you can remove it from your dependencies.
 
 ## Using expo-sqlite for storage (optional)
 
-If your app already uses [expo-sqlite](https://docs.expo.dev/versions/latest/sdk/sqlite/), you can use it for Instant's local persistence too.
+If your app already uses [expo-sqlite](https://docs.expo.dev/versions/latest/sdk/sqlite/), you can use it for daabase's local persistence too.
 
 ### Install the expo-sqlite package
 
@@ -196,7 +196,7 @@ Note: expo-sqlite is included in Expo Go, so no prebuild is needed to try it out
 npx expo prebuild
 ```
 
-### Configure Instant to use expo-sqlite
+### Configure daabase to use expo-sqlite
 
 Import `Store` from `@instantdb/expo-sqlite` and pass it to `init`:
 
@@ -216,7 +216,7 @@ Then run your app on a device or simulator:
 npx expo run:ios # or npx expo run:android
 ```
 
-That's it! Instant will now use expo-sqlite for local persistence instead of AsyncStorage.
+That's it! daabase will now use expo-sqlite for local persistence instead of AsyncStorage.
 
 When you use a custom store, `@react-native-async-storage/async-storage` becomes optional, so you can remove it from your dependencies.
 
@@ -271,18 +271,18 @@ const db = init({
 
 ## Next Steps
 
-Want a more in-depth tutorial on building an Expo app with Instant? Check out [Beto's](https://x.com/betomoedano) video on building a chat app below!
+Want a more in-depth tutorial on building an Expo app with daabase? Check out [Beto's](https://x.com/betomoedano) video on building a chat app below!
 
-This video goes through core concepts of using Instant like setting up schema, writing queries, and using transactions!
+This video goes through core concepts of using daabase like setting up schema, writing queries, and using transactions!
 
-{% youtube src="https://www.youtube.com/watch?v=jyVR5NDjNJ4" title="Building a Real-Time Chat App with Instant DB" /%}
+{% youtube src="https://www.youtube.com/watch?v=jyVR5NDjNJ4" title="Building a Real-Time Chat App with daabase DB" /%}
 
-For more advanced features, check out [Simon Grimm](https://x.com/schlimmson) building a mobile app builder with Instant!
+For more advanced features, check out [Simon Grimm](https://x.com/schlimmson) building a mobile app builder with daabase!
 
 In this video, Simon builds on top of the concepts from Beto's video and shows off how to use Storage for uploading assets and the Platform API for programmatically spinning up databases.
 
-{% youtube src="https://www.youtube.com/watch?v=HRACNTmikZI" title="Use React Native + InstantDB to Build a Self-Building App" /%}
+{% youtube src="https://www.youtube.com/watch?v=HRACNTmikZI" title="Use React Native + daabase to Build a Self-Building App" /%}
 
-If you prefer reading docs, you can also check out the [Working with data](/docs/init) section to learn more about Instant concepts.
+If you prefer reading docs, you can also check out the [Working with data](/docs/init) section to learn more about daabase concepts.
 
-As you get more familiar with Instant, check out our [Recommended Workflow](/docs/workflow) docs for using Instant in your projects.
+As you get more familiar with daabase, check out our [Recommended Workflow](/docs/workflow) docs for using daabase in your projects.

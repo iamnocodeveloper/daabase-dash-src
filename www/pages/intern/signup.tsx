@@ -9,7 +9,7 @@ const AdminIndex = () => {
   return (
     <div className="h-screen w-screen">
       <Head>
-        <title>Instant Dashboard</title>
+        <title>daabase Dashboard</title>
       </Head>
       <AdminRoot />
     </div>

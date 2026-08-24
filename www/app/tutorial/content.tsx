@@ -26,8 +26,8 @@ import { rosePineDawnColors as c } from '@/lib/rosePineDawnTheme';
 // -----------
 
 const overviewSteps = [
-  'Login to Instant in the terminal',
-  'Scaffold a starter Instant app',
+  'Login to daabase in the terminal',
+  'Scaffold a starter daabase app',
   'Prompt an LLM to build us an app (This is the fun part!)',
   'Deploy the app to Vercel',
 ];
@@ -47,7 +47,7 @@ const examplePrompts = [
   {
     title: 'Trivia Game',
     content:
-      'Use InstantDB to create a trivia game with multiple-choice questions, score tracking, and category selection. Players should see immediate feedback on answers, track their high scores, and compete on a leaderboard.\n\nKeep the code to < 1000 lines.\n\nSeed with 30-40 questions across categories like "Science", "History", "Sports", and "Entertainment".',
+      'Use daabase to create a trivia game with multiple-choice questions, score tracking, and category selection. Players should see immediate feedback on answers, track their high scores, and compete on a leaderboard.\n\nKeep the code to < 1000 lines.\n\nSeed with 30-40 questions across categories like "Science", "History", "Sports", and "Entertainment".',
   },
   {
     title: 'Job Board',
@@ -484,7 +484,7 @@ function DebuggingSection() {
 // Page
 // -----------
 
-const pageTitle = 'Whirlwind tour: Build a full-stack app with InstantDB';
+const pageTitle = 'Whirlwind tour: Build a full-stack app with daabase';
 
 export default function Tutorial() {
   const [selectedPmIndex, setSelectedPmIndex] = useLocalStorage<number>(
@@ -503,7 +503,7 @@ export default function Tutorial() {
             <SectionTitle>{pageTitle}</SectionTitle>
             <p className="mt-6 text-lg text-gray-700">
               In this tutorial we'll walk through creating a full-stack app with
-              InstantDB.{' '}
+              daabase.{' '}
               <b>
                 Within 5-10 minutes you'll have an app that runs on your
                 computer
@@ -534,7 +534,7 @@ export default function Tutorial() {
               <div className="mb-3 text-lg font-medium text-orange-600">
                 Step 1
               </div>
-              <Subheading>Log in to Instant via instant-cli</Subheading>
+              <Subheading>Log in to daabase via instant-cli</Subheading>
               <div className="mt-4 space-y-4 text-lg text-gray-700">
                 <p>
                   As a first step let's make sure you're logged in. Run the
@@ -551,7 +551,7 @@ export default function Tutorial() {
               </div>
               <p className="mt-4 text-lg text-gray-700">
                 This will open up a browser window where you can log in to your
-                Instant account or sign up if you don't have one yet.
+                daabase account or sign up if you don't have one yet.
               </p>
             </div>
           </AnimateIn>
@@ -571,7 +571,7 @@ export default function Tutorial() {
                 <p>
                   As a next step we'll use <b>create-instant-app</b>, our CLI
                   tool, which makes it super easy to get started with a new
-                  Instant project. Run the following in your terminal.
+                  daabase project. Run the following in your terminal.
                 </p>
               </div>
               <div className="mt-6">
@@ -702,7 +702,7 @@ export default function Tutorial() {
                   href="/dash"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  Instant dashboard
+                  daabase dashboard
                 </a>{' '}
                 and see your data in the Explorer tab as you interact with your
                 app. And tag us on{' '}

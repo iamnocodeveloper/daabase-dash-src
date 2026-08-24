@@ -97,7 +97,7 @@ export function Footer() {
 
         <div className="mt-4 border-t border-gray-200 pt-4">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Instant. All rights reserved.
+            &copy; {new Date().getFullYear()} daabase. All rights reserved.
           </p>
         </div>
       </div>

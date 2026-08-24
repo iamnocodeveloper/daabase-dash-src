@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Self hosting on VPS'
-    description: 'Run Instant on a VPS.'
+    description: 'Run daabase on a VPS.'
 ---
 
-You can run the Instant backend, dashboard, PostgreSQL, MinIO, and Caddy on a
+You can run the daabase backend, dashboard, PostgreSQL, MinIO, and Caddy on a
 single VPS. A server with 2 vCPUs and 4 GB of RAM is enough to get started and
 usually costs around $30 per month.
 
@@ -67,9 +67,9 @@ sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-## Configure Instant
+## Configure daabase
 
-Clone Instant and copy the example environment file:
+Clone daabase and copy the example environment file:
 
 ```sh {% showCopy=true %}
 git clone https://github.com/instantdb/instant.git
@@ -98,10 +98,10 @@ different reverse proxy.
 `/storage`.
 
 Review the rest of `.env` and replace the default PostgreSQL and MinIO
-credentials. The MinIO bucket is private and Instant serves files with signed
+credentials. The MinIO bucket is private and daabase serves files with signed
 URLs.
 
-## Start Instant
+## Start daabase
 
 Once the DNS records resolve to the server, run:
 
@@ -136,5 +136,5 @@ vCPUs and 8 GB of RAM, but you can size the server to match your workload.
 If you want to scale application servers and PostgreSQL independently, use the
 [AWS guide](/docs/self-hosting/aws).
 
-Once Instant is running, see [Operating Instant](/docs/self-hosting#operating)
+Once daabase is running, see [Operating daabase](/docs/self-hosting#operating)
 to configure email, dashboard access, the CLI, and health checks.

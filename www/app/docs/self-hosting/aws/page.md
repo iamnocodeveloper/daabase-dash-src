@@ -1,21 +1,21 @@
 ---
 nextjs:
   metadata:
-    title: 'Self Hosting Instant on AWS'
-    description: 'Run Instant with multiple backend servers and Aurora PostgreSQL.'
+    title: 'Self Hosting daabase on AWS'
+    description: 'Run daabase with multiple backend servers and Aurora PostgreSQL.'
 ---
 
 For more serious projects where you need higher availability and point-in-time
 restores, we recommend starting with two backend servers and
-Aurora PostgreSQL. This is the same general architecture Instant Cloud uses and
+Aurora PostgreSQL. This is the same general architecture daabase Cloud uses and
 lets you scale the backend and database separately.
 
 The resources and instance types are up to you. The important parts are how the
-Instant containers connect to PostgreSQL, object storage, and each other.
+daabase containers connect to PostgreSQL, object storage, and each other.
 
 ## Architecture
 
-Instant does not require a particular AWS container platform. Your deployment
+daabase does not require a particular AWS container platform. Your deployment
 needs:
 
 - HTTPS traffic routed to every healthy backend
@@ -29,7 +29,7 @@ needs:
 Set `SWARM_SERVICE_NAME` to the service name used in private DNS. Backend tasks
 must be able to communicate over ports 5701–5708 and 5801–5808.
 
-Do not set `PRODUCTION=true`; that selects Instant Cloud configuration rather
+Do not set `PRODUCTION=true`; that selects daabase Cloud configuration rather
 than self-hosted configuration.
 
 ## Configure AWS access
@@ -48,7 +48,7 @@ profile and Region consistently throughout the deployment.
 
 ## Configure Aurora PostgreSQL
 
-Instant requires PostgreSQL 17 with logical replication and `pg_hint_plan`.
+daabase requires PostgreSQL 17 with logical replication and `pg_hint_plan`.
 Create an Aurora PostgreSQL 17 cluster and apply these settings in a custom DB
 cluster parameter group:
 
@@ -65,11 +65,11 @@ Keep any existing entries in `shared_preload_libraries`. The replication
 settings require a reboot.
 
 {% callout type="note" %}
-Instant opens its migration connection without TLS, so Aurora PostgreSQL 17
+daabase opens its migration connection without TLS, so Aurora PostgreSQL 17
 requires `rds.force_ssl = 0`. Restrict port 5432 to the backend servers.
 {% /callout %}
 
-Create a database and login for Instant. The login needs the RDS replication
+Create a database and login for daabase. The login needs the RDS replication
 role:
 
 ```sql
@@ -91,7 +91,7 @@ migrations and administration. Increase `max_replication_slots` and
 
 ## Configure S3
 
-Create a private S3 bucket for Instant Storage. The backend needs permission to
+Create a private S3 bucket for daabase Storage. The backend needs permission to
 list the bucket and to read, write, delete, and manage multipart uploads for its
 objects.
 
@@ -104,15 +104,15 @@ AWS_ACCESS_KEY_ID=replace-with-the-storage-access-key
 AWS_SECRET_ACCESS_KEY=replace-with-the-storage-secret-key
 ```
 
-Be sure to configure CORS on the bucket so Instant apps can upload files directly from the browser.
+Be sure to configure CORS on the bucket so daabase apps can upload files directly from the browser.
 
-Leave `S3_ENDPOINT` and `S3_PUBLIC_ENDPOINT` unset when using AWS S3. Instant
+Leave `S3_ENDPOINT` and `S3_PUBLIC_ENDPOINT` unset when using AWS S3. daabase
 currently needs static IAM credentials to sign S3 URLs, so provide an access
 key even when the application servers also have an instance role.
 
 ## Share the encryption configuration
 
-Every backend instance must use the same `override.edn`. Instant uses this file
+Every backend instance must use the same `override.edn`. daabase uses this file
 to encrypt secrets and sign webhooks. Generate it once:
 
 ```sh {% showCopy=true %}
@@ -127,7 +127,7 @@ Store it with your other deployment secrets and mount it at
 `/app/resources/config/override.edn` on every backend. Do not generate a
 different file for each server.
 
-## Deploy Instant
+## Deploy daabase
 
 ### Run the backend servers
 
@@ -185,7 +185,7 @@ of every backend task. Each task must be able to reach the others over TCP ports
 ECS with AWS Cloud Map, Docker Swarm DNSRR, or another scheduler that provides
 equivalent private DNS can satisfy this requirement.
 
-Keep `PRODUCTION` unset. Setting `PRODUCTION=true` selects Instant Cloud's
+Keep `PRODUCTION` unset. Setting `PRODUCTION=true` selects daabase Cloud's
 production configuration rather than the mounted self-hosted `override.edn`.
 
 A successful `/health/system` response verifies the database WAL but does not
@@ -243,7 +243,7 @@ Resize the Aurora writer when database CPU, memory, connections, or query
 latency becomes the bottleneck. Revisit the connection pool and replication
 settings whenever you add backend servers.
 
-Currently Instant Cloud runs on:
+Currently daabase Cloud runs on:
 
 | Tier                | Capacity                                                                                       |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
@@ -253,5 +253,5 @@ Currently Instant Cloud runs on:
 
 Most deployments should start much smaller and scale each part from observed usage.
 
-Once Instant is running, see [Operating Instant](/docs/self-hosting#operating)
+Once daabase is running, see [Operating daabase](/docs/self-hosting#operating)
 to configure email, dashboard access, the CLI, and health checks.

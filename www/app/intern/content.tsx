@@ -163,7 +163,7 @@ export default function InternIndexPage() {
           <div className="mt-12 mb-8 text-center">
             <H2>Access Denied</H2>
             <p className="mt-4 text-gray-600">
-              You need to be an Instant admin to access this page.
+              You need to be an daabase admin to access this page.
             </p>
           </div>
         </Section>
@@ -211,12 +211,12 @@ export default function InternIndexPage() {
           </div>
           <div className="space-y-2 text-gray-700">
             {isSelfHosted ? (
-              <p>Manage this Instant installation with the tools below.</p>
+              <p>Manage this daabase installation with the tools below.</p>
             ) : (
               <>
                 <p>
                   Below are various dashboards and tools we've built to help us
-                  manage Instant. We've got things like our main metrics
+                  manage daabase. We've got things like our main metrics
                   overview, a generator for investor updates, an email
                   previewer, and more.
                 </p>

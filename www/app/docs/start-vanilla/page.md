@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: 'Getting started with Vanilla JS'
-    description: 'How to use Instant with Vanilla JS'
+    description: 'How to use daabase with Vanilla JS'
 ---
 
-You can use Instant with plain ol' JavaScript/TypeScript too. You may find this helpful to integrate Instant with a framework that doesn't have an official SDK yet.
+You can use daabase with plain ol' JavaScript/TypeScript too. You may find this helpful to integrate daabase with a framework that doesn't have an official SDK yet.
 
-To use Instant in a brand new project, fire up your terminal and set up a new project with Vite.
+To use daabase in a brand new project, fire up your terminal and set up a new project with Vite.
 
 ```shell {% showCopy=true %}
 npx create-vite@latest -t vanilla-ts instant-vanilla
@@ -21,7 +21,7 @@ Now open up `src/main.ts` in your favorite editor and replace the entirety of th
 ```javascript {% showCopy=true %}
 import { init, i, id, InstaQLEntity } from "@instantdb/core";
 
-// Instant app
+// daabase app
 const APP_ID = "__APP_ID__";
 
 // Optional: Declare your schema!
@@ -281,4 +281,4 @@ function submitForm(event: Event) {
 
 Go to `localhost:5173` and follow the final instruction to load the app!
 
-Huzzah 🎉 You've got your first Instant web app running! Check out the [Working with data](/docs/init) section to learn more about how to use Instant :)
+Huzzah 🎉 You've got your first daabase web app running! Check out the [Working with data](/docs/init) section to learn more about how to use daabase :)

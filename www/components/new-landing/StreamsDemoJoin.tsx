@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
-// ─── Pre-defined doodle: Instant logo ───────────────────
+// ─── Pre-defined doodle: daabase logo ───────────────────
 function rectStroke(
   x1: number,
   y1: number,
@@ -718,12 +718,12 @@ export function StreamsDemoJoin() {
           </div>
         </div>
 
-        {/* ─── Instant server + storage ─── */}
+        {/* ─── daabase server + storage ─── */}
         <div className="flex flex-col items-center gap-3">
           <div ref={serverRef}>
             <img
               src="/img/icon/logo-512.svg"
-              alt="Instant servers"
+              alt="daabase servers"
               className="h-[28px] w-[28px]"
             />
           </div>

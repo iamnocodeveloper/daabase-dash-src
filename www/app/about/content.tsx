@@ -83,7 +83,7 @@ function HeroHeader() {
         Building the database for the AI era
       </h1>
       <p className="max-w-xl text-lg text-balance sm:text-xl lg:max-w-lg">
-        We started Instant because we believed we needed a new kind of database
+        We started daabase because we believed we needed a new kind of database
         for the future of app development. Now, with agents building more
         software than ever, that need is bigger than ever.
       </p>
@@ -108,25 +108,25 @@ const timelineEvents = [
     date: 'August 2024',
     title: 'Open Source Launch',
     description:
-      'After two years of development, Instant is open-sourced. Hits the front page of Hacker News with 1,000+ upvotes. The demo of spinning up a database instantly captures developer imagination.',
+      'After two years of development, daabase is open-sourced. Hits the front page of Hacker News with 1,000+ upvotes. The demo of spinning up a database instantly captures developer imagination.',
   },
   {
     date: 'January 2025',
     title: 'Full Backend',
     description:
-      'Instant becomes a complete backend as a service with database, auth, permissions, and storage.',
+      'daabase becomes a complete backend as a service with database, auth, permissions, and storage.',
   },
   {
     date: 'August 2025',
-    title: 'Create Instant App',
+    title: 'Create daabase App',
     description:
-      'Launch of create-instant-app and end-to-end typesafety. Getting started with Instant becomes as easy as a single terminal command.',
+      'Launch of create-instant-app and end-to-end typesafety. Getting started with daabase becomes as easy as a single terminal command.',
   },
   {
     date: 'January 2026',
-    title: 'Instant sings with AI',
+    title: 'daabase sings with AI',
     description:
-      'Modern LLMs natively know how to use Instant. Agents can build full apps in a few prompts. Instant handles 10,000+ concurrent connections and 1,000+ queries per second in production.',
+      'Modern LLMs natively know how to use daabase. Agents can build full apps in a few prompts. daabase handles 10,000+ concurrent connections and 1,000+ queries per second in production.',
   },
 ];
 
@@ -167,7 +167,7 @@ function OfflineSection() {
       <div className="space-y-4 md:max-w-[440px]">
         <Subheading>Offline by default</Subheading>
         <p className="mt-2 text-lg">
-          Instant persists your query results on device automatically. When the
+          daabase persists your query results on device automatically. When the
           network drops, queries keep resolving from the cache. Mutations are
           saved to a persistent outbox before they&apos;re ever sent to the
           server.
@@ -188,7 +188,7 @@ function MultiTenantSection() {
       <div className="space-y-4 md:max-w-[440px]">
         <Subheading>Multi-tenant Core</Subheading>
         <p className="mt-2 text-lg">
-          We designed Instant from the ground up to be multi-tenant. Queries and
+          We designed daabase from the ground up to be multi-tenant. Queries and
           writes include an{' '}
           <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm">
             appId
@@ -325,16 +325,16 @@ export default function AboutPage() {
                   , which laid out how a triple store and a new query language
                   could give developers the relational power of Supabase with
                   the real-time magic of Firebase. The essay went viral and the
-                  team raised a seed round to build Instant.
+                  team raised a seed round to build daabase.
                 </p>
                 <p>
-                  Two years of heads-down development later, Instant was
+                  Two years of heads-down development later, daabase was
                   open-sourced. It hit the front page of Hacker News with 1,000+
                   upvotes. The demo of spinning up a database instantly
                   resonated with the community.
                 </p>
                 <p>
-                  In 2025 Instant became a full backend solution with database,
+                  In 2025 daabase became a full backend solution with database,
                   auth, permissions, and storage all governed by the same data
                   model. Then came{' '}
                   <span className="rounded bg-gray-200 px-1.5 py-0.5 font-mono text-sm">
@@ -344,14 +344,14 @@ export default function AboutPage() {
                   single terminal command.
                 </p>
                 <p>
-                  In 2026 Instant entered the AI era. Modern LLMs natively know
+                  In 2026 daabase entered the AI era. Modern LLMs natively know
                   how to use it. Give them a bit of context and they can build
                   apps like Counter-Strike and Instagram in a few prompts.
                 </p>
                 <p>
                   With the rise of agents, we believe more software will be
                   built than ever. Infrastructure needs to scale to millions of
-                  apps, not just millions of users. Instant is the database for
+                  apps, not just millions of users. daabase is the database for
                   that future.
                 </p>
               </div>
@@ -489,7 +489,7 @@ export default function AboutPage() {
             <SectionTitle>Under the hood</SectionTitle>
           </div>
           <SectionSubtitle>
-            Instant looks simple on the surface. A few lines of code and your
+            daabase looks simple on the surface. A few lines of code and your
             app has a real-time backend. But there&apos;s a lot of interesting
             architecture that makes this possible.
           </SectionSubtitle>
@@ -501,7 +501,7 @@ export default function AboutPage() {
             <div className="space-y-4 md:max-w-[400px]">
               <Subheading>Triples: the foundation</Subheading>
               <p className="mt-2 text-lg">
-                All data in Instant is stored as triples:{' '}
+                All data in daabase is stored as triples:{' '}
                 <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm">
                   [entity, attribute, value]
                 </code>

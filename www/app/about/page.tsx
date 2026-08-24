@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Content from './content';
 
 export const metadata: Metadata = {
-  title: 'About - InstantDB',
+  title: 'About - daabase',
 };
 
 export default function Page() {

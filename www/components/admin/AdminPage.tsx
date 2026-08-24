@@ -366,10 +366,10 @@ export function Admin({
           />
           <HomeButton
             href="/docs/backend"
-            title="Instant and your backend"
+            title="daabase and your backend"
             target="_blank"
           >
-            Learn how to use the Admin SDK to integrate Instant with your
+            Learn how to use the Admin SDK to integrate daabase with your
             backend.
           </HomeButton>
         </div>
@@ -866,7 +866,7 @@ function ReadOnlyModeRow({ app }: { app: InstantApp }) {
         </div>
         <span className="text-sm text-gray-500 dark:text-neutral-400">
           {isAppDisabled
-            ? 'Reads and writes are paused. Contact the Instant team to re-enable this app.'
+            ? 'Reads and writes are paused. Contact the daabase team to re-enable this app.'
             : 'Pause all writes while you migrate data or debug an issue.'}
         </span>
       </div>

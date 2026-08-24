@@ -25,4 +25,4 @@ export async function GET(request: Request) {
   });
 }
 
-const DEFAULT_APP_TITLE = 'Instant Meta React App';
+const DEFAULT_APP_TITLE = 'daabase Meta React App';

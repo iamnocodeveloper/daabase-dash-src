@@ -398,7 +398,7 @@ function AppPermsSection({
       </p>
       <p>
         Second, our app is efficient. We didn’t have to spin up any additional
-        compute resources to get this far. The overhead of an Instant app is
+        compute resources to get this far. The overhead of an daabase app is
         just a few rows in a database. That makes it so your agents can build
         apps with abandon — they (or really you) don’t worry about a giant
         compute bill.

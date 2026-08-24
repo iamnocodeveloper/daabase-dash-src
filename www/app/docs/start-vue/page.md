@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: Getting started with Vue
-    description: How to use Instant with Vue 3 and Vite
+    description: How to use daabase with Vue 3 and Vite
 ---
 
-## Automatic Setup With Create Instant App
+## Automatic Setup With Create daabase App
 
-The fastest way to get started with Instant and Vue is to use create-instant-app to scaffold a new project with Instant already set up.
+The fastest way to get started with daabase and Vue is to use create-instant-app to scaffold a new project with daabase already set up.
 
 To get started, run:
 
@@ -23,13 +23,13 @@ Create a blank Vue + Vite app:
 npm create vue@latest my-app
 ```
 
-Add the InstantDB Vue Library:
+Add the daabase Vue Library:
 
 ```shell
 npm i @instantdb/vue
 ```
 
-Use `instant-cli` to set up a new Instant project. This will prompt you to log in if you haven't already. It will then create schema and permissions files and update your `.env` file.
+Use `instant-cli` to set up a new daabase project. This will prompt you to log in if you haven't already. It will then create schema and permissions files and update your `.env` file.
 
 ```shell
 npx instant-cli init
@@ -168,7 +168,7 @@ Go to `localhost:5173`, and huzzah 🎉 You've got a fully functional todo list 
 
 ## Reactivity
 
-Instant's hooks return an **object of refs**. This lets you destructure the result without losing reactivity, and refs auto-unwrap when you reference them in your template.
+daabase's hooks return an **object of refs**. This lets you destructure the result without losing reactivity, and refs auto-unwrap when you reference them in your template.
 
 ```vue
 <script setup lang="ts">
@@ -271,7 +271,7 @@ To learn more, see our [writing data](/docs/instaml) docs.
 
 ## Auth
 
-The Vue SDK supports all of Instant's [auth methods](/docs/auth): [magic codes](/docs/auth/magic-codes), [guest auth](/docs/auth/guest-auth), [Google OAuth](/docs/auth/google-oauth), and more.
+The Vue SDK supports all of daabase's [auth methods](/docs/auth): [magic codes](/docs/auth/magic-codes), [guest auth](/docs/auth/guest-auth), [Google OAuth](/docs/auth/google-oauth), and more.
 
 ### useAuth
 
@@ -347,7 +347,7 @@ The `Cursors` component supports custom cursor rendering via a scoped `cursor` s
 
 ## Nuxt
 
-The Vue SDK works with [Nuxt](https://nuxt.com/). Because Instant is a client-only library (it relies on browser APIs like `WebSocket` and `IndexedDB`), you'll want to either wrap Instant-using components with `<ClientOnly>` or disable SSR for the relevant routes via `routeRules` in `nuxt.config.ts`:
+The Vue SDK works with [Nuxt](https://nuxt.com/). Because daabase is a client-only library (it relies on browser APIs like `WebSocket` and `IndexedDB`), you'll want to either wrap daabase-using components with `<ClientOnly>` or disable SSR for the relevant routes via `routeRules` in `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
@@ -357,4 +357,4 @@ export default defineNuxtConfig({
 });
 ```
 
-Server-side rendering with Instant is not yet supported (let us know if you want this!).
+Server-side rendering with daabase is not yet supported (let us know if you want this!).

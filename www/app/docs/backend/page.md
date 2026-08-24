@@ -1,11 +1,11 @@
 ---
 nextjs:
   metadata:
-    title: 'Instant on the Backend'
-    description: 'How to use Instant on the server with the Admin SDK.'
+    title: 'daabase on the Backend'
+    description: 'How to use daabase on the server with the Admin SDK.'
 ---
 
-You can use Instant on the server as well! This can be especially useful for
+You can use daabase on the server as well! This can be especially useful for
 running scripts, custom auth flows, or sensitive application logic.
 
 We currently offer two server-side SDKs:
@@ -16,7 +16,7 @@ We currently offer two server-side SDKs:
 
 ## Admin SDK
 
-`@instantdb/admin` is the JavaScript Admin SDK for using Instant in a
+`@instantdb/admin` is the JavaScript Admin SDK for using daabase in a
 non-browser context. This library is similar to our client SDK with a few
 tweaks.
 
@@ -25,7 +25,7 @@ tweaks.
 ```javascript
 import { init, id } from '@instantdb/admin';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 const db = init({
   appId: APP_ID,
@@ -129,7 +129,7 @@ Subscriptions keep a live connection open on your backend. Be sure to close them
 import { init, id } from '@instantdb/admin';
 import schema from '../instant.schema.ts';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 const db = init({
   appId: APP_ID,
@@ -315,7 +315,7 @@ Here's a full example:
 import React, { useState } from 'react';
 import { init } from '@instantdb/react';
 
-// Instant app
+// daabase app
 const APP_ID = "__APP_ID__";
 const db = init({ appId: APP_ID });
 
@@ -398,7 +398,7 @@ app.post('/custom-send-magic-code', async (req, res) => {
 });
 ```
 
-You can also use Instant's default email provider to send a magic code with `db.auth.sendMagicCode`:
+You can also use daabase's default email provider to send a magic code with `db.auth.sendMagicCode`:
 
 ```typescript {% showCopy=true %}
 // You can trigger a magic code email in your backend with `sendMagicCode`
@@ -462,7 +462,7 @@ app.post('/custom_endpoint', async (req, res) => {
 
 Sometimes you want to get the logged in user in the backend without needing to explicitly pass in the refresh token from the frontend. Here's how you can do it.
 
-Instant provides a `createInstantRouteHandler` function that generates a web standard endpoint that can be used to sync the refresh token to a cookie that your server can read.
+daabase provides a `createInstantRouteHandler` function that generates a web standard endpoint that can be used to sync the refresh token to a cookie that your server can read.
 
 To use it in Next.js:
 

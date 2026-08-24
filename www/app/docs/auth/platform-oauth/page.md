@@ -2,33 +2,33 @@
 nextjs:
   metadata:
     title: 'Platform OAuth Integration'
-    description: 'Allow third-party applications to access Instant resources on behalf of users using OAuth 2.0.'
+    description: 'Allow third-party applications to access daabase resources on behalf of users using OAuth 2.0.'
 ---
 
-Instant supports the standard OAuth 2.0 Authorization Code grant flow, enabling users to authorize your application to access their Instant data and perform actions on their behalf, like reading app details or managing apps.
+daabase supports the standard OAuth 2.0 Authorization Code grant flow, enabling users to authorize your application to access their daabase data and perform actions on their behalf, like reading app details or managing apps.
 
-This guide walks you through the steps required to integrate your application with Instant using OAuth. You can also [walk through a demo](/labs/oauth_apps_demo) to see it in action.
+This guide walks you through the steps required to integrate your application with daabase using OAuth. You can also [walk through a demo](/labs/oauth_apps_demo) to see it in action.
 
 ## OAuth flow
 
 ### 1. Create an OAuth App and Client
 
-The first step is to register your OAuth application with Instant. This is done through the Instant Dashboard:
+The first step is to register your OAuth application with daabase. This is done through the daabase Dashboard:
 
-1.  Navigate to the **[OAuth Apps section of the Instant Dashboard](https://instantdb.com/dash?s=main&t=oauth-apps)**
-2.  Create a new "OAuth App" associated with your Instant App. Give it a descriptive name.
+1.  Navigate to the **[OAuth Apps section of the daabase Dashboard](https://instantdb.com/dash?s=main&t=oauth-apps)**
+2.  Create a new "OAuth App" associated with your daabase App. Give it a descriptive name.
 3.  Within that OAuth App, create a new "OAuth Client".
     - Provide a name for the client (e.g., "My Web App Integration").
-    - Specify one or more **Authorized Redirect URIs**. These are the exact URLs that Instant is allowed to redirect the user back to after they authorize (or deny) your application.
+    - Specify one or more **Authorized Redirect URIs**. These are the exact URLs that daabase is allowed to redirect the user back to after they authorize (or deny) your application.
 4.  Upon creating the client, you will be provided with:
     - **Client ID:** A public identifier for your application.
-    - **Client Secret:** A confidential secret known only to your application and Instant. **Treat this like a password and keep it secure.**
+    - **Client Secret:** A confidential secret known only to your application and daabase. **Treat this like a password and keep it secure.**
 
 You will need the Client ID and Client Secret for subsequent steps.
 
 {% callout type="note" %}
 
-Your OAuth app will start in test mode. Only members of your Instant app will be able to authorize with the app.
+Your OAuth app will start in test mode. Only members of your daabase app will be able to authorize with the app.
 
 {% hosted-only %}
 
@@ -40,7 +40,7 @@ Once you have your OAuth flow working, [ping us in Discord](https://discord.gg/2
 
 ### 2. Redirect User for Authorization
 
-To start the flow, redirect the user from your application to the Instant authorization endpoint. Construct the URL as follows:
+To start the flow, redirect the user from your application to the daabase authorization endpoint. Construct the URL as follows:
 
 **Base URL:**
 
@@ -64,11 +64,11 @@ https://api.instantdb.com/platform/oauth/start
 https://api.instantdb.com/platform/oauth/start?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=YOUR_REDIRECT_URI&scope=apps-read%20apps-write&state=RANDOM_STATE_STRING
 ```
 
-When the user visits this URL, they will be prompted by Instant to log in (if they aren't already) and asked to grant your application the requested permissions (scopes).
+When the user visits this URL, they will be prompted by daabase to log in (if they aren't already) and asked to grant your application the requested permissions (scopes).
 
-### 3. Handle the Redirect from Instant
+### 3. Handle the Redirect from daabase
 
-After the user grants or denies authorization, Instant redirects them back to the `redirect_uri` you specified.
+After the user grants or denies authorization, daabase redirects them back to the `redirect_uri` you specified.
 
 **If Successful:**
 
@@ -93,7 +93,7 @@ Handle these errors appropriately (e.g., display a message to the user).
 
 ### 4. Exchange Authorization Code for Tokens
 
-Once you have verified the `state` and obtained the `code`, exchange the code for an access token and a refresh token by making a `POST` request from your backend server to the Instant token endpoint.
+Once you have verified the `state` and obtained the `code`, exchange the code for an access token and a refresh token by making a `POST` request from your backend server to the daabase token endpoint.
 
 **Endpoint:**
 
@@ -159,7 +159,7 @@ Store the `access_token`, `refresh_token`, and expiration time securely on your 
 
 ### 5. Use the Access Token
 
-To make authenticated API calls to Instant on behalf of the user, include the `access_token` in the `Authorization` header of your requests:
+To make authenticated API calls to daabase on behalf of the user, include the `access_token` in the `Authorization` header of your requests:
 
 ```text
 Authorization: Bearer ACCESS_TOKEN_VALUE

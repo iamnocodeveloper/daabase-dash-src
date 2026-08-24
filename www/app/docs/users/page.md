@@ -2,7 +2,7 @@
 nextjs:
   metadata:
     title: 'Managing users'
-    description: 'How to manage users in your Instant app.'
+    description: 'How to manage users in your daabase app.'
 ---
 
 ## See users in your app
@@ -211,7 +211,7 @@ db.auth.signInWithIdToken({
 
 **OAuth with web redirect** (Google, GitHub, LinkedIn)
 
-For the redirect flow, pass `extraFields` when creating the authorization URL. Instant stores them and applies them when the user is created after the redirect.
+For the redirect flow, pass `extraFields` when creating the authorization URL. daabase stores them and applies them when the user is created after the redirect.
 
 ```javascript
 const url = db.auth.createAuthorizationURL({

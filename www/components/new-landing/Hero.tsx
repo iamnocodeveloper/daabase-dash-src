@@ -98,7 +98,7 @@ export function Hero() {
             >
               <span>
                 <span className="font-semibold">
-                  The Instant Team is joining OpenAI.
+                  The daabase Team is joining OpenAI.
                 </span>{' '}
                 Services will continue until August 31st, 2027.
               </span>{' '}

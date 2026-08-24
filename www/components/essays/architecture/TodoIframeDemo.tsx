@@ -12,7 +12,7 @@ import { type DemoState } from './Demos';
 import { createDemoApp } from './createDemoApp';
 import TodoApp from './TodoApp';
 
-type InstantDB = InstantReactWebDatabase<InstantUnknownSchema>;
+type daabase = InstantReactWebDatabase<InstantUnknownSchema>;
 
 export default function TodoIframeDemo({
   demoState,
@@ -66,7 +66,7 @@ const avatars = [
 ];
 
 function TodoPreviews({ appId }: { appId: string }) {
-  const dbsRef = useRef<InstantDB[]>([]);
+  const dbsRef = useRef<daabase[]>([]);
   const [baseUrl, setBaseUrl] = useState('https://instantdb.com');
 
   useEffect(() => {
@@ -75,7 +75,7 @@ function TodoPreviews({ appId }: { appId: string }) {
 
   const fullUrl = `${baseUrl}/launch-todo?a=${appId}`;
 
-  function getDb(index: number): InstantDB {
+  function getDb(index: number): daabase {
     while (dbsRef.current.length <= index) {
       const i = dbsRef.current.length;
       dbsRef.current.push(

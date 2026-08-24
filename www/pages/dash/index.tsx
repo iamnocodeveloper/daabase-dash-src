@@ -614,7 +614,7 @@ function Dashboard() {
       </div>
       <div className="flex w-full grow flex-col overflow-hidden md:flex-row">
         <Head>
-          <title>Instant - {mainTabIndex.get(tab as MainTabId)?.title}</title>
+          <title>daabase - {mainTabIndex.get(tab as MainTabId)?.title}</title>
         </Head>
         <Nav
           apps={apps}
@@ -649,16 +649,16 @@ function Dashboard() {
                   <div className="border-b border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950 dark:border-amber-900/60 dark:bg-amber-950/50 dark:text-amber-100">
                     <p className="font-semibold">
                       {fetchedDash.data.sunset?.stage === 'disabled'
-                        ? 'Instant Cloud is now offline.'
-                        : 'Instant Cloud is now read-only.'}{' '}
+                        ? 'daabase Cloud is now offline.'
+                        : 'daabase Cloud is now read-only.'}{' '}
                       Backups will be available to download until August 31st,
                       2028.
                     </p>
                     <p>
                       Download a backup of this app to restore it to your
-                      self-hosted Instant deployment.{' '}
+                      self-hosted daabase deployment.{' '}
                       <a
-                        href="https://www.instantdb.com/docs/self-hosting/migrate"
+                        href="https://daabase-dash.apps.devtik.xyz/docs/self-hosting/migrate"
                         target="_blank"
                         rel="noreferrer"
                         className="font-medium underline underline-offset-2"
@@ -858,7 +858,7 @@ function Home({ app, token }: { app: InstantApp; token: string }) {
               })
             }
           >
-            Jump into our docs to start learning how to use Instant.
+            Jump into our docs to start learning how to use daabase.
           </HomeButton>
         </div>
         <div className="md:w-[calc(50%-0.5rem)]">

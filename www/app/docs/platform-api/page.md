@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: 'Platform API'
-    description: 'Spin up Instant apps on demand and manage schema with the Platform API.'
+    description: 'Spin up daabase apps on demand and manage schema with the Platform API.'
 ---
 
-You can use Instant to programmatically create apps, push schemas and manage permissions. This is particularly powerful in two scenarios:
+You can use daabase to programmatically create apps, push schemas and manage permissions. This is particularly powerful in two scenarios:
 
-- **App Builders**: If you're an app builder, you can give your customers a backend. It takes only an hour to set up the platform, and every app your users create gets a full backend as a result. LLMs are great at using Instant: they can make more progress with fewer tokens and fewer mistakes.
+- **App Builders**: If you're an app builder, you can give your customers a backend. It takes only an hour to set up the platform, and every app your users create gets a full backend as a result. LLMs are great at using daabase: they can make more progress with fewer tokens and fewer mistakes.
 - **Software teams**: If you're a software team, you can improve your development workflows: create apps for different pull requests, or spin up temporary apps for tests.
 
 In this document, we'll show you:
@@ -23,7 +23,7 @@ Let's get into it!
 
 To manage apps, you have two main tools at your disposal.
 
-You can either use the Instant CLI:
+You can either use the daabase CLI:
 
 ```bash
 npx instant-cli
@@ -41,7 +41,7 @@ Let's see how to use them.
 
 First things first, let's create a temporary app.
 
-A temporary app is an Instant app that deletes itself in 2 weeks. You can use it to run quick experiments or spin apps up for tests.
+A temporary app is an daabase app that deletes itself in 2 weeks. You can use it to run quick experiments or spin apps up for tests.
 
 You don't need to authenticate to create temporary apps, so they're a great way to get a sense of our tools.
 
@@ -111,7 +111,7 @@ app -> {
 }
 ```
 
-You can use this app `id` and `adminToken` in Instant SDKs.
+You can use this app `id` and `adminToken` in daabase SDKs.
 
 Temporary apps are great, but they only last 2 weeks. What if you want to make apps that last forever?
 
@@ -125,7 +125,7 @@ You have two options to authenticate and create long-lived apps:
 
 **Option 1: Personal Access Tokens**
 
-The quickest way to get started is to create a Personal Access Token. You can create Personal Access Tokens by going to user settings in "Dashboard -> Settings -> New Access Token". Here's a direct [link](https://www.instantdb.com/dash/user-settings).
+The quickest way to get started is to create a Personal Access Token. You can create Personal Access Tokens by going to user settings in "Dashboard -> Settings -> New Access Token". Here's a direct [link](https://daabase-dash.apps.devtik.xyz/dash/user-settings).
 
 Once you click "New Access Token", you'll get a token that looks like this:
 
@@ -135,13 +135,13 @@ per_xxx11x1xxx1xx1x11x1x1111xxx1xx11x11xxxx1x1x1x1111xxx11111xxx111x
 
 When you use this token to create apps, they will get associated with the account where you created the token.
 
-**Option 2: Let users Sign in with Instant**
+**Option 2: Let users Sign in with daabase**
 
-Alternatively, you can create a "Sign in with Instant" button in your app. This button would let end-users provide their own Instant accounts and give you permissions to manage apps on their behalf.
+Alternatively, you can create a "Sign in with daabase" button in your app. This button would let end-users provide their own daabase accounts and give you permissions to manage apps on their behalf.
 
 To do this, you can use the Platform SDK and set up OAuth. Follow the tutorial in the [Platform OAuth Guide](https://github.com/instantdb/instant/tree/main/client/packages/platform#oauth-flow) to see how to do that.
 
-When you're done and a user clicks "Sign in with Instant" in your app, you'll get a token that looks like this:
+When you're done and a user clicks "Sign in with daabase" in your app, you'll get a token that looks like this:
 
 ```bash
 prt_xxx11x1xxx1xx1x11x1x1111xxx1xx11x11xxxx1x1x1x1111xxx11111xxx111x

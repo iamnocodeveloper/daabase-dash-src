@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: 'Sign In with Apple'
-    description: 'How to add Sign In with Apple to your Instant app.'
+    description: 'How to add Sign In with Apple to your daabase app.'
 ---
 
 {% nav-default value="web-popup" %}
 
-Instant supports Sign In with Apple on the Web and in native applications.
+daabase supports Sign In with Apple on the Web and in native applications.
 
 {% nav-group %}
 {% nav-button param="method" value="web-popup" title="Web Popup (recommended)" description="Use Apple-provided popup to authenticate users" /%}
@@ -79,7 +79,7 @@ Instant supports Sign In with Apple on the Web and in native applications.
 This step is not needed for Expo.
 {% /conditional %}
 
-## Step 4: Register your OAuth client with Instant
+## Step 4: Register your OAuth client with daabase
 
 {% conditional param="method" value="web-redirect" %}
 
@@ -87,7 +87,7 @@ This step is not needed for Expo.
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard:
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard:
 
 - Click "Add Apple Client"
 - Select a unique client name (`apple` by default, used in `db.auth` calls)
@@ -119,7 +119,7 @@ npx instant-cli@latest auth client add \
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard:
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard:
 
 - Click "Add Apple Client"
 - Select a unique client name (`apple` by default, used in `db.auth` calls)
@@ -144,13 +144,13 @@ npx instant-cli@latest auth client add \
 
 {% conditional param="method" value="web-redirect" %}
 
-## Step 4.5: Whitelist your domain in Instant (Web Redirect flow only)
+## Step 4.5: Whitelist your domain in daabase (Web Redirect flow only)
 
 {% setup-paths %}
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard:
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard:
 
 - Click "Redirect Origins" → "Add an origin"
 - Add your app's domain (e.g. `myapp.com`)
@@ -201,7 +201,7 @@ async function signInPopup() {
     usePopup: true,
   });
 
-  // authenticate with Instant
+  // authenticate with daabase
   await db.auth.signInWithIdToken({
     clientName: '<clientName>',
     idToken: resp.authorization.id_token,
@@ -244,7 +244,7 @@ That’s it!
 
 ## Step 5: Add Sign In code to your app (React Native flow)
 
-Instant comes with support for the [Expo AppleAuthentication library](https://docs.expo.dev/versions/latest/sdk/apple-authentication/).
+daabase comes with support for the [Expo AppleAuthentication library](https://docs.expo.dev/versions/latest/sdk/apple-authentication/).
 
 Add dependency:
 
@@ -270,7 +270,7 @@ Add `exp://` as a redirect origin for development with Expo:
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard:
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard:
 
 - Click "Redirect Origins" → "Add an origin"
 - Add `exp://`
@@ -287,7 +287,7 @@ npx instant-cli@latest auth origin add --type custom-scheme --scheme exp://
 
 {% /setup-paths %}
 
-Authenticate with Apple and then pass identityToken to Instant along with `clientName` from Step 4:
+Authenticate with Apple and then pass identityToken to daabase along with `clientName` from Step 4:
 
 ```jsx {% showCopy=true %}
 const [nonce] = useState('' + Math.random());
@@ -301,7 +301,7 @@ try {
     nonce: nonce,
   });
 
-  // pass identityToken to Instant
+  // pass identityToken to daabase
   db.auth
     .signInWithIdToken({
       clientName: '<clientName>',

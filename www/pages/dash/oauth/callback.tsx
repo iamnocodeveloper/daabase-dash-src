@@ -169,7 +169,7 @@ export default function OAuthCallback() {
   return (
     <div className="flex h-screen w-full flex-col overflow-hidden md:flex-row">
       <Head>
-        <title>Instant - Log in with Google</title>
+        <title>daabase - Log in with Google</title>
       </Head>
       <CallbackScreen state={state} />
       <Toaster theme={darkMode ? 'dark' : 'light'} position="top-right" />

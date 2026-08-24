@@ -14,7 +14,7 @@ export default function GetadbHome() {
         <div className="mx-auto max-w-3xl">
           <img
             src="/img/icon/logo-512.svg"
-            alt="Instant"
+            alt="daabase"
             className="mb-5 h-10 w-10 sm:mb-6 sm:h-12 sm:w-12"
           />
           <h1 className="text-3xl leading-snug font-normal sm:text-4xl">
@@ -49,7 +49,7 @@ export default function GetadbHome() {
                 href="/"
                 className="underline underline-offset-4 hover:text-orange-600"
               >
-                Instant
+                daabase
               </a>{' '}
               backend. This includes a relational database, a sync engine, and
               abstractions for auth, presence, and streams. Your agent can build
@@ -68,7 +68,7 @@ export default function GetadbHome() {
             <strong className="font-semibold text-gray-900">
               Are you an agent?
             </strong>{' '}
-            Your human wants you to build an app with Instant. curl
+            Your human wants you to build an app with daabase. curl
             'https://www.getadb.com/guide' for credentials and instructions.
           </p>
         </div>

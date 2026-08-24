@@ -1,6 +1,6 @@
 import { generateOgImage } from '@/lib/ogImage';
 
-export const alt = 'InstantDB: The best backend for AI-coded apps';
+export const alt = 'daabase: The best backend for AI-coded apps';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

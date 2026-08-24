@@ -312,7 +312,7 @@ function DevtoolWithData({
         <div className="flex h-full w-full items-center justify-center">
           <div className="mx-auto max-w-md space-y-4">
             <ScreenHeading>
-              🤕 Failed connect to Instant's backend
+              🤕 Failed connect to daabase's backend
             </ScreenHeading>
             {message ? (
               <div className="mx-auto flex w-full max-w-2xl flex-col">
@@ -324,12 +324,12 @@ function DevtoolWithData({
             <AppIdLabel appId={appId} />
             {isSelfHosted ? (
               <p>
-                We had some trouble connecting to Instant's backend. Contact
+                We had some trouble connecting to daabase's backend. Contact
                 your deployment administrator with details.
               </p>
             ) : (
               <p>
-                We had some trouble connecting to Instant's backend. Please ping
+                We had some trouble connecting to daabase's backend. Please ping
                 us on{' '}
                 <a
                   className="font-bold text-blue-500"
@@ -430,7 +430,7 @@ function DevtoolWindow({
       <div className="flex h-full w-full flex-col">
         <div className="flex border-b bg-gray-100 p-2 text-xs">
           <div className="flex-1 font-mono">
-            Instant Devtools {app?.title ? `• ${app?.title}` : ''}
+            daabase Devtools {app?.title ? `• ${app?.title}` : ''}
             {isLocalHost ? ' • localhost' : ''}
           </div>
           <XMarkIcon
@@ -619,9 +619,9 @@ function Admin({
 function Help() {
   return (
     <Stack className="max-w-sm gap-2 text-sm">
-      <SectionHeading>Instant Devtools</SectionHeading>
+      <SectionHeading>daabase Devtools</SectionHeading>
       <p>
-        This widget embeds a data explorer and sandbox for your Instant app. We
+        This widget embeds a data explorer and sandbox for your daabase app. We
         added it to make it easier to interact with your data and test
         operations.
       </p>

@@ -2,7 +2,7 @@
 nextjs:
   metadata:
     title: 'Rate Limits'
-    description: 'How to add rate limiting to your Instant app with permission rules.'
+    description: 'How to add rate limiting to your daabase app with permission rules.'
 ---
 
 You can add rate limiting to your app with the `rateLimit` object in the [permission rules](/docs/permissions). Rate limits let you control how often users can perform actions like creating records or querying data.
@@ -229,7 +229,7 @@ Rate limit by IP address with `request.ip`. Useful for limiting unauthenticated 
 
 ## Error handling
 
-When a rate limit is exceeded, Instant returns an error with `type: "rate-limited"` and a `hint` containing `retry-after` (seconds until the bucket refills):
+When a rate limit is exceeded, daabase returns an error with `type: "rate-limited"` and a `hint` containing `retry-after` (seconds until the bucket refills):
 
 ```json
 {

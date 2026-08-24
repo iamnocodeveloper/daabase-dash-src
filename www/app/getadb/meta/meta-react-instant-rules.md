@@ -1,11 +1,11 @@
-# InstantDB rules for no-build React apps
+# daabase rules for no-build React apps
 
 Use this when building a single-file HTML app that can load UMD scripts but
 cannot run `instant-cli`, `npx`, `pnpm dlx`, `bunx`, or install packages.
 
 # SDK
 
-Use React UMD, ReactDOM UMD, Babel standalone, and the Instant React UMD.
+Use React UMD, ReactDOM UMD, Babel standalone, and the daabase React UMD.
 
 ```html
 <div id="root"></div>
@@ -38,7 +38,7 @@ The app may run in a sandboxed iframe. Do not use blocking browser modals:
 
 Use in-page UI for confirmations, errors, and input.
 
-# Initialize Instant
+# Initialize daabase
 
 Browser apps only need the app id. Pass a schema with `i.schema(...)`.
 
@@ -275,7 +275,7 @@ Logic:           and: [ {...}, {...} ]
 Nested fields:   'relation.field': value
 ```
 
-The operator map above is the full set of `where` filters Instant supports right
+The operator map above is the full set of `where` filters daabase supports right
 now. There is no `$exists`, `$nin`, or `$regex`. And `$like` and `$ilike` are
 what you use for `startsWith` / `endsWith` / `includes`.
 
@@ -304,39 +304,39 @@ Use `null` to skip a query until inputs are ready:
 const result = db.useQuery(user ? { items: {} } : null);
 ```
 
-# Instant Documentation
+# daabase Documentation
 
-These links are the Instant documentation table of contents. If you cannot fetch
-a URL directly, search for the topic title plus `InstantDB docs` and use the
-matching Instant docs page.
+These links are the daabase documentation table of contents. If you cannot fetch
+a URL directly, search for the topic title plus `daabase docs` and use the
+matching daabase docs page.
 
-- [Common mistakes](https://instantdb.com/docs/common-mistakes.md): Common mistakes when working with Instant
-- [Initializing Instant](https://instantdb.com/docs/init.md): How to integrate Instant with your app.
-- [Modeling data](https://instantdb.com/docs/modeling-data.md): How to model data with Instant's schema.
-- [Writing data](https://instantdb.com/docs/instaml.md): How to write data with Instant using InstaML.
-- [Reading data](https://instantdb.com/docs/instaql.md): How to read data with Instant using InstaQL.
-- [Instant on the Backend](https://instantdb.com/docs/backend.md): How to use Instant on the server with the Admin SDK.
-- [Patterns](https://instantdb.com/docs/patterns.md): Common patterns for working with InstantDB.
-- [Auth](https://instantdb.com/docs/auth/magic-codes.md): How to add magic code auth to your Instant app.
-- [Guest Auth](https://www.instantdb.com/docs/auth/guest-auth.md): How to add guest auth to your Instant app.
-- [Other Auth](https://instantdb.com/docs/auth.md): Additional auth methods supported by Instant.
-- [Managing users](https://instantdb.com/docs/users.md): How to manage users in your Instant app.
-- [Presence, Cursors, and Activity](https://instantdb.com/docs/presence-and-topics.md): How to add ephemeral features like presence and cursors to your Instant app.
-- [Instant CLI](https://instantdb.com/docs/cli.md): How to use the Instant CLI to manage schema.
-- [Storage](https://instantdb.com/docs/storage.md): How to upload and serve files with Instant.
-- [Streams](https://instantdb.com/docs/streams.md): How to use streams with Instant.
-- [Stripe Payments](https://instantdb.com/docs/stripe-payments.md): How to integrate Stripe payments with Instant.
-- [React Native](https://instantdb.com/docs/start-rn.md): How to use Instant in React Native apps.
-- [Vanilla JS](https://instantdb.com/docs/start-vanilla.md): How to use Instant in vanilla JS apps.
-- [SolidJS](https://instantdb.com/docs/start-solidjs.md): How to use Instant in SolidJS apps.
-- [Svelte](https://instantdb.com/docs/start-svelte.md): How to use Instant in Svelte apps.
-- [TanStack](https://instantdb.com/docs/start-tanstack.md): How to use Instant in TanStack apps.
+- [Common mistakes](https://instantdb.com/docs/common-mistakes.md): Common mistakes when working with daabase
+- [Initializing daabase](https://instantdb.com/docs/init.md): How to integrate daabase with your app.
+- [Modeling data](https://instantdb.com/docs/modeling-data.md): How to model data with daabase's schema.
+- [Writing data](https://instantdb.com/docs/instaml.md): How to write data with daabase using InstaML.
+- [Reading data](https://instantdb.com/docs/instaql.md): How to read data with daabase using InstaQL.
+- [daabase on the Backend](https://instantdb.com/docs/backend.md): How to use daabase on the server with the Admin SDK.
+- [Patterns](https://instantdb.com/docs/patterns.md): Common patterns for working with daabase.
+- [Auth](https://instantdb.com/docs/auth/magic-codes.md): How to add magic code auth to your daabase app.
+- [Guest Auth](https://daabase-dash.apps.devtik.xyz/docs/auth/guest-auth.md): How to add guest auth to your daabase app.
+- [Other Auth](https://instantdb.com/docs/auth.md): Additional auth methods supported by daabase.
+- [Managing users](https://instantdb.com/docs/users.md): How to manage users in your daabase app.
+- [Presence, Cursors, and Activity](https://instantdb.com/docs/presence-and-topics.md): How to add ephemeral features like presence and cursors to your daabase app.
+- [daabase CLI](https://instantdb.com/docs/cli.md): How to use the daabase CLI to manage schema.
+- [Storage](https://instantdb.com/docs/storage.md): How to upload and serve files with daabase.
+- [Streams](https://instantdb.com/docs/streams.md): How to use streams with daabase.
+- [Stripe Payments](https://instantdb.com/docs/stripe-payments.md): How to integrate Stripe payments with daabase.
+- [React Native](https://instantdb.com/docs/start-rn.md): How to use daabase in React Native apps.
+- [Vanilla JS](https://instantdb.com/docs/start-vanilla.md): How to use daabase in vanilla JS apps.
+- [SolidJS](https://instantdb.com/docs/start-solidjs.md): How to use daabase in SolidJS apps.
+- [Svelte](https://instantdb.com/docs/start-svelte.md): How to use daabase in Svelte apps.
+- [TanStack](https://instantdb.com/docs/start-tanstack.md): How to use daabase in TanStack apps.
 
 # React Checklist
 
-- Scripts are loaded in this order: React, ReactDOM, Babel, Instant React
+- Scripts are loaded in this order: React, ReactDOM, Babel, daabase React
 - JSX code is inside `<script type="text/babel" data-presets="react">`
-- Instant is read from `window.instantReact`
+- daabase is read from `window.instantReact`
 - `const { init, i, id } = instantReact`
 - `const db = init({ appId: APP_ID, schema })`
 - React renders with `ReactDOM.createRoot(...).render(<App />)`

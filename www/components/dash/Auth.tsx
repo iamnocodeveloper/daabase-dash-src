@@ -4,7 +4,6 @@ import {
   Button,
   Content,
   Divider,
-  LogoIcon,
   ScreenHeading,
   TextInput,
 } from '../ui';
@@ -227,8 +226,9 @@ export default function Auth(props: {
     <div className="flex min-h-[100dvh] items-center justify-center p-4 dark:bg-neutral-900">
       <div className="max-w-sm">
         <span className="inline-flex items-center space-x-2">
-          <LogoIcon />
-          <span className="font-mono text-sm lowercase">Instant</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/img/icon/logo-512.svg" alt="daabase" className="h-9 w-9" />
+          <span className="font-mono text-sm lowercase">daabase</span>
         </span>
         <div className="flex flex-col gap-4">
           {sentEmail ? (

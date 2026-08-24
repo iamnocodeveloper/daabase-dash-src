@@ -213,7 +213,7 @@ export default function SyncEngine() {
         </div>
       </Section>
 
-      {/* Mini CTA: With Instant you get sync for free */}
+      {/* Mini CTA: With daabase you get sync for free */}
       <div className="relative overflow-hidden bg-[#F0F5FA]">
         <div className="pointer-events-none absolute top-0 right-0 left-0 z-[5] h-48 bg-gradient-to-b from-white to-transparent" />
         <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-[5] h-48 bg-gradient-to-b from-transparent to-white" />
@@ -221,7 +221,7 @@ export default function SyncEngine() {
           <AnimateIn>
             <div className="text-center">
               <SectionTitle>
-                With Instant you get <br className="hidden md:block" />
+                With daabase you get <br className="hidden md:block" />
                 <span className="text-orange-600">sync for free.</span>
               </SectionTitle>
               <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">

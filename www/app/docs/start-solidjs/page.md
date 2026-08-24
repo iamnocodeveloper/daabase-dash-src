@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: 'Getting started with SolidJS'
-    description: 'How to use Instant with SolidJS'
+    description: 'How to use daabase with SolidJS'
 ---
 
-## Automatic Setup With Create Instant App
+## Automatic Setup With Create daabase App
 
-The fastest way to get started with Instant and SolidJS is to use create-instant-app to scaffold a new project with Instant already set up.
+The fastest way to get started with daabase and SolidJS is to use create-instant-app to scaffold a new project with daabase already set up.
 
 To get started, run:
 
@@ -23,13 +23,13 @@ Create a blank Vite SolidJS App:
 npx create-vite@latest -t solid-ts
 ```
 
-Add the InstantDB SolidJS Library:
+Add the daabase SolidJS Library:
 
 ```shell
 npm i @instantdb/solidjs
 ```
 
-Use `instant-cli` to set up a new Instant project. This will prompt you to log in if you haven't already. It will then create schema and permissions files and update your `.env` file.
+Use `instant-cli` to set up a new daabase project. This will prompt you to log in if you haven't already. It will then create schema and permissions files and update your `.env` file.
 
 ```shell
 npx instant-cli init
@@ -252,7 +252,7 @@ function Welcome() {
   return (
     <div class="bg-white p-6 rounded-lg border border-neutral-200 shadow flex justify-center flex-col gap-2">
       <h2 class="tracking-wide text-[#F54A00] text-2xl text-center">
-        Solid + Vite + InstantDB
+        Solid + Vite + daabase
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 grow gap-2">
         <a
@@ -269,15 +269,15 @@ function Welcome() {
         </a>
         <a
           target="_blank"
-          href="https://www.instantdb.com/docs"
+          href="https://daabase-dash.apps.devtik.xyz/docs"
           rel="noopener noreferrer"
           class="border shadow flex flex-col py-8 gap-2 hover:bg-neutral-100 items-center justify-center font-semibold border-neutral-200 rounded"
         >
           <img
-            src="https://www.instantdb.com/img/icon/logo-512.svg"
+            src="https://daabase-dash.apps.devtik.xyz/img/icon/logo-512.svg"
             width={34}
           />
-          Instant Docs
+          daabase Docs
         </a>
       </div>
     </div>

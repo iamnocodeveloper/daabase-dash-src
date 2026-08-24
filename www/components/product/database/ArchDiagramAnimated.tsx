@@ -371,7 +371,7 @@ export function ArchDiagramAnimated() {
                 transition={{ duration: 0.25 }}
               >
                 <span>🎉</span>
-                With Instant
+                With daabase
               </motion.span>
             ) : (
               <motion.span
@@ -397,7 +397,7 @@ export function ArchDiagramAnimated() {
                     fill="white"
                   />
                 </svg>
-                Add Instant
+                Add daabase
               </motion.span>
             )}
           </AnimatePresence>
@@ -456,7 +456,7 @@ export function ArchDiagramAnimated() {
         {/* App screen (always visible) */}
         <AppScreen />
 
-        {/* Instant logo */}
+        {/* daabase logo */}
         <AnimatePresence>
           {showInstant && (
             <motion.g
@@ -492,7 +492,7 @@ export function ArchDiagramAnimated() {
           )}
         </AnimatePresence>
 
-        {/* Lines from Instant to App */}
+        {/* Lines from daabase to App */}
         {instantToAppLines.map((d, i) => (
           <path
             key={`instant-line-${i}`}

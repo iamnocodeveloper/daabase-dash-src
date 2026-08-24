@@ -102,7 +102,7 @@ function Page() {
   return (
     <div>
       <Head>
-        <title>Instant Storage Usage</title>
+        <title>daabase Storage Usage</title>
       </Head>
       <div className="max-w-4xl p-8">
         <div className="">

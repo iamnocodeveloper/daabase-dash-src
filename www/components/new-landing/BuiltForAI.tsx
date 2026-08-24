@@ -729,12 +729,12 @@ export function BuiltForAI() {
           <div className="lg:max-w-[440px]">
             <Subheading>Easy for humans, perfect for LLMs</Subheading>
             <FeatureBody>
-              Instant has a tiny API surface. Modern LLMs already know it from
+              daabase has a tiny API surface. Modern LLMs already know it from
               their training data. And it takes only 1% of context for advanced
               features.
             </FeatureBody>
             <FeatureBody>
-              Here's what a real-time chat app looks like with Instant. Simple
+              Here's what a real-time chat app looks like with daabase. Simple
               to read, and even easier for your AI to understand and generate.
             </FeatureBody>
           </div>
@@ -747,7 +747,7 @@ export function BuiltForAI() {
           <div className="md:max-w-[440px]">
             <Subheading>End-to-end type safety</Subheading>
             <FeatureBody>
-              Instant comes with types for your schema, permissions, queries,
+              daabase comes with types for your schema, permissions, queries,
               and transactions. This makes it easy to catch errors early. Your
               AI can understand your data model and generate correct code on the
               first try.
@@ -769,7 +769,7 @@ export function BuiltForAI() {
             <Subheading>Undo destructive changes</Subheading>
             <FeatureBody>
               LLMs can make mistakes. For destructive actions like schema
-              deletions, Instant comes with built-in undo. Restore deleted
+              deletions, daabase comes with built-in undo. Restore deleted
               columns instantly.
             </FeatureBody>
           </div>

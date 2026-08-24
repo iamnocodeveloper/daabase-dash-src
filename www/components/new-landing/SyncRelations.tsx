@@ -13,7 +13,7 @@ export function SyncRelations() {
           <SectionTitle>Relational at the Core</SectionTitle>
           <SectionSubtitle>
             Real apps aren't flat. Data needs to connect. Most backends make you
-            choose between real-time sync and relational queries. Instant gives
+            choose between real-time sync and relational queries. daabase gives
             you both.
           </SectionSubtitle>
         </SectionIntro>

@@ -80,8 +80,8 @@ function Page() {
   return (
     <div>
       <Head>
-        <title>Instant Investor Update Metrics</title>
-        <meta name="description" content="Welcome to Instant." />
+        <title>daabase Investor Update Metrics</title>
+        <meta name="description" content="Welcome to daabase." />
       </Head>
       <div className="p-4">
         <div>

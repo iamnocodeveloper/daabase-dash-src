@@ -23,7 +23,7 @@ import { ArchDiagramAnimated } from '@/components/product/database/ArchDiagramAn
 
 export default function Database() {
   const description =
-    'Instant has everything you need to build web and mobile apps with your favorite LLM.';
+    'daabase has everything you need to build web and mobile apps with your favorite LLM.';
 
   return (
     <div className="text-off-black w-full overflow-x-auto">
@@ -52,7 +52,7 @@ export default function Database() {
             <div className="space-y-4 md:max-w-[400px]">
               <Subheading>Easy to query</Subheading>
               <p className="mt-2 text-base">
-                Instant's query language, InstaQL, is designed to be easy to
+                daabase's query language, InstaQL, is designed to be easy to
                 understand. It uses plain JavaScript objects to declare the data
                 you want to fetch and the shape you want.
               </p>
@@ -92,7 +92,7 @@ export default function Database() {
               <div className="space-y-4 md:max-w-[440px]">
                 <Subheading>Easy to transact</Subheading>
                 <p className="mt-2 text-base">
-                  Modifying data in Instant is easy with our transaction
+                  Modifying data in daabase is easy with our transaction
                   language InstaML.
                 </p>
                 <p className="mt-2 text-base">
@@ -135,7 +135,7 @@ export default function Database() {
               <div className="space-y-4 md:max-w-[400px]">
                 <Subheading>No need for a server</Subheading>
                 <p className="mt-2 text-base">
-                  Use our client SDKs to use InstantDB directly from your
+                  Use our client SDKs to use daabase directly from your
                   frontend. No need to manage a database or server.
                 </p>
                 <p className="mt-2 text-base">
@@ -158,7 +158,7 @@ export default function Database() {
               <div className="space-y-4 md:max-w-[440px]">
                 <Subheading>Full type-safety</Subheading>
                 <p className="mt-2 text-base">
-                  Instant provides full type-safety for your schema, queries,
+                  daabase provides full type-safety for your schema, queries,
                   and transactions. This means you can catch errors at compile
                   time instead of runtime. If you change your schema your types
                   will automagically update too!
@@ -179,7 +179,7 @@ export default function Database() {
               <div className="space-y-4 md:max-w-[400px]">
                 <Subheading>CLI tools for agentic development</Subheading>
                 <p className="mt-2 text-base">
-                  Our CLI tools make it easy to manage your Instant project and
+                  Our CLI tools make it easy to manage your daabase project and
                   scaffold new ones. Anything you can do in the dashboard your
                   agent can do from the terminal.
                 </p>
@@ -232,7 +232,7 @@ export default function Database() {
                 </div>
               </div>
               <p className="mt-6 text-base text-gray-500">
-                Instant is{' '}
+                daabase is{' '}
                 <Link
                   href="https://github.com/instantdb/instant"
                   className="underline hover:text-gray-700"

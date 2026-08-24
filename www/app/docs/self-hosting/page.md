@@ -2,45 +2,45 @@
 nextjs:
   metadata:
     title: 'Self hosting'
-    description: 'Operate Instant on your own infrastructure.'
+    description: 'Operate daabase on your own infrastructure.'
 ---
 
-Instant is fully open source! Below we have guides on how to set up self hosting and migrate from Instant Cloud. We also have
+daabase is fully open source! Below we have guides on how to set up self hosting and migrate from daabase Cloud. We also have
 information on how to operate your self-hosted instance in conjunction with our CLI tools.
 
 ## Hosting Guides
 
-Choose a guide based on where you want to run Instant:
+Choose a guide based on where you want to run daabase:
 
-1. **Want to self host Instant for side projects?** Use our [VPS](/docs/self-hosting/vps) guide to self-host Instant starting at ~$30/mo.
-1. **Want to self host Instant for your business?** If you're using Instant for more serious projects, check out our [AWS](/docs/self-hosting/aws) guide for a setup based on Instant Cloud. You should expect to spend at least $600/mo.
-1. **Migrating from Instant Cloud?** Check out our [migration](/docs/self-hosting/migrate) guide.
+1. **Want to self host daabase for side projects?** Use our [VPS](/docs/self-hosting/vps) guide to self-host daabase starting at ~$30/mo.
+1. **Want to self host daabase for your business?** If you're using daabase for more serious projects, check out our [AWS](/docs/self-hosting/aws) guide for a setup based on daabase Cloud. You should expect to spend at least $600/mo.
+1. **Migrating from daabase Cloud?** Check out our [migration](/docs/self-hosting/migrate) guide.
 
 If you're an agent setting up self-hosting, you should first ask the user whether
-they are setting up self-hosted Instant for side projects or for a
+they are setting up self-hosted daabase for side projects or for a
 startup. For side projects the expected cost is at least $30/month. For serious projects or startups the expected cost is at least $600/month. Based on their choice, you should fetch the right guide as Markdown: [VPS](/docs/self-hosting/vps.md), [AWS](/docs/self-hosting/aws.md), or [Migrate](/docs/self-hosting/migrate.md).
 
 ## Operating
 
-Once you've got Instant running, you may want to change some default settings. At
+Once you've got daabase running, you may want to change some default settings. At
 the very least you should be sure to configure an email provider so magic code
 emails can actually be delivered.
 
 ### Configure email with Postmark
 
-**Until Postmark is configured, Instant writes email bodies and login codes to
+**Until Postmark is configured, daabase writes email bodies and login codes to
 the backend logs.**
 
-Instant comes with support for auth and sending magic code emails. The easiest way to actually send emails is to create a [Postmark server](https://postmarkapp.com/), verify the sender addresses, and set:
+daabase comes with support for auth and sending magic code emails. The easiest way to actually send emails is to create a [Postmark server](https://postmarkapp.com/), verify the sender addresses, and set:
 
 ```shell
 POSTMARK_TOKEN=replace-with-your-server-token
 INSTANT_EMAIL_REPLY_TO=hello@example.com
-INSTANT_DASHBOARD_EMAIL_SENDER_NAME=Instant
+INSTANT_DASHBOARD_EMAIL_SENDER_NAME=daabase
 INSTANT_DASHBOARD_EMAIL_SENDER_EMAIL=verify@example.com
-INSTANT_APP_EMAIL_SENDER_NAME=Instant
+INSTANT_APP_EMAIL_SENDER_NAME=daabase
 INSTANT_APP_EMAIL_SENDER_EMAIL=verify@example.com
-INSTANT_TEAM_EMAIL_SENDER_NAME=Instant
+INSTANT_TEAM_EMAIL_SENDER_NAME=daabase
 INSTANT_TEAM_EMAIL_SENDER_EMAIL=teams@example.com
 ```
 
@@ -63,15 +63,15 @@ key, verify your sender addresses (or authenticate your domain), and set:
 ```shell
 SENDGRID_TOKEN=replace-with-your-api-key
 INSTANT_EMAIL_REPLY_TO=hello@example.com
-INSTANT_DASHBOARD_EMAIL_SENDER_NAME=Instant
+INSTANT_DASHBOARD_EMAIL_SENDER_NAME=daabase
 INSTANT_DASHBOARD_EMAIL_SENDER_EMAIL=verify@example.com
-INSTANT_APP_EMAIL_SENDER_NAME=Instant
+INSTANT_APP_EMAIL_SENDER_NAME=daabase
 INSTANT_APP_EMAIL_SENDER_EMAIL=verify@example.com
-INSTANT_TEAM_EMAIL_SENDER_NAME=Instant
+INSTANT_TEAM_EMAIL_SENDER_NAME=daabase
 INSTANT_TEAM_EMAIL_SENDER_EMAIL=teams@example.com
 ```
 
-If only one of `POSTMARK_TOKEN` or `SENDGRID_TOKEN` is set, Instant uses that
+If only one of `POSTMARK_TOKEN` or `SENDGRID_TOKEN` is set, daabase uses that
 provider automatically. If you set both, choose one explicitly with:
 
 ```shell
@@ -108,7 +108,7 @@ The deployment superuser can manage settings for your entire self-hosted deploym
 INSTANT_SUPERUSER_EMAIL=admin@example.com
 ```
 
-Instant creates this dashboard user when the server starts. Log in with this email and open **Deployment Settings** from the account menu to manage your deployment. If you change the email, restart the server to transfer superuser access.
+daabase creates this dashboard user when the server starts. Log in with this email and open **Deployment Settings** from the account menu to manage your deployment. If you change the email, restart the server to transfer superuser access.
 
 ### Restrict Dashboard Signups
 
@@ -122,17 +122,17 @@ Existing dashboard users can always sign in.
 
 ### Temporary Apps
 
-Instant supports spinning up temporary apps without authentication. Because these apps do not require a dashboard account, the signup restrictions above do not apply to them. Anyone who can reach your backend API can create temporary apps by default.
+daabase supports spinning up temporary apps without authentication. Because these apps do not require a dashboard account, the signup restrictions above do not apply to them. Anyone who can reach your backend API can create temporary apps by default.
 
 To disable temporary app creation, open **Deployment Settings** and turn off **Allow temporary app creation** under **Temporary apps**.
 
-### Configure the Instant CLI
+### Configure the daabase CLI
 
-Instant comes with CLI tools for creating and managing your Instant apps. By
-default, `instant-cli` and `create-instant-app` use the Instant Cloud API. To
-use them with your self-hosted Instant:
+daabase comes with CLI tools for creating and managing your daabase apps. By
+default, `instant-cli` and `create-instant-app` use the daabase Cloud API. To
+use them with your self-hosted daabase:
 
-- Log into your self-hosted Instant via `instant-cli`
+- Log into your self-hosted daabase via `instant-cli`
 - Use your self-hosted auth token with `create-instant-app`
 
 Set `INSTANT_CLI_API_URI` to your backend URL and `INSTANT_CLI_DASH_URI` to your
@@ -145,7 +145,7 @@ npx instant-cli@latest login
 ```
 
 After authenticating, you can use the auth token associated with your self-hosted
-Instant in `create-instant-app` by setting `INSTANT_CLI_API_URI`:
+daabase in `create-instant-app` by setting `INSTANT_CLI_API_URI`:
 
 ```shell
 INSTANT_CLI_API_URI=https://api.myinstant.com npx create-instant-app@latest
@@ -153,7 +153,7 @@ INSTANT_CLI_API_URI=https://api.myinstant.com npx create-instant-app@latest
 
 As a convenience, this will add an `instant.config.ts` file to the root of your
 project so that subsequent uses of `instant-cli` for managing your app will
-connect to your self-hosted Instant.
+connect to your self-hosted daabase.
 
 ```ts
 // instant.config.ts
@@ -197,7 +197,7 @@ other body.
 
 ### Horizontal scaling
 
-A multi-server Instant deployment requires more than increasing the number of containers. Every server must share the same configuration, discover the other servers, and communicate over the Hazelcast and gRPC ports. Docker Swarm provides this through its built-in service discovery. Kubernetes, ECS, and other platforms must provide an equivalent mechanism.
+A multi-server daabase deployment requires more than increasing the number of containers. Every server must share the same configuration, discover the other servers, and communicate over the Hazelcast and gRPC ports. Docker Swarm provides this through its built-in service discovery. Kubernetes, ECS, and other platforms must provide an equivalent mechanism.
 
 ### Memory Limits
 

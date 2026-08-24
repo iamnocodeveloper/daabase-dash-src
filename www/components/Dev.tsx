@@ -41,7 +41,7 @@ export function Dev() {
 
   return (
     <div className="fixed top-2 right-2 bottom-2 z-50 flex w-full max-w-md flex-col gap-4 overflow-auto border bg-gray-50 p-5 font-mono shadow-lg">
-      <h2 className="text-lg font-bold">Instant WWW Devtools</h2>
+      <h2 className="text-lg font-bold">daabase WWW Devtools</h2>
 
       <div>
         <h3 className="font-bold">Backend</h3>

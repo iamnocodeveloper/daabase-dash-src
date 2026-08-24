@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: 'Getting started with TanStack Start'
-    description: 'How to use Instant with TanStack Start'
+    description: 'How to use daabase with TanStack Start'
 ---
 
-## Automatic Setup With Create Instant App
+## Automatic Setup With Create daabase App
 
-The fastest way to get started with Instant on TanStack Start is to use npx create-instant-app to scaffold a new project with Instant already set up.
+The fastest way to get started with daabase on TanStack Start is to use npx create-instant-app to scaffold a new project with daabase already set up.
 
 To get started, run:
 
@@ -17,7 +17,7 @@ npx create-instant-app -b tanstack-start
 
 ## Manual Setup
 
-The following guide demonstrates the basics for manually scaffolding a new TanStack project with Instant and managing data. In general, we recommend the automatic setup above, which includes all of this, a basic auth flow, and other useful full-stack utilities.
+The following guide demonstrates the basics for manually scaffolding a new TanStack project with daabase and managing data. In general, we recommend the automatic setup above, which includes all of this, a basic auth flow, and other useful full-stack utilities.
 
 Create a blank TanStack Start app:
 
@@ -25,13 +25,13 @@ Create a blank TanStack Start app:
 npx @tanstack/cli create my-app
 ```
 
-Add the InstantDB React Library:
+Add the daabase React Library:
 
 ```shell
 npm i @instantdb/react
 ```
 
-Use `instant-cli` to set up a new Instant project. This will prompt you to log in if you haven't already. It will then create schema and permissions files and update your `.env` file.
+Use `instant-cli` to set up a new daabase project. This will prompt you to log in if you haven't already. It will then create schema and permissions files and update your `.env` file.
 
 ```shell
 npx instant-cli init
@@ -260,6 +260,6 @@ Want to dive deeper on how this todo app works? Check out our step-by-step [Todo
 
 For the advanced use case of integrating with TanStack Query and enabling SSR, refer to our [tanstack-start-with-tanstack-query](https://github.com/instantdb/instant/tree/main/examples/tanstack-start-with-tanstack-query) example. It can be scaffolded using `npx create-instant-app -b tanstack-start-with-tanstack-query`.
 
-You can also check out the [Working with data](/docs/init) section to learn more about Instant concepts.
+You can also check out the [Working with data](/docs/init) section to learn more about daabase concepts.
 
-As you get more familiar with Instant, check out our [Recommended Workflow](/docs/workflow) docs for using Instant in your projects.
+As you get more familiar with daabase, check out our [Recommended Workflow](/docs/workflow) docs for using daabase in your projects.

@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Backups'
-    description: 'How Instant creates backups, how to download them, and what a backup archive contains.'
+    description: 'How daabase creates backups, how to download them, and what a backup archive contains.'
 ---
 
-Instant automatically generates a nightly backup that contains all of the data from your app.
+daabase automatically generates a nightly backup that contains all of the data from your app.
 
 You can view backups for the last 7 days from the `Backups` page on the dashboard, or with the cli:
 
@@ -29,7 +29,7 @@ A backup contains all of your app's data, including user records like email addr
 
 {% /callout %}
 
-## Anatomy of an Instant backup
+## Anatomy of an daabase backup
 
 A backup is a zip file with this layout:
 
@@ -88,7 +88,7 @@ size   name
 
 ## Restore a backup
 
-You can restore a backup zipfile that you downloaded from the dashboard or through the cli into a self-hosted Instant instance.
+You can restore a backup zipfile that you downloaded from the dashboard or through the cli into a self-hosted daabase instance.
 
 Read the [Self hosting](/docs/self-hosting) guide for more information on how to set up a self-hosted instance.
 

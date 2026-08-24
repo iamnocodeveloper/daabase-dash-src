@@ -216,8 +216,8 @@ function Page() {
   return (
     <div>
       <Head>
-        <title>Instant Paid Apps</title>
-        <meta name="description" content="Welcome to Instant." />
+        <title>daabase Paid Apps</title>
+        <meta name="description" content="Welcome to daabase." />
       </Head>
       <div className="m-4 flex flex-wrap space-y-4 space-x-0 md:flex-nowrap md:space-y-0 md:space-x-8">
         <div className="flex flex-col space-y-2">

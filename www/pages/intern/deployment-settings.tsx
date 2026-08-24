@@ -34,7 +34,7 @@ const flagSettings = {
   dashboardSignups: {
     setting: 'dashboard-signups',
     description:
-      'Controls who can create dashboard accounts for this Instant deployment.',
+      'Controls who can create dashboard accounts for this daabase deployment.',
   },
   ephemeralAppsEnabled: {
     setting: 'ephemeral-apps-enabled',
@@ -79,7 +79,7 @@ const signupModeOptions: {
   {
     label: 'Open',
     value: 'open',
-    description: 'Anyone can create an Instant dashboard account.',
+    description: 'Anyone can create an daabase dashboard account.',
   },
   {
     label: 'Restricted',
@@ -843,7 +843,7 @@ function InstantConfigSettingsContent({
         <div className="min-w-0">
           <h2 className="text-sm font-medium">Advanced settings</h2>
           <p className="mt-0.5 truncate text-sm text-gray-500 dark:text-neutral-400">
-            Open Instant Config to edit every flag and toggle directly.
+            Open daabase Config to edit every flag and toggle directly.
           </p>
         </div>
         <ChevronRightIcon
@@ -863,7 +863,7 @@ function InstantConfigSettings({ app }: { app: InstantApp }) {
       appId: app.id,
       apiURI: config.apiURI,
       websocketURI: config.websocketURI,
-      // @ts-expect-error Instant's dashboard uses the app admin token.
+      // @ts-expect-error daabase's dashboard uses the app admin token.
       __adminToken: app.admin_token,
       disableValidation: true,
     });
@@ -909,7 +909,7 @@ function DeploymentSettingsContent() {
   if (!configApp) {
     return (
       <p className="text-sm text-red-600">
-        Instant Config is not available for this account.
+        daabase Config is not available for this account.
       </p>
     );
   }

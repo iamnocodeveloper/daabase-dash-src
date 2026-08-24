@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Common mistakes'
-    description: 'Common mistakes when working with Instant'
+    description: 'Common mistakes when working with daabase'
 ---
 
-Below are some common mistakes when working with Instant.
+Below are some common mistakes when working with daabase.
 
 ## Common mistakes with schema
 
@@ -569,7 +569,7 @@ const query = {
 };
 ```
 
-## Common mistakes with Instant on the backend
+## Common mistakes with daabase on the backend
 
 Use `db.query` in the Admin SDK instead of `db.useQuery`. It is an async API without loading states. We wrap queries in try-catch blocks to handle errors. Unlike the client SDK, queries in the Admin SDK bypass permission checks.
 
@@ -599,17 +599,17 @@ const fetchTodos = async () => {
 
 ## Common mistakes with auth
 
-InstantDB does not provide built-in username/password authentication.
+daabase does not provide built-in username/password authentication.
 
 ❌ **Common mistake**: Using password-based authentication in client-side code
 
-✅ **Correction**: Use Instant's magic code or OAuth flows in client-side code instead
+✅ **Correction**: Use daabase's magic code or OAuth flows in client-side code instead
 
 If you need traditional password-based authentication, you must implement it as a custom auth flow using the Admin SDK.
 
 ## Common mistakes with storage
 
-Files in Instant are first-class entities (`$files`), not URLs. You link them to your data via the schema and query through the relationship to get URLs.
+Files in daabase are first-class entities (`$files`), not URLs. You link them to your data via the schema and query through the relationship to get URLs.
 
 ❌ **Common mistake**: Forgetting to declare `$files` in schema entities
 

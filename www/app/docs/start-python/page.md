@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Getting started with Python'
-    description: 'How to use Instant from Python with the admin SDK.'
+    description: 'How to use daabase from Python with the admin SDK.'
 ---
 
-Instant offers a Python Admin SDK with an API that mirrors our JavaScript
+daabase offers a Python Admin SDK with an API that mirrors our JavaScript
 Admin SDK. If you read the JS docs, you can mentally substitute Python syntax
 and write working code.
 
@@ -29,7 +29,7 @@ uv sync
 
 This creates a starter script with a `.env`, `main.py`,
 `instant.schema.ts`, and `instant.perms.ts`. Schema and permission files are included so you can manage
-your app with the Instant CLI.
+your app with the daabase CLI.
 
 ## Usage
 
@@ -37,9 +37,9 @@ Our Python SDK mirrors the JS admin SDK's surface and behavior, with a few
 Pythonic adjustments. A basic example looks like this:
 
 ```python {% showCopy=true %}
-from instantdb import Instant, id
+from instantdb import daabase, id
 
-db = Instant(
+db = daabase(
     # You can pass these explicitly; by default they fall back to
     # INSTANT_APP_ID and INSTANT_APP_ADMIN_TOKEN environment variables
     app_id="__APP_ID__",
@@ -92,7 +92,7 @@ Everything else works on both the sync and async client.
 
 The Python starter includes `instant.schema.ts` and `instant.perms.ts`
 so you can manage your app from your Python project. Push changes with
-the Instant CLI as you would normally:
+the daabase CLI as you would normally:
 
 ```shell {% showCopy=true %}
 npx instant-cli push
@@ -162,9 +162,9 @@ db.query({"goals": {}}, rule_params={"region": "us"})
 Mutations use the same InstaML proxy syntax.
 
 ```python {% showCopy=true %}
-from instantdb import Instant, id, lookup
+from instantdb import daabase, id, lookup
 
-db = Instant()
+db = daabase()
 
 goal_id = id()
 todo_id = id()
@@ -288,7 +288,7 @@ db = AsyncInstant(verbose=True)
 db = AsyncInstant(verbose=True, logger=logging.getLogger("myapp"))
 ```
 
-Only `AsyncInstant` has realtime, so the sync `Instant` has no `verbose` option.
+Only `AsyncInstant` has realtime, so the sync `daabase` has no `verbose` option.
 
 ## Auth
 
@@ -360,7 +360,7 @@ Direct queries on the base `db` will fail, but `db.as_user(token=...)` and
 `db.as_user(guest=True)` will work.
 
 ```python {% showCopy=true %}
-db = Instant(app_id="__APP_ID__")  # no admin_token
+db = daabase(app_id="__APP_ID__")  # no admin_token
 
 user_db = db.as_user(token="...")
 user_db.query({"todos": {}})
@@ -488,7 +488,7 @@ Three primitives compose into a framework integration:
 ```python
 # 1. Verify the Ed25519 signature and parse the signed body
 webhook_body = db.webhooks.validate(
-    signature_header=request.headers["Instant-Signature"],
+    signature_header=request.headers["daabase-Signature"],
     body=raw_bytes,
     max_age_seconds=300,
 )
@@ -537,7 +537,7 @@ handlers = {"goals": {"create": on_goal_create}}
 @app.post("/webhooks/instant")
 async def webhook_in(request: Request):
     body = await request.body()
-    sig = request.headers.get("Instant-Signature", "")
+    sig = request.headers.get("daabase-Signature", "")
     try:
         webhook_body = await db.webhooks.validate(signature_header=sig, body=body)
     except InstantError:
@@ -549,9 +549,9 @@ async def webhook_in(request: Request):
 ```
 
 `validate`, `fetch_payloads`, and `process_payload` are awaitable under
-`AsyncInstant`. `validate` falls back to Instant's JWKS endpoint when a
+`AsyncInstant`. `validate` falls back to daabase's JWKS endpoint when a
 signing key is not already cached or bundled. Handlers must match:
-`async def` for `AsyncInstant`, plain `def` for `Instant`.
+`async def` for `AsyncInstant`, plain `def` for `daabase`.
 
 See [Webhooks](/docs/webhooks) for the broader webhook model.
 
@@ -562,9 +562,9 @@ returns a non-2xx response as `InstantAPIError`, which carries `status`
 and `body`:
 
 ```python {% showCopy=true %}
-from instantdb import Instant, InstantAPIError, id
+from instantdb import daabase, InstantAPIError, id
 
-db = Instant()
+db = daabase()
 
 try:
     db.transact(db.tx.goals[id()].update({"title": "Get fit"}))

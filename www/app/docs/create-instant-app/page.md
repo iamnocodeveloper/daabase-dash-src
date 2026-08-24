@@ -1,19 +1,19 @@
 ---
 nextjs:
   metadata:
-    title: 'Create Instant App'
-    description: 'Use create-instant-app to scaffold a new Instant project'
+    title: 'Create daabase App'
+    description: 'Use create-instant-app to scaffold a new daabase project'
 ---
 
-Once you know the basics of Instant, you may find it useful to be able to
-quickly scaffold a new Instant project. We built `create-instant-app` to do just
+Once you know the basics of daabase, you may find it useful to be able to
+quickly scaffold a new daabase project. We built `create-instant-app` to do just
 that.
 
 We currently offer templates for Next.js, Vite + React, Expo, and Vanilla TypeScript. Follow the quick start below to give it a spin!
 
 ## Quick start
 
-If you haven't already, authenticate with the [Instant CLI](/docs/cli) in your
+If you haven't already, authenticate with the [daabase CLI](/docs/cli) in your
 terminal.
 
 ```shell {% showCopy=true %}
@@ -22,9 +22,9 @@ npx instant-cli login
 
 This will open a browser window where you can log in or sign up for an account.
 Once you've authenticated, any app you create with `create-instant-app` will be
-associated with your Instant account!
+associated with your daabase account!
 
-After authenticating, run the following command to scaffold a new Instant app.
+After authenticating, run the following command to scaffold a new daabase app.
 
 ```shell {% showCopy=true %}
 npx create-instant-app instant-demo
@@ -37,11 +37,11 @@ cd instant-demo
 npm run dev
 ```
 
-Huzzah! 🎉 You now have a brand new Instant project to play around with!
+Huzzah! 🎉 You now have a brand new daabase project to play around with!
 
 ## One-shot with Claude Code
 
-Got Claude Code? You can use it to one-shot a full-stack Instant app!
+Got Claude Code? You can use it to one-shot a full-stack daabase app!
 
 Use `create-instant-app` with the `--ai` flag and you'll be prompted to describe the app you want to build. Give it a try!
 

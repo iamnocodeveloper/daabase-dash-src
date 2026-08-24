@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Firebase Auth'
-    description: "How to integrate Firebase's auth flow with Instant."
+    description: "How to integrate Firebase's auth flow with daabase."
 ---
 
-Instant supports delegating auth to Firebase Auth.
+daabase supports delegating auth to Firebase Auth.
 
 ## Setup
 
@@ -13,13 +13,13 @@ Instant supports delegating auth to Firebase Auth.
 
 On the [Firebase dashboard](https://console.firebase.google.com/), open your project and navigate to `Project Overview` > `⚙` > `Project Settings`, then copy the `Project ID`.
 
-**Step 2: Register your Firebase Project ID with your Instant app**
+**Step 2: Register your Firebase Project ID with your daabase app**
 
 {% setup-paths %}
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard, add a new Firebase client with the Project ID you copied.
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard, add a new Firebase client with the Project ID you copied.
 
 {% /dashboard-path %}
 
@@ -36,9 +36,9 @@ npx instant-cli@latest auth client add \
 
 ## Usage
 
-Use Firebase's `getIdToken` helper to get a JWT for your signed-in user. Then call Instant's `db.auth.signInWithIdToken` with the JWT and the client name you set on the Instant dashboard.
+Use Firebase's `getIdToken` helper to get a JWT for your signed-in user. Then call daabase's `db.auth.signInWithIdToken` with the JWT and the client name you set on the daabase dashboard.
 
-When you call `db.auth.signInWithIdToken`, Instant will verify that the JWT was signed by your Firebase app. If verified, Instant will use the email in the JWT's claims to look up your user or create a new one and create a long-lived session. Be sure to call Instant's `db.auth.signOut` when you want to sign the user out.
+When you call `db.auth.signInWithIdToken`, daabase will verify that the JWT was signed by your Firebase app. If verified, daabase will use the email in the JWT's claims to look up your user or create a new one and create a long-lived session. Be sure to call daabase's `db.auth.signOut` when you want to sign the user out.
 
 Here is a full example:
 
@@ -55,16 +55,16 @@ import {
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 
 const db = init({ appId: APP_ID });
 
-// Use the firebase client name you set in the Instant dashboard auth tab
+// Use the firebase client name you set in the daabase dashboard auth tab
 const FIREBASE_CLIENT_NAME = 'REPLACE_ME';
 
 const firebaseConfig = {
-  // Use the same Project ID you set in the Instant dashboard auth tab
+  // Use the same Project ID you set in the daabase dashboard auth tab
   projectId: 'REPLACE_ME',
   apiKey: 'REPLACE_ME',
 };

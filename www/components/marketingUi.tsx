@@ -53,7 +53,7 @@ const products: Product[] = [
   {
     id: 'admin-sdk',
     name: 'Admin SDK',
-    tagline: 'Use Instant on your backend',
+    tagline: 'Use daabase on your backend',
   },
 ];
 
@@ -512,7 +512,7 @@ export function LandingFooter() {
           className={clsx(`flex flex-col gap-6 md:flex-row md:justify-between`)}
         >
           <div className="flex flex-col gap-2 md:gap-0">
-            <div>Instant</div>
+            <div>daabase</div>
             <div>Engineered in San Francisco</div>
           </div>
           <div className="flex flex-wrap gap-x-4 gap-y-2">

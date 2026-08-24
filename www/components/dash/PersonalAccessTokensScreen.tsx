@@ -179,7 +179,7 @@ function CopyTokenDialog({
       <div className="mt-2 flex min-w-0 flex-col gap-2">
         <Content>
           <p>
-            Copy and save your token somewhere safe. Instant does not keep a
+            Copy and save your token somewhere safe. daabase does not keep a
             copy of the token. You will have to generate a new token if this one
             is lost.
           </p>

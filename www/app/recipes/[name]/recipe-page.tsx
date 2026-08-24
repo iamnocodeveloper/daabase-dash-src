@@ -21,7 +21,7 @@ import {
   provisionErrorMessage,
 } from '@/lib/recipes/ephemeralApp';
 
-type InstantDB = InstantReactWebDatabase<InstantUnknownSchema>;
+type daabase = InstantReactWebDatabase<InstantUnknownSchema>;
 
 export default function RecipePage({ name }: { name: string }) {
   return (
@@ -35,9 +35,9 @@ function Main({ name }: { name: string }) {
   const router = useRouter();
   const isHydrated = useIsHydrated();
   const [appId, setAppId] = useState<string | undefined>(undefined);
-  const dbRef = useRef<InstantDB | null>(null);
+  const dbRef = useRef<daabase | null>(null);
 
-  function getDb(appId: string): InstantDB {
+  function getDb(appId: string): daabase {
     if (!dbRef.current) {
       dbRef.current = init({
         ...demoConfig,

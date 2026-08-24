@@ -40,7 +40,7 @@ const TYPE_OPTIONS: { id: AppType; label: string; desc: string }[] = [
   {
     id: 'web',
     label: 'Web',
-    desc: 'Redirect sign-in. Works with Instant dev keys.',
+    desc: 'Redirect sign-in. Works with daabase dev keys.',
   },
   {
     id: 'ios',
@@ -212,7 +212,7 @@ export function AddGoogleClientForm({
       {useSharedCredentials ? (
         <div className="rounded-sm bg-gray-50 p-3 text-sm text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">
           <p>
-            Instant provides dev credentials so you can test Google sign-in in
+            daabase provides dev credentials so you can test Google sign-in in
             development without any setup.
           </p>
           <button
@@ -428,7 +428,7 @@ function CredentialsEditor({
     return (
       <div className="rounded-sm bg-gray-50 p-3 text-sm text-gray-600 dark:bg-neutral-800 dark:text-neutral-400">
         <p>
-          Using Instant's dev credentials. Works in development out of the box.
+          Using daabase's dev credentials. Works in development out of the box.
         </p>
         {!showUpgrade ? (
           <div className="mt-2 flex items-center gap-2">
@@ -511,7 +511,7 @@ const url = db.auth.createAuthorizationURL({
       console.error("no ID token present!");
       return;
     }
-    // 2. Use your token, and sign into InstantDB!
+    // 2. Use your token, and sign into daabase!
     try {
       const res = await db.auth.signInWithIdToken({
         clientName: "${client.client_name}",

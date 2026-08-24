@@ -2,10 +2,10 @@
 nextjs:
   metadata:
     title: 'Writing data'
-    description: 'How to write data with Instant using InstaML.'
+    description: 'How to write data with daabase using InstaML.'
 ---
 
-Instant uses a **Firebase-inspired** interface for mutations. We call our mutation language **InstaML**.
+daabase uses a **Firebase-inspired** interface for mutations. We call our mutation language **InstaML**.
 
 ## Creating data
 
@@ -14,7 +14,7 @@ We use the `create` action to create entities:
 ```typescript
 import { init, id } from '@instantdb/react';
 
-// Instant app
+// daabase app
 const APP_ID = '__APP_ID__';
 const db = init({ appId: APP_ID });
 
@@ -277,7 +277,7 @@ By default, `db.transact` is permissive. When you save data, we'll create missin
 
 ```typescript
 db.tx.todos[workoutId].update({
-  // Instant will automatically create this attribute
+  // daabase will automatically create this attribute
   dueDate: Date.now() + 60 * 1000,
 });
 ```
@@ -298,11 +298,11 @@ const _schema = i.schema({
 // ...
 ```
 
-Instant will enforce that `todos.dueDate` values are actually dates, and you'll get some nice IntelliSense to boot:
+daabase will enforce that `todos.dueDate` values are actually dates, and you'll get some nice IntelliSense to boot:
 
 {% screenshot src="/img/docs/instaml-due-date.png" /%}
 
-Instant also comes with a few utility types, which can help you write abstractions over `transact`. For example, say you wanted to write a custom `update` function:
+daabase also comes with a few utility types, which can help you write abstractions over `transact`. For example, say you wanted to write a custom `update` function:
 
 ```typescript
 // Goal

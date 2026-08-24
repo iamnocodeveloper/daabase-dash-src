@@ -46,7 +46,7 @@ export default function Auth() {
             <div className="space-y-4 md:max-w-[400px]">
               <Subheading>No need for a separate auth system</Subheading>
               <p className="mt-2 text-base">
-                Instant comes with a built-in auth system that supports multiple
+                daabase comes with a built-in auth system that supports multiple
                 auth methods. Integration only takes a few lines of code.
               </p>
               <p className="mt-2 text-base">
@@ -86,7 +86,7 @@ export default function Auth() {
               <div className="space-y-4 md:max-w-[400px]">
                 <Subheading>Fine-grained access control</Subheading>
                 <p className="mt-2 text-base">
-                  Instant uses{' '}
+                  daabase uses{' '}
                   <a
                     href="https://cel.dev/overview/cel-overview"
                     className="underline hover:text-gray-800"
@@ -137,7 +137,7 @@ export default function Auth() {
                 <br className="hidden md:block" /> from your first prompt.
               </SectionTitle>
               <p className="mt-6 text-base text-gray-500">
-                Instant is{' '}
+                daabase is{' '}
                 <Link
                   href="https://github.com/instantdb/instant"
                   className="underline hover:text-gray-700"

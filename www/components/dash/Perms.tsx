@@ -259,7 +259,7 @@ export function Perms({
             permissions. You can define them here
           </p>
           <p>
-            Under the hood, Instant uses the CEL Expression Language. Check out
+            Under the hood, daabase uses the CEL Expression Language. Check out
             the docs to learn more about permission rules and how you can write
             them.
           </p>

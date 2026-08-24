@@ -801,7 +801,7 @@ export function BatteriesForAI() {
         <SectionIntro>
           <SectionTitle>Batteries included</SectionTitle>
           <SectionSubtitle>
-            As your app grows, you start needing more services. Instant comes
+            As your app grows, you start needing more services. daabase comes
             with a bunch of the fundamental ones built-in, and they're designed
             to work well together.
           </SectionSubtitle>
@@ -869,7 +869,7 @@ export function BatteriesForAI() {
               <FeatureBody>
                 Build apps that monetize. Easily add one-time purchases,
                 subscriptions, or usage-based billing by telling AI to add
-                Stripe to your Instant app.
+                Stripe to your daabase app.
               </FeatureBody>
             </div>
             <div className="grow lg:col-span-2">

@@ -68,7 +68,7 @@ function AdminInfo({
       <div>Admin URLs</div>
       {isSelfHosted ? (
         <div className="flex w-full flex-col items-center gap-2">
-          <div>Search the Instant server logs for this trace ID</div>
+          <div>Search the daabase server logs for this trace ID</div>
           <QueryBlock query={`docker compose logs server | grep ${traceId}`} />
         </div>
       ) : null}

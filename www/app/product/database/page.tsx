@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Content from './content';
 
-const title = 'Database - Instant';
+const title = 'Database - daabase';
 const description =
-  'Instant has everything you need to build web and mobile apps with your favorite LLM.';
+  'daabase has everything you need to build web and mobile apps with your favorite LLM.';
 
 export const metadata: Metadata = {
   title,

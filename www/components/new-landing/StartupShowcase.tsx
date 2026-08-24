@@ -10,7 +10,7 @@ const startups = [
     role: 'Founder, Eden',
     avatar: '/img/peeps/ari_bapna.jpg',
     quote:
-      'Before Instant every feature we shipped came with a handoff: a frontend engineer communicated with a backend engineer. Today, everyone is a full-stack engineer. The very first piece of frontend already comes with persistence.',
+      'Before daabase every feature we shipped came with a handoff: a frontend engineer communicated with a backend engineer. Today, everyone is a full-stack engineer. The very first piece of frontend already comes with persistence.',
     demo: {
       type: 'video' as const,
       src: 'https://stream.mux.com/vQSRJTGQgLuInsUJjw01klupQSKE7a00nWY4MGbcmU5Xc/720p.mp4',
@@ -23,7 +23,7 @@ const startups = [
     role: 'Creator, HeroUI (YC S24)',
     avatar: '/img/peeps/junior_garcia.jpg',
     quote:
-      'When I was choosing a backend for HeroUI, I was looking for speed: I wanted creating objects, modifying them, just about every detail, to feel fast. With Instant not only did we get optimistic updates, but we got real-time updates, and collisions. Just about all the problems we were worried about came solved. At that point I do not want to use any database other than Instant.',
+      'When I was choosing a backend for HeroUI, I was looking for speed: I wanted creating objects, modifying them, just about every detail, to feel fast. With daabase not only did we get optimistic updates, but we got real-time updates, and collisions. Just about all the problems we were worried about came solved. At that point I do not want to use any database other than daabase.',
     demo: {
       type: 'video' as const,
       src: 'https://stream.mux.com/a6XKGHGr801qqXSiZDnKldCqiobCOZ2pDLMzSB00pv6qM/720p.mp4',
@@ -36,7 +36,7 @@ const startups = [
     role: 'Founder, Prism (YC S25)',
     avatar: '/img/startups/alex-liu.jpeg',
     quote:
-      'InstantDB is the reason we are able to build applications that feel "instant" to the user. When we were using Supabase, we had to manually create optimistic updates and  struggled to keep client state in sync with the backend. InstantDB removes all of that complexity and has become our competitive advantage. That immediate responsiveness consistently gives us a better user experience than our competitors.',
+      'daabase is the reason we are able to build applications that feel "instant" to the user. When we were using Supabase, we had to manually create optimistic updates and  struggled to keep client state in sync with the backend. daabase removes all of that complexity and has become our competitive advantage. That immediate responsiveness consistently gives us a better user experience than our competitors.',
     demo: {
       type: 'video' as const,
       src: 'https://stream.mux.com/QcgsuWVVwBHiHLAKeREBcfXBoQRn486KzU1YwrGfd1c/720p.mp4',
@@ -49,7 +49,7 @@ const startups = [
     role: 'Co-founder, Mirando (Ex-Facebook)',
     avatar: '/img/peeps/nacho.jpg',
     quote:
-      'Instant lets us move fast without cutting corners. The schema and permissions are a joy to work with, recovery features have saved us a couple of times, and real-time sync eliminates a ton of boilerplate. The best part? Every time we demo our WhatsApp integration and every action instantly shows up on the web dashboard, clients are in awe. And it took zero effort on our part to achieve that magic.',
+      'daabase lets us move fast without cutting corners. The schema and permissions are a joy to work with, recovery features have saved us a couple of times, and real-time sync eliminates a ton of boilerplate. The best part? Every time we demo our WhatsApp integration and every action instantly shows up on the web dashboard, clients are in awe. And it took zero effort on our part to achieve that magic.',
     demo: {
       type: 'video' as const,
       src: 'https://stream.mux.com/RKonvNooP6gss8vCLxqnCVcbjzrPn01x01O00vH9bgQAX00/720p.mp4',
@@ -62,7 +62,7 @@ const startups = [
     role: 'Creator, TinyHarvest',
     avatar: '/img/peeps/simon_grimm.jpg',
     quote:
-      "InstantDB completely changed how I build Tiny Harvest. I didn't have to think about backend logic, syncing, or infrastructure - I could just focus on building the game. Real-time updates work out of the box, and everything feels incredibly smooth. As a solo dev, that's exactly what I need: less setup, more building.",
+      "daabase completely changed how I build Tiny Harvest. I didn't have to think about backend logic, syncing, or infrastructure - I could just focus on building the game. Real-time updates work out of the box, and everything feels incredibly smooth. As a solo dev, that's exactly what I need: less setup, more building.",
     demo: {
       type: 'video' as const,
       src: 'https://stream.mux.com/DtNkCSmdCnUp00igSAeo01DCfVBeeLf1WnszJBhE2JBEQ/720p.mp4',
@@ -166,10 +166,10 @@ export function StartupShowcase() {
     <div className="space-y-16">
       <AnimateIn>
         <SectionIntro>
-          <SectionTitle>Startups love Instant</SectionTitle>
+          <SectionTitle>Startups love daabase</SectionTitle>
           <SectionSubtitle>
             Some of the best developers have bet their infrastructure on
-            Instant. They do it because it helps them move fast and focus on
+            daabase. They do it because it helps them move fast and focus on
             wowing their users.
           </SectionSubtitle>
         </SectionIntro>

@@ -12,9 +12,9 @@ import { FirebaseTestimonial } from '@/components/new-landing/FirebaseTestimonia
 import { Footer } from '@/components/new-landing/Footer';
 import type { ReactNode } from 'react';
 export const metadata: Metadata = {
-  title: 'Instant',
+  title: 'daabase',
   openGraph: {
-    title: 'InstantDB: the best backend for AI-coded apps',
+    title: 'daabase: the best backend for AI-coded apps',
     description:
       'We make you and your agent more productive by giving your frontend a real-time database.',
   },

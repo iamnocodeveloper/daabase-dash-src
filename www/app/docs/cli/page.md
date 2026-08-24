@@ -1,31 +1,31 @@
 ---
 nextjs:
   metadata:
-    title: 'Instant CLI'
-    description: 'How to use the Instant CLI to manage schema and permissions.'
+    title: 'daabase CLI'
+    description: 'How to use the daabase CLI to manage schema and permissions.'
 ---
 
-The Instant CLI was designed to drive your Instant application entirely from a project's codebase. You can create apps, define your data model, and update your permissions, **all through your terminal**.
+The daabase CLI was designed to drive your daabase application entirely from a project's codebase. You can create apps, define your data model, and update your permissions, **all through your terminal**.
 
 ## Login
 
-To get started, you need to log in to your Instant account. You can do this by running:
+To get started, you need to log in to your daabase account. You can do this by running:
 
 ```shell {% showCopy=true %}
 npx instant-cli@latest login
 ```
 
-This will open a browser window where you can authenticate with your Instant account. Once authenticated, you'll be able to run commands that interact with your Instant apps!
+This will open a browser window where you can authenticate with your daabase account. Once authenticated, you'll be able to run commands that interact with your daabase apps!
 
 ## Logout
 
-To log out of your Instant account and remove your authentication token from your local device, run:
+To log out of your daabase account and remove your authentication token from your local device, run:
 
 ```shell {% showCopy=true %}
 npx instant-cli@latest logout
 ```
 
-This will clear your stored credentials. You'll need to log in again to interact with your Instant apps.
+This will clear your stored credentials. You'll need to log in again to interact with your daabase apps.
 
 ## Init
 
@@ -35,7 +35,7 @@ After logging in, head on over to your project's root repository, and write:
 npx instant-cli@latest init
 ```
 
-This will guide you through picking an Instant app and generate two files for you:
+This will guide you through picking an daabase app and generate two files for you:
 
 - `instant.schema.ts` defines your application's data model.
 - `instant.perms.ts` defines your permission rules.
@@ -157,7 +157,7 @@ As a convenience, apart from `INSTANT_APP_ID`, we also check for:
 
 ## Where to save files
 
-By default, Instant will search for your `instant.schema.ts` and `instant.perms.ts` files in:
+By default, daabase will search for your `instant.schema.ts` and `instant.perms.ts` files in:
 
 1. The `root` directory: `./`
 2. The `src` directory: `./src`
@@ -190,7 +190,7 @@ Instead of saving the token to your local device, the CLI will print it to your 
 
 ## Init without creating files
 
-Sometimes you want to create an Instant app without generating `instant.schema.ts` and `instant.perms.ts` or modifying your .env files. You can do this by running:
+Sometimes you want to create an daabase app without generating `instant.schema.ts` and `instant.perms.ts` or modifying your .env files. You can do this by running:
 
 ```shell {% showCopy=true %}
 npx instant-cli@latest init-without-files --title "Hello World"
@@ -232,7 +232,7 @@ adminToken=$(echo "$output" | jq -r '.adminToken')
 You can manage OAuth clients and redirect origins from the CLI in addition to the dashboard. Run `--help` on any subcommand for the full list of provider-specific flags.
 
 ```shell
-# Add a Google web client using Instant's dev credentials
+# Add a Google web client using daabase's dev credentials
 npx instant-cli@latest auth client add \
   --type google --app-type web \
   --name google-web --dev-credentials
@@ -309,7 +309,7 @@ npx instant-cli@latest auth email push
 # View the status of the email configuration and verification
 npx instant-cli@latest auth email status
 
-# Reset your email template to the Instant default template (only updates the file, requires push)
+# Reset your email template to the daabase default template (only updates the file, requires push)
 npx instant-cli@latest auth email reset
 
 # Verify a custom email address using the code sent to the email.

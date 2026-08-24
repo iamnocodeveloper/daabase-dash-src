@@ -5,7 +5,7 @@ import type {
   InstantUnknownSchema,
 } from '@instantdb/react';
 
-type InstantDB = InstantReactWebDatabase<InstantUnknownSchema>;
+type daabase = InstantReactWebDatabase<InstantUnknownSchema>;
 
 function CheckIcon() {
   return (
@@ -38,7 +38,7 @@ function ClipboardIcon() {
   );
 }
 
-export default function TodoApp({ db }: { db: InstantDB }) {
+export default function TodoApp({ db }: { db: daabase }) {
   const [text, setText] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 

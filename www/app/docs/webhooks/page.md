@@ -2,16 +2,16 @@
 nextjs:
   metadata:
     title: 'Webhooks'
-    description: 'How to receive, verify, and manage Instant webhooks.'
+    description: 'How to receive, verify, and manage daabase webhooks.'
 ---
 
 Webhooks allow you to subscribe to changes to your entities via POST requests to your server.
 
 ## How webhooks work
 
-A webhook subscribes to one or more **namespaces** and **actions** (`create`, `update`, `delete`). Whenever a matching write commits, Instant queues an event and POSTs it to your endpoint.
+A webhook subscribes to one or more **namespaces** and **actions** (`create`, `update`, `delete`). Whenever a matching write commits, daabase queues an event and POSTs it to your endpoint.
 
-Each request carries an `Instant-Signature` header and a small body. The body holds a short-lived URL and a JWT — you exchange them for the full payload of records:
+Each request carries an `daabase-Signature` header and a small body. The body holds a short-lived URL and a JWT — you exchange them for the full payload of records:
 
 ```json
 {
@@ -35,7 +35,7 @@ The `before` and `after` fields include all of the data attributes on an entity,
 
 ### Delivery and retries
 
-Instant retries failed deliveries with backoff. An event moves through these stages:
+daabase retries failed deliveries with backoff. An event moves through these stages:
 
 - `pending` — queued, not yet attempted
 - `processing` — a sender is actively trying to deliver
@@ -43,13 +43,13 @@ Instant retries failed deliveries with backoff. An event moves through these sta
 - `error` — an attempt failed; another retry is scheduled
 - `failed` — all retries exhausted; will not be retried automatically
 
-Each delivery attempt has a **15-second timeout** — if your endpoint hasn't responded by then, the attempt is recorded as a `timeout` error and Instant retries. Do any slow work (sending emails, calling third-party APIs, etc.) asynchronously, and respond with `2xx` as soon as you've durably enqueued the work.
+Each delivery attempt has a **15-second timeout** — if your endpoint hasn't responded by then, the attempt is recorded as a `timeout` error and daabase retries. Do any slow work (sending emails, calling third-party APIs, etc.) asynchronously, and respond with `2xx` as soon as you've durably enqueued the work.
 
 A webhook that fails too many times in a row is automatically disabled. You can re-enable it from the dashboard or via the SDK once you've fixed the receiver.
 
 ## Setting up a webhook
 
-The easiest way to create a webhook is from the **Webhooks** tab in the dashboard: pick the namespaces, the actions, and the URL Instant should POST to.
+The easiest way to create a webhook is from the **Webhooks** tab in the dashboard: pick the namespaces, the actions, and the URL daabase should POST to.
 
 You can also manage webhooks programmatically with `npx instant-cli webhook` or through the Admin SDK:
 
@@ -114,7 +114,7 @@ export async function POST(req: Request) {
 
 Handler resolution is most-specific-wins: `namespace` + `action`, then the `namespace`'s `$default`, then the top-level `$default`. Records with no matching handler are skipped.
 
-Handlers run concurrently. `processRequest` resolves once every handler resolves or a handler rejects; if any handler rejects, the call rejects too — return a non-2xx response so Instant retries.
+Handlers run concurrently. `processRequest` resolves once every handler resolves or a handler rejects; if any handler rejects, the call rejects too — return a non-2xx response so daabase retries.
 
 ### Next.js (Pages Router)
 
@@ -199,7 +199,7 @@ app.post(
 
 ## Verifying signatures manually
 
-If you'd rather not use the handler dispatch, you can stop after verification. `validate` parses and checks the `Instant-Signature` header against the body and returns the `{ payloadUrl, token }` you'd use to fetch records:
+If you'd rather not use the handler dispatch, you can stop after verification. `validate` parses and checks the `daabase-Signature` header against the body and returns the `{ payloadUrl, token }` you'd use to fetch records:
 
 ```ts {% showCopy=true %}
 const { payloadUrl, token } = await db.webhooks.validate(
@@ -263,7 +263,7 @@ do {
   cursor = pageInfo.hasNextPage ? pageInfo.endCursor : null;
 } while (cursor);
 
-// Fetch one event by its ISN (Instant Sequence Number)
+// Fetch one event by its ISN (daabase Sequence Number)
 const event = await db.webhooks.manager.getEvent(hook.id, isn);
 
 // Fetch the full payload for an event
@@ -285,13 +285,13 @@ The `@instantdb/admin` SDK is the easiest way to receive webhooks, but the proto
 
 Every webhook arrives as a `POST` with two things you care about:
 
-- The `Instant-Signature` header, a comma-separated list of `key=value` pairs:
+- The `daabase-Signature` header, a comma-separated list of `key=value` pairs:
 
   ```http
-  Instant-Signature: t=1715551200,kid=1034696293,v1=4a8f...
+  daabase-Signature: t=1715551200,kid=1034696293,v1=4a8f...
   ```
 
-  - `t` — Unix timestamp (seconds) of when Instant signed the request
+  - `t` — Unix timestamp (seconds) of when daabase signed the request
   - `kid` — ID of the signing key
   - `v1` — hex-encoded Ed25519 signature
 
@@ -496,7 +496,7 @@ public class WebhookVerifier {
     }
     String t = parts.get("t"), kid = parts.get("kid"), v1 = parts.get("v1");
 
-    if (Instant.now().getEpochSecond() - Long.parseLong(t) > TOLERANCE_SECONDS) {
+    if (daabase.now().getEpochSecond() - Long.parseLong(t) > TOLERANCE_SECONDS) {
       throw new IllegalStateException("signature too old");
     }
 

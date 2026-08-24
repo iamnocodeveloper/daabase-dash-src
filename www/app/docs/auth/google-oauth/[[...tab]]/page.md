@@ -2,12 +2,12 @@
 nextjs:
   metadata:
     title: 'Google OAuth'
-    description: 'How to add Google OAuth to your Instant app.'
+    description: 'How to add Google OAuth to your daabase app.'
 ---
 
 {% nav-default value="web-google-button" %}
 
-Instant supports logging users in with their Google account. There are a few ways to do this: it depends on whether you are building for web or React Native.
+daabase supports logging users in with their Google account. There are a few ways to do this: it depends on whether you are building for web or React Native.
 
 Choose the option that sounds best to you, and the rest of the document will show you how to add Sign in with Google to your app.
 
@@ -53,7 +53,7 @@ Choose the option that sounds best to you, and the rest of the document will sho
 There are three main steps:
 
 1. **Google Console**: Set up your consent screen and create an OAuth client.
-2. **Instant Dashboard**: Connect your OAuth client to Instant
+2. **daabase Dashboard**: Connect your OAuth client to daabase
 3. **Your app**: Add some code to log in with Google!
 
 Let's dive deeper into each step:
@@ -64,7 +64,7 @@ Let's dive deeper into each step:
 
 ## Quick start: developer credentials
 
-If you're testing Google sign-in locally, we have a fast option for you. Instant provides developer credentials that you can use for local development.
+If you're testing Google sign-in locally, we have a fast option for you. daabase provides developer credentials that you can use for local development.
 
 You don't need to go to the Google Cloud Console, and you can log in within minutes.
 
@@ -72,7 +72,7 @@ You don't need to go to the Google Cloud Console, and you can log in within minu
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard:
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard:
 
 - Click "Set up Google"
 - Toggle "Use dev credentials"
@@ -165,19 +165,19 @@ Save your Client IDs -- you'll need them for the next step!
 
 {% /conditional %}
 
-## 2. Connect your OAuth client to Instant
+## 2. Connect your OAuth client to daabase
 
 {% conditional
    param="method"
    value=["web-google-button", "web-redirect", "rn-web"] %}
 
-**Add your OAuth Client on Instant**
+**Add your OAuth Client on daabase**
 
 {% setup-paths %}
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard:
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard:
 
 - Click "Set up Google"
 - Enter your "Client ID"
@@ -205,7 +205,7 @@ npx instant-cli@latest auth client add \
    param="method"
    value=["web-google-button", "web-redirect"] %}
 
-**Register your website with Instant**
+**Register your website with daabase**
 
 If you're testing from localhost, add `http://localhost:3000` (replacing `3000` with the port you use). For production, add your website's domain.
 
@@ -213,7 +213,7 @@ If you're testing from localhost, add `http://localhost:3000` (replacing `3000` 
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard, add your URL to the **Redirect Origins** list.
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard, add your URL to the **Redirect Origins** list.
 
 {% /dashboard-path %}
 
@@ -233,15 +233,15 @@ npx instant-cli@latest auth origin add --type website --url <your-domain>
    param="method"
    value=["rn-native"] %}
 
-**Add your OAuth Client on Instant**
+**Add your OAuth Client on daabase**
 
-For each OAuth Client you created, add it to Instant:
+For each OAuth Client you created, add it to daabase:
 
 {% setup-paths %}
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard:
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard:
 
 - Click "Set up Google"
 - Enter your "Client ID"
@@ -303,7 +303,7 @@ const db = init({ appId: APP_ID });
 // e.g. 89602129-cuf0j.apps.googleusercontent.com
 const GOOGLE_CLIENT_ID = 'REPLACE_ME';
 
-// Use the google client name in the Instant dashboard auth tab
+// Use the google client name in the daabase dashboard auth tab
 const GOOGLE_CLIENT_NAME = 'REPLACE_ME';
 
 function App() {
@@ -360,7 +360,7 @@ When creating your button, make sure to set the `data-ux_mode="popup"`. Your `da
 ```jsx {% showCopy=true %}
 async function handleSignInWithGoogle(response) {
   await db.auth.signInWithIdToken({
-    // Use the google client name in the Instant dashboard auth tab
+    // Use the google client name in the daabase dashboard auth tab
     clientName: 'REPLACE_ME',
     idToken: response.credential,
     // make sure this is the same nonce you set in data-nonce
@@ -390,7 +390,7 @@ const APP_ID = '__APP_ID__';
 const db = init({ appId: APP_ID });
 
 const url = db.auth.createAuthorizationURL({
-  // Use the google client name in the Instant dashboard auth tab
+  // Use the google client name in the daabase dashboard auth tab
   clientName: 'REPLACE_ME',
   redirectURL: window.location.href,
 });
@@ -422,7 +422,7 @@ function Login() {
 
 When your users click on the link, they'll be redirected to Google to start the OAuth flow and then back to your site.
 
-Instant will automatically log them in to your app when they are redirected!
+daabase will automatically log them in to your app when they are redirected!
 
 {% /conditional %}
 
@@ -430,10 +430,10 @@ Instant will automatically log them in to your app when they are redirected!
 
 **Method: Expo Web Auth**
 
-Instant comes with support for Expo's AuthSession library. To use it, you need to:
+daabase comes with support for Expo's AuthSession library. To use it, you need to:
 
 1. Set up AuthSession
-2. Register your app with Instant
+2. Register your app with daabase
 3. Use AuthSession to log in with Google!
 
 Let's do that.
@@ -458,15 +458,15 @@ Update your app.json with your scheme:
 }
 ```
 
-**Register your app with Instant**
+**Register your app with daabase**
 
-Now that you have your App Scheme, it's time to tell Instant about it. For development with Expo, add `exp://` and your scheme (e.g. `mycoolredirect://`) as redirect origins.
+Now that you have your App Scheme, it's time to tell daabase about it. For development with Expo, add `exp://` and your scheme (e.g. `mycoolredirect://`) as redirect origins.
 
 {% setup-paths %}
 
 {% dashboard-path %}
 
-From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the Instant dashboard, add a redirect origin of type "App scheme".
+From the {% blank-link href="/dash?s=main&t=auth" label="Auth" /%} tab on the daabase dashboard, add a redirect origin of type "App scheme".
 
 {% screenshot src="/img/docs/rn-web-redirect-origins.png" /%}
 
@@ -522,7 +522,7 @@ function Login() {
   const [request, _response, promptAsync] = useAuthRequest(
     {
       // The unique name you gave the OAuth client when you
-      // registered it on the Instant dashboard
+      // registered it on the daabase dashboard
       clientId: 'YOUR_INSTANT_AUTH_CLIENT_NAME',
       redirectUri: makeRedirectUri(),
     },
@@ -646,11 +646,11 @@ function Login() {
           console.error('no ID token present!');
           return;
         }
-        // 2. Use your token to sign in to InstantDB!
+        // 2. Use your token to sign in to daabase!
         try {
           const res = await db.auth.signInWithIdToken({
             // The unique name you gave the OAuth client when you
-            // registered it on the Instant dashboard
+            // registered it on the daabase dashboard
             clientName: 'YOUR_INSTANT_AUTH_CLIENT_NAME',
             idToken,
           });

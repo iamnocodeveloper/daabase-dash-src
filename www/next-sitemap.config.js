@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://instantdb.com',
+  siteUrl: 'https://daabase-dash.apps.devtik.xyz',
   generateRobotsTxt: false,
   generateIndexSitemap: false,
 
