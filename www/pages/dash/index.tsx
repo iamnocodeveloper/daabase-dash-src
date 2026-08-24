@@ -57,6 +57,7 @@ import {
 import { AppAuth } from '@/components/dash/AppAuth';
 import Billing from '@/components/dash/Billing';
 import { QueryInspector } from '@/components/dash/explorer/QueryInspector';
+import { SpaceWarningBanner } from '@/components/dash/SpaceWarningBanner';
 import {
   MainDashLayout,
   useFetchedDash,
@@ -996,6 +997,7 @@ function DashboardContent({
 
   return (
     <>
+      <SpaceWarningBanner appId={appId} />
       {tab === 'home' ? (
         <Home app={app} token={token} />
       ) : tab === 'explorer' ? (

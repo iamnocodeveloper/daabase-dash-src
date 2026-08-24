@@ -14,6 +14,7 @@ import { useOrgPaid } from '@/lib/hooks/useOrgPaid';
 import { useFetchedDash } from '@/components/dash/MainDashLayout';
 import Link from 'next/link';
 
+export const MB_200 = 200 * 1024 * 1024;
 export const GB_1 = 1024 * 1024 * 1024;
 export const GB_10 = 10 * GB_1;
 export const GB_250 = 250 * GB_1;
@@ -213,7 +214,7 @@ export default function Billing({ appId }: { appId: string }) {
   const totalAppBytes = data['total-app-bytes'] || 0;
   const totalStorageBytes = data['total-storage-bytes'] || 0;
   const totalUsageBytes = totalAppBytes + totalStorageBytes;
-  const progressDen = isFreeTier ? GB_1 : GB_10;
+  const progressDen = isFreeTier ? MB_200 : GB_10;
   const progress = Math.round((totalUsageBytes / progressDen) * 100);
 
   return (

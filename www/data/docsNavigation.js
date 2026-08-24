@@ -143,6 +143,7 @@ module.exports = [
       { title: 'Custom emails', href: '/docs/emails', optionalLLM: true },
       { title: 'App teams', href: '/docs/teams', optionalLLM: true },
       { title: 'Storage', href: '/docs/storage' },
+      { title: 'Plans and Limits', href: '/docs/limits' },
       { title: 'Streams', href: '/docs/streams' },
       { title: 'Webhooks', href: '/docs/webhooks' },
       { title: 'Backups', href: '/docs/backups' },
