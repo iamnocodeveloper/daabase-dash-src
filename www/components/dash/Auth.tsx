@@ -296,7 +296,7 @@ function errorFromSendMagicCode(res: InstantIssue): string {
     case 'signups-closed':
       return (
         res.body?.message ??
-        "daabase beta: this sign-up could not be completed. Contact support@daabase.app if the problem persists."
+        "daabase beta: this sign-up could not be completed. Contact support@daabase.click if the problem persists."
       );
     case 'validation-failed':
       const hintMsg = res.body?.hint?.errors?.[0]?.message;
